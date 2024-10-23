@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Suspense } from "react";
+import { Navbar } from "@/components/Navbar";
 import {
   Card,
   CardHeader,
@@ -26,7 +27,11 @@ type Props = {};
 export default function Dashboard({}: Props) {
   return (
     <>
+    <div className="bg-black text-gray-100 h-20">
+        <Navbar/>
+    </div>
       <div className="w-full flex flex-col gap-8 md:p-5">
+        
         <Suspense
           fallback={
             <div className="bg-gradient-to-l from-cyan-300 via-blue-500 to-purple-500 text-white relative group overflow-hidden rounded-lg transition-all hover:shadow min-h-36 sm:min-h-52">
@@ -136,7 +141,7 @@ export default function Dashboard({}: Props) {
             Trending Tools :
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 py-10 mb-12">
-            {/* @ts-ignore */}
+            {/* @ts-expect-error */}
             {Templates.slice(0, 8).map((item: TEMPLATE, index) => (
               <TemplateCard {...item} key={index} />
             ))}
