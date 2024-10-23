@@ -18,8 +18,9 @@ const Welcome = async () => {
         </span>{" "}
         !👋
       </h1>
-      <p className="text-muted text-lg">
-        hi there! welcome to your dashboard. You can do:
+      <p className="text-white text-lg">
+        Hey there:)
+        Welcome to the AI powered platform for all your needs.
       </p>
     </div>
   );
