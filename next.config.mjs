@@ -10,6 +10,16 @@ const nextConfig = {
       DATABASE_URL: process.env.DATABASE_URL,
       MAILTRAP_API_TOKEN: process.env.MAILTRAP_API_TOKEN,
     },
+    images: {
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: '*',
+        }
+      ]
+    },
+    reactStrictMode: true,
   };
   
   export default nextConfig;
+  
