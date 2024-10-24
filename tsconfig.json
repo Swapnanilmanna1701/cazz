@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "drizzle.config.js", "utils/db/dbConfig.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "drizzle.config.js", "utils/db/dbConfig.jsx", "app/aiform/[formid]/page.jsx"],
   "exclude": ["node_modules"]
 }

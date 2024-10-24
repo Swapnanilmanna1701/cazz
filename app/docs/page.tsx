@@ -57,7 +57,7 @@ export default function DocsPage() {
               </p>
               <Button
                 asChild
-                className="w-full bg-white text-black hover:bg-gray-200"
+                className="w-full bg-gradient-to-l from-cyan-300 via-blue-500 to-purple-500 text-white hover:bg-gray-200"
               >
                 <Link href={section.link}>Read More</Link>
               </Button>
