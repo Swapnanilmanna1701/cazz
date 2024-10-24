@@ -91,7 +91,7 @@ export default function Dashboard({}: Props) {
             </CardHeader>
             <CardContent>
               <Button asChild size={"sm"}>
-                <Link href="app/dashboard/resume/page.tsx">
+                <Link href="/dashboard/resume">
                   Create
                   <ArrowRight size={18} />
                 </Link>
@@ -110,7 +110,7 @@ export default function Dashboard({}: Props) {
             </CardHeader>
             <CardContent>
               <Button size={"sm"} asChild>
-                <Link href="app\dashboard\chatbot\page.tsx">
+                <Link href="/dashboard/chatbot">
                   Chat <ArrowRight size={18} />
                 </Link>
               </Button>
