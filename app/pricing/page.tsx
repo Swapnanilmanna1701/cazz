@@ -118,7 +118,7 @@ export default function PricingPage() {
               <Button
                 onClick={() => plan.priceId && handleSubscribe(plan.priceId)}
                 disabled={isLoading || !plan.priceId}
-                className="w-full bg-white text-black hover:bg-gray-200"
+                className="w-full bg-gradient-to-l from-cyan-300 via-blue-500 to-purple-500 text-white hover:bg-gray-200"
               >
                 {isLoading ? "Processing..." : "Choose Plan"}
               </Button>
