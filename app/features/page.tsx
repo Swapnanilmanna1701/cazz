@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Suspense } from "react";
 import { Navbar } from "@/components/Navbar";
+import LinkedIn from "@/components/ui/LinkedInIcon"
+
 import {
   Card,
   CardHeader,
@@ -16,6 +18,7 @@ import {
   MailPlus,
   Speech,
   TableProperties,
+  
 } from "lucide-react";
 import Welcome from "@/components/Welcome";
 import Link from "next/link";
@@ -121,6 +124,26 @@ export default function Dashboard({}: Props) {
               <MailPlus size={50} />
               <div>
                 <CardTitle>AI Emailer ✨</CardTitle>
+                <CardDescription>
+                  Send Emails to multiple persons with AI generated content.
+                </CardDescription>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <Button asChild size={"sm"}>
+                <Link href="/dashboard/emailer">
+                  Create
+                  <ArrowRight size={18} />
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card className="hover:-translate-y-1 shadow hover:shadow-blue-500/40 hover:shadow-md duration-500 transition-all border border-violet-500">
+            <CardHeader className="flex gap-4">
+              <LinkedIn  />
+              <div>
+                <CardTitle>Top LinkedIn Search ✨</CardTitle>
                 <CardDescription>
                   Send Emails to multiple persons with AI generated content.
                 </CardDescription>
