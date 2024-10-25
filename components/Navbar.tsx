@@ -10,6 +10,7 @@ import {
 } from "@clerk/nextjs";
 import { useState, useEffect } from "react";
 import { Menu, X, Zap } from "lucide-react";
+import SparklesText from "@/components/ui/sparklestxt";
 
 export function Navbar() {
   const { userId } = useAuth();
@@ -34,10 +35,10 @@ export function Navbar() {
         <div className="flex flex-wrap justify-between items-center max-w-6xl mx-auto">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <Zap className="w-8 h-8 text-blue-500" />
-              <span className="text-xl sm:text-2xl font-bold text-white">
-                Cazz
-              </span>
+              <Zap className="w-8 h-8 text-blue-500 text-2xl" />
+              <span className="text-3xl">
+                  <SparklesText text="Cazz" />{" "}
+                </span>
             </Link>
           </div>
           <button

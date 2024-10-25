@@ -1,6 +1,7 @@
-
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Blobby from "@/components/ui/blobby";
+import SparklesText from "@/components/ui/sparklestxt";
 import {
   TwitterIcon,
   InstagramIcon,
@@ -29,7 +30,7 @@ export default function Home() {
           <SparklesIcon className="w-8 h-8 text-yellow-400 opacity-50" />
         </div>
         <div className="absolute top-40 right-20 animate-float animation-delay-2000">
-          <ZapIcon className="w-10 h-10 text-blue-400 opacity-50" />
+          <ZapIcon className="w-10 h-10 text-blue-300 opacity-50" />
         </div>
         <div className="absolute bottom-20 left-1/4 animate-float animation-delay-4000">
           <TrendingUpIcon className="w-12 h-12 text-green-400 opacity-50" />
@@ -38,8 +39,11 @@ export default function Home() {
         {/* Hero Section */}
         <div className="text-center py-20 lg:py-32 relative">
           <RocketIcon className="w-16 h-16 text-purple-500 mx-auto mb-6 animate-bounce" />
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-            AI-Powered Social Media Content Generator
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-100 to-purple-900">
+            Sky-Rocket Your Carrier with{" "}
+            <span>
+              <SparklesText text="Cazz" />{" "}
+            </span>
           </h1>
           <p className="text-xl mb-10 text-gray-300 max-w-2xl mx-auto">
             Create engaging content for Twitter, Instagram, and LinkedIn with
