@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import Blobby from "@/components/ui/blobby";
+//import Blobby from "@/components/ui/blobby";
 import SparklesText from "@/components/ui/sparklestxt";
 import {
   TwitterIcon,
@@ -30,7 +30,7 @@ export default function Home() {
           <SparklesIcon className="w-8 h-8 text-yellow-400 opacity-50" />
         </div>
         <div className="absolute top-40 right-20 animate-float animation-delay-2000">
-          <ZapIcon className="w-10 h-10 text-blue-300 opacity-50" />
+          <ZapIcon className="w-10 h-10 text-blue-500 opacity-50" />
         </div>
         <div className="absolute bottom-20 left-1/4 animate-float animation-delay-4000">
           <TrendingUpIcon className="w-12 h-12 text-green-400 opacity-50" />
