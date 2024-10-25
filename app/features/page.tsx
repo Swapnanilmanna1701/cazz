@@ -151,7 +151,7 @@ export default function Dashboard({}: Props) {
             </CardHeader>
             <CardContent>
               <Button asChild size={"sm"}>
-                <Link href="/dashboard/emailer">
+                <Link href="/dashboard/toplinkedin">
                   Create
                   <ArrowRight size={18} />
                 </Link>
