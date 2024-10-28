@@ -1,5 +1,5 @@
-import AddNewInterview from "@/components/interview/start/add-new-interview";
-import InterviewList from "@/components/interview/start/interview-list";
+import AddNewInterview from "@/components/interview/add-new-interview";
+import InterviewList from "@/components/interview/interview-list";
 import { Navbar } from "@/components/Navbar";
 
 export default function InterviewDashboard() {

@@ -1,6 +1,6 @@
 import { FormListItemResp } from "@/components/forms/response/FormListItemResp";
-import { db } from "@/lib/utils/db";
-import { JsonForms } from "@/lib/utils/schema";
+import { db } from "@/utils/db/dbConfig";
+import { JsonForms } from "@/utils/db/schema";
 import { currentUser } from "@clerk/nextjs/server";
 import { eq } from "drizzle-orm";
 

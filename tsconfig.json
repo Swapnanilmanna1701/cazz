@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "drizzle.config.js", "utils/db/dbConfig.jsx", "app/aiform/[formid]/page.jsx", "app/dashboard/resume/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "drizzle.config.js", "utils/db/dbConfig.jsx", "app/aiform/[formid]/page.jsx", "app/dashboard/resume/page.jsx", "components/forms/CreateForm.jsx"],
   "exclude": ["node_modules"]
 }
