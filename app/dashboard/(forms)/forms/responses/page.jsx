@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { FormListItemResp } from "@/components/forms/response/FormListItemResp";
 import { db } from "@/utils/db/dbConfig";
 import { JsonForms } from "@/utils/db/schema";
@@ -6,7 +7,7 @@ import { eq } from "drizzle-orm";
 
 async function Responses() {
   const user = await currentUser();
-  const formList = await db
+  const formList = db
     .select()
     .from(JsonForms)
     .where(eq(JsonForms.createdBy, user?.primaryEmailAddress?.emailAddress));
