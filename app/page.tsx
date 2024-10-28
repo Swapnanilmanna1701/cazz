@@ -16,6 +16,7 @@ import {
 import { auth } from "@clerk/nextjs/server";
 import { SignUpButton } from "@clerk/nextjs";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   const { userId } = auth();
@@ -206,6 +207,7 @@ export default function Home() {
           )}
           <p className="mt-4 text-gray-400">No credit card required</p>
         </div>
+        <Footer/>
       </main>
     </div>
   );

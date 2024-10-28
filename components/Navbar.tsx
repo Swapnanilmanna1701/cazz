@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Link from "next/link";
 import {
   SignInButton,
@@ -37,8 +37,8 @@ export function Navbar() {
             <Link href="/" className="flex items-center space-x-2">
               <Zap className="w-8 h-8 text-blue-500 text-2xl" />
               <span className="text-3xl">
-                  <SparklesText text="Cazz" />{" "}
-                </span>
+                <SparklesText text="Cazz" />{" "}
+              </span>
             </Link>
           </div>
           <button
