@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 import { Button } from "@/components/ui/button";
 import { Suspense } from "react";
 import { Navbar } from "@/components/Navbar";
