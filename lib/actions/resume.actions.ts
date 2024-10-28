@@ -5,7 +5,7 @@ import Education from "../models/education.model";
 import Experience from "../models/experience.model";
 import Resume from "../models/resume.model";
 import Skill from "../models/skill.model";
-import { connectToDB } from "@/lib/validations/mongoose";
+import { connectToDB } from "@/lib/mongoose";
 import { revalidatePath } from "next/cache";
 
 export async function createResume({

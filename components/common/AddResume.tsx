@@ -89,7 +89,7 @@ const AddResume = ({ userId }: { userId: string | undefined }) => {
           <DialogHeader>
             <DialogTitle>Create New Resume</DialogTitle>
             <DialogDescription>
-              Enter the title of your resume here. Click create when you're
+              Enter the title of your resume here. Click create when you&apos are
               done.
             </DialogDescription>
           </DialogHeader>

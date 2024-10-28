@@ -49,7 +49,7 @@ const FinalResumeView = ({
                 your friends and family.
               </p>
               <p className="text-center text-sm text-gray-500 font-light">
-                For better print quality, adjust your browser's print settings:
+                For better print quality, adjust your browser&apos s print settings:
                 save as PDF, disable headers and footers, set margins to none,
                 and enable background graphics.
               </p>
@@ -58,7 +58,7 @@ const FinalResumeView = ({
             <>
               <h2 className="text-center text-2xl font-bold">Resume Preview</h2>
               <p className="text-center text-gray-600">
-                You are currently viewing a preview of someone else's resume.
+                You are currently viewing a preview of someone else&apos s resume.
               </p>
               <p className="text-center text-sm text-gray-500 font-light">
                 For the ultimate experience, create your own AI-generated
