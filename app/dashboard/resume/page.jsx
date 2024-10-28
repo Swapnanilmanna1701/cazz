@@ -1,4 +1,4 @@
-//import DashboardCards from "@/components/layout/DashboardCards";
+import DashboardCards from "@/components/layout/DashboardCards";
 import { Navbar } from "@/components/Navbar";
 
 export default function Resume() {
@@ -21,6 +21,7 @@ export default function Resume() {
             </div>
           </div>
         </div>
+        <DashboardCards />
 
         
       </div>

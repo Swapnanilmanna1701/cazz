@@ -1,5 +1,5 @@
-//import AddNewInterview from "@/components/interview/start/add-new-interview";
-//import InterviewList from "@/components/interview/start/interview-list";
+import AddNewInterview from "@/components/interview/start/add-new-interview";
+import InterviewList from "@/components/interview/start/interview-list";
 import { Navbar } from "@/components/Navbar";
 
 export default function InterviewDashboard() {
@@ -19,11 +19,13 @@ export default function InterviewDashboard() {
               Create and Start your AI Mock Interview
             </h2>
           </div>
+          <AddNewInterview />
 
           
         </div>
+        
       </div>
-      
+      <InterviewList />
     </div>
   );
 }

@@ -17,7 +17,7 @@ export default function InterviewList() {
   }, [user]);
 
   const GetInterviewList = async () => {
-    const result = await db
+    const  result =  db
       .select()
       .from(MockInterview)
       .where(

@@ -1,6 +1,6 @@
 "use client";
 
-import generateQuestions from "@/actions/generateQuesions";
+//import generateQuestions from "@/actions/generateQuesions";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -11,8 +11,8 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { db } from "@/lib/utils/db";
-import { MockInterview } from "@/lib/utils/schema";
+import { db } from "@/utils/db/dbConfig";
+import { MockInterview } from "@/utils/db/schema";
 import { useUser } from "@clerk/nextjs";
 import { LoaderCircle } from "lucide-react";
 import moment from "moment";
