@@ -38,7 +38,7 @@ export default function CreateForm() {
   }, [user]);
 
   const GetFormList = async () => {
-    const result = await db
+    const result = db
       .select()
       .from(JsonForms)
       .where(eq(JsonForms.createdBy, user?.primaryEmailAddress?.emailAddress))

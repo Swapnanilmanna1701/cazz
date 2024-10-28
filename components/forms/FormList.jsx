@@ -9,7 +9,7 @@ import CreateForm from "./CreateForm";
 async function FormList() {
   const user = await currentUser();
 
-  const formList = await db
+  const formList = db
     .select()
     .from(JsonForms)
     .where(eq(JsonForms.createdBy, user?.primaryEmailAddress?.emailAddress))
