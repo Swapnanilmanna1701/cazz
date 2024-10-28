@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/app/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Edit, Share, Trash } from "lucide-react";
 import React from "react";
 import {
@@ -12,9 +12,9 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/app/components/ui/alert-dialog";
-import { db } from "@/lib/utils/db";
-import { JsonForms } from "@/lib/utils/schema";
+} from "@/components/ui/alert-dialog";
+import { db } from "@/utils/db/dbConfig";
+import { JsonForms } from "@/utils/db/schema";
 import { and, eq } from "drizzle-orm";
 import { toast } from "sonner";
 import { RWebShare } from "react-web-share";
