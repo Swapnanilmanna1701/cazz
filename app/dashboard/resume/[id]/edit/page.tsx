@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { use } from "react";
 import { currentUser } from "@clerk/nextjs/server";
 import { checkResumeOwnership } from "@/lib/actions/resume.actions";
