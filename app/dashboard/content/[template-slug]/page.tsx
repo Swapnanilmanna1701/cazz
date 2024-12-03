@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import FormSection from '../_components/FormSection'
 import OutputSection from '../_components/OutputSection'
 import { TEMPLATE } from '@/components/content/TemplateListSection'
@@ -12,9 +13,9 @@ import { chatSession } from '@/utils/db/gemini-model'
 import { db } from '@/utils/db/dbConfig'
 import { AIOutput } from '@/utils/db/schema'
 import moment from 'moment'
-import { useRouter } from 'next/navigation'
+//import { useRouter } from 'next/navigation'
 import { useUser } from '@clerk/nextjs'
-import ts from 'typescript'
+//import ts from 'typescript'
 
 interface PROPS{
     params:{
@@ -29,7 +30,7 @@ function CreateNewContent(props:PROPS) {
     const [loading,setLoading]=useState(false);
     const [aiOutput,setAiOutput]=useState<string>('');
     const {user}=useUser();
-    const router=useRouter();
+    //const router=useRouter();
     /**
      * Used to generate content from AI
      * @param formData 
@@ -62,7 +63,7 @@ function CreateNewContent(props:PROPS) {
   return (
     <div className='p-5 text-black'>
         <Link href={"/dashboard/content"}>
-            <Button variant="secondary"> <ArrowLeft/> Back</Button>
+            <Button variant="secondary" className='bg-blue-700'> <ArrowLeft/> Back</Button>
         </Link>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-5 py-5 '>
             {/* FormSection  */}

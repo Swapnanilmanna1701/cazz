@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable react/jsx-key */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import React, { useState } from 'react'
 import { TEMPLATE } from '@/components/content/TemplateListSection'
@@ -32,7 +35,7 @@ function FormSection({ selectedTemplate,userFormInput,loading }: PROPS) {
             {/* @ts-ignore */}
             <Image src={selectedTemplate?.icon}
                 alt='icon' width={70} height={70} />
-            <h2 className='font-bold text-2xl mb-2 mt-4 text-primary'>{selectedTemplate?.name}</h2>
+            <h2 className='font-bold text-2xl mb-2 mt-4 text-black'>{selectedTemplate?.name}</h2>
             <p className='text-gray-500 text-sm'>{selectedTemplate?.desc}</p>
 
             <form className='mt-6' onSubmit={onSubmit}>
@@ -56,7 +59,7 @@ function FormSection({ selectedTemplate,userFormInput,loading }: PROPS) {
                     </div>
                 ))}
                 <Button type="submit" 
-                className='w-full py-6'
+                className='w-full py-6 bg-blue-700 text-white hover:bg-blue-600 hover:text-white'
                 disabled={loading}
                 >
                     {loading&&<Loader2Icon className='animate-spin'/>}
