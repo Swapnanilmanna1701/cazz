@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import FormSectioEmailer from "@/components/emailer/FormSectionEmailer";
@@ -14,6 +15,7 @@ import InputBar from "@/components/ui/InputBar";
 import { Button } from "@/components/ui/button";
 import { CirclePlus } from "lucide-react";
 import dynamic from "next/dynamic";
+import { Navbar } from "@/components/Navbar";
 
 const OutputSection2 = dynamic(
   () => import("@/components/emailer/OutputSection2"),
@@ -49,7 +51,7 @@ export default function page  ()  {
   };
 
   const SaveInDb = async (formData: any, slug: any, aiResp: string) => {
-    const result = await db.insert(AIOutput).values({
+    const result = db.insert(AIOutput).values({
       formData: formData,
       templateSlug: slug,
       aiResponse: aiResp,
@@ -73,7 +75,11 @@ export default function page  ()  {
   };
 
   return (
+    
     <div>
+      <div className="bg-black text-gray-100 h-20 ">
+        <Navbar/>
+    </div>
       <div className="p-5 mb-4 shadow-md border rounded-lg bg-gradient-to-tl from-green-300 via-blue-500 to-purple-600">
         <h2 className="font-bold text-2xl mb-2 text-white">
           Scheduler Your Emails

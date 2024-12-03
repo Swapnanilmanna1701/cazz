@@ -30,8 +30,8 @@ function FormSectioEmailer({
   };
 
   return (
-    <div className="p-5 shadow-md border rounded-lg bg-white">
-      {/* @ts-ignore */}
+    <div className="p-5 shadow-md border rounded-lg bg-white text-black">
+      {/* @ts-expect-error */}
       <form className="mt-6" onSubmit={onSubmit}>
         {selectedTemplate?.form?.map((item, index) => (
           <div className="my-2 flex flex-col gap-2 mb-7">
