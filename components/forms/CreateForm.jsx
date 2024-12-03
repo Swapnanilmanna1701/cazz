@@ -53,7 +53,7 @@ export default function CreateForm() {
     );
     console.log(result.response.text());
     if (result.response.text()) {
-      const resp = await db
+      const resp = db
         .insert(JsonForms)
         .values({
           jsonform: result.response.text(),
@@ -62,8 +62,8 @@ export default function CreateForm() {
         })
         .returning({ id: JsonForms.id });
 
-      console.log("New Form ID", resp[0].id);
-      if (resp[0].id) {
+      console.log("New Form ID", resp[0]?.id);
+      if (resp[0]?.id) {
         route.push("/dashboard/edit-form/" + resp[0].id);
       }
       setLoading(false);

@@ -14,10 +14,7 @@ async function FormList() {
     .where(eq(JsonForms.createdBy, user?.primaryEmailAddress?.emailAddress))
     .orderBy(desc(JsonForms.id));
   return (
-    
     <div className="py-10 px-4">
-      
-
       <h2 className="font-bold text-3xl">Your Forms</h2>
       <div className="mt-5 flex flex-row flex-wrap gap-5">
         {formList.length > 0 ? (

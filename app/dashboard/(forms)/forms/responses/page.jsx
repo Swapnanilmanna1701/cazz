@@ -1,4 +1,4 @@
-//@ts-nocheck
+
 import { FormListItemResp } from "@/components/forms/response/FormListItemResp";
 import { db } from "@/utils/db/dbConfig";
 import { JsonForms } from "@/utils/db/schema";
