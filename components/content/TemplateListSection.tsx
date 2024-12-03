@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Templates from '@/app/(data)/Templates'
 import React, { useEffect, useState } from 'react'
 import TemplateCard from './TemplateCard'
