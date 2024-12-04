@@ -47,8 +47,8 @@ const contentTypes = [
   { value: "linkedin", label: "LinkedIn Post" },
 ];
 
-const MAX_TWEET_LENGTH = 280;
-const POINTS_PER_GENERATION = 5;
+const MAX_TWEET_LENGTH = 500;
+const POINTS_PER_GENERATION = 2;
 
 interface HistoryItem {
   id: number;
