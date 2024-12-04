@@ -75,23 +75,24 @@ export default function CreateForm() {
     <div>
       <Button onClick={() => setOpenDailog(true)}>+ Create Form</Button>
       <Dialog open={openDialog}>
-        <DialogContent>
+        <DialogContent className="bg-white text-black">
           <DialogHeader>
             <DialogTitle>Create new form </DialogTitle>
             <DialogDescription>
               <Textarea
-                className="my-2"
+                className="my-2 text-black"
                 onChange={(event) => setUserInput(event.target.value)}
                 placeholder="Write descrition of your form"
               />
-              <div className="flex gap-2 my-3 justify-end">
+              <div className="flex gap-2 my-3 justify-end text-black">
                 <Button
+                className="bg-red-700 text-white hover:bg-red-600"
                   onClick={() => setOpenDailog(false)}
                   variant="destructive"
                 >
                   Cancel
                 </Button>
-                <Button disabled={loading} onClick={() => onCreateForm()}>
+                <Button className="bg-blue-700 text-white hover:bg-blue-600" disabled={loading} onClick={() => onCreateForm()}>
                   {loading ? <Loader2 className="animate-spin" /> : "Create"}
                 </Button>
               </div>

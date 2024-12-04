@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { RWebShare } from "react-web-share";
 import { toast } from "sonner";
+//import Navbar from "@/components/Navbar";
 
 function EditForm({ params }) {
   const { user } = useUser();
@@ -107,6 +108,7 @@ function EditForm({ params }) {
   return (
     <>
       <div className="w-full h-full mb-8 flex flex-col gap-8 md:p-5">
+      
         <div className="space-y-4">
           <div className="flex justify-between items-center">
             <Button

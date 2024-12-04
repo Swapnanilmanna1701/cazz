@@ -19,7 +19,7 @@ async function Responses() {
 
         <div className="flex flex-row flex-wrap gap-5">
           {formList &&
-            formList.map((form, index) => (
+            formList?.map((form, index) => (
               <FormListItemResp
                 key={index}
                 formRecord={form}

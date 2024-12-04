@@ -33,6 +33,7 @@ function LiveAiForm({ params }) {
         backgroundImage: record?.background,
       }}
     >
+      
       {record && (
         <FormUi
           jsonForm={jsonForm}
@@ -49,7 +50,7 @@ function LiveAiForm({ params }) {
         className="flex gap-2 items-center bg-zinc-800/30 backdrop-blur-md text-white px-3 py-1 rounded-full fixed bottom-5 left-5 cursor-pointer text-xs"
         href={"/"}
       >
-        Made using Brave{" "}
+        Made using Cazz{" "}
         <Image src={"/logo-base-256x256.png"} width={26} height={26} />
       </Link>
     </div>
