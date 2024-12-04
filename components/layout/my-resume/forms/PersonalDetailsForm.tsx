@@ -53,7 +53,7 @@ const PersonalDetailsForm = ({ params }: { params: { id: string } }) => {
 
   return (
     <div className="p-5 shadow-lg rounded-lg border-t-primary-700 border-t-4 bg-white">
-      <h2 className="text-lg font-semibold leading-none tracking-tight">
+      <h2 className="text-lg font-semibold leading-none tracking-tight text-black">
         Personal Details
       </h2>
       <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
@@ -63,7 +63,7 @@ const PersonalDetailsForm = ({ params }: { params: { id: string } }) => {
       <form onSubmit={onSave}>
         <div className="grid grid-cols-2 mt-5 gap-3">
           <div className="space-y-2">
-            <label className="mt-2 text-slate-700 font-semibold">
+            <label className="mt-2 text-black font-semibold">
               First Name:
             </label>
             <Input
@@ -71,7 +71,7 @@ const PersonalDetailsForm = ({ params }: { params: { id: string } }) => {
               defaultValue={formData?.firstName}
               required
               onChange={handleInputChange}
-              className="no-focus"
+              className="no-focus text-black"
             />
           </div>
           <div className="space-y-2">
@@ -83,7 +83,7 @@ const PersonalDetailsForm = ({ params }: { params: { id: string } }) => {
               required
               onChange={handleInputChange}
               defaultValue={formData?.lastName}
-              className="no-focus"
+              className="no-focus text-black"
             />
           </div>
           <div className="col-span-2 space-y-2">
@@ -95,7 +95,7 @@ const PersonalDetailsForm = ({ params }: { params: { id: string } }) => {
               required
               onChange={handleInputChange}
               defaultValue={formData?.jobTitle}
-              className="no-focus"
+              className="no-focus text-black"
             />
           </div>
           <div className="col-span-2 space-y-2">
@@ -107,7 +107,7 @@ const PersonalDetailsForm = ({ params }: { params: { id: string } }) => {
               required
               defaultValue={formData?.address}
               onChange={handleInputChange}
-              className="no-focus"
+              className="no-focus text-black"
             />
           </div>
           <div className="space-y-2">
@@ -117,7 +117,7 @@ const PersonalDetailsForm = ({ params }: { params: { id: string } }) => {
               required
               defaultValue={formData?.phone}
               onChange={handleInputChange}
-              className="no-focus"
+              className="no-focus text-black"
             />
           </div>
           <div className="space-y-2">
@@ -127,7 +127,7 @@ const PersonalDetailsForm = ({ params }: { params: { id: string } }) => {
               required
               defaultValue={formData?.email}
               onChange={handleInputChange}
-              className="no-focus"
+              className="no-focus text-black"
             />
           </div>
         </div>

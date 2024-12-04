@@ -84,8 +84,8 @@ const SummaryForm = ({ params }: { params: { id: string } }) => {
 
   return (
     <div>
-      <div className="p-5 shadow-lg rounded-lg border-t-primary-700 border-t-4 bg-white">
-        <h2 className="text-lg font-semibold leading-none tracking-tight">
+      <div className="p-5 shadow-lg rounded-lg border-t-primary-700 border-t-4 bg-white text-black">
+        <h2 className="text-lg text-black font-semibold leading-none tracking-tight">
           Summary
         </h2>
         <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">

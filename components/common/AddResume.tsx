@@ -125,7 +125,7 @@ const AddResume = ({ userId }: { userId: string | undefined }) => {
                 <button
                   type="button"
                   onClick={() => setOpenDialog(false)}
-                  className="btn-ghost bg-red-600 text-white hover:bg-red-500 border-radius-md"
+                  className=" bg-red-600 text-white hover:bg-red-500 border-radius-md"
                   disabled={isLoading}
                 >
                   Cancel
