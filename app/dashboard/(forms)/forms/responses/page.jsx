@@ -1,5 +1,5 @@
-"use client"
-/*
+"use server"
+
 import { FormListItemResp } from "@/components/forms/response/FormListItemResp";
 import { db } from "@/utils/db/dbConfig";
 import { JsonForms } from "@/utils/db/schema";
@@ -19,8 +19,7 @@ async function Responses() {
           <h2 className="font-bold text-3xl">Responses</h2>
   
           <div className="flex flex-row flex-wrap gap-5">
-            {formList &&
-              formList?.map((form, index) => (
+            {Array.isArray(formList) && formList?.map((form, index) => (
                 <FormListItemResp
                   key={index}
                   formRecord={form}
@@ -34,4 +33,4 @@ async function Responses() {
 }
 
 export default Responses;
-*/
+

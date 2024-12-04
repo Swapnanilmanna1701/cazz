@@ -4,7 +4,7 @@ import { desc, eq } from "drizzle-orm";
 import FormListItem from "./FormListItem";
 import { currentUser } from "@clerk/nextjs/server";
 import CreateForm from "./CreateForm";
-//import { Navbar } from "@/components/Navbar";
+///import { Navbar } from "@/components/Navbar";
 async function FormList() {
   const user = await currentUser();
 
@@ -18,7 +18,7 @@ async function FormList() {
       <h2 className="font-bold text-3xl">Your Forms</h2>
       <div className="mt-5 flex flex-row flex-wrap gap-5">
         {formList.length > 0 ? (
-          formList.map((form) => (
+          formList?.map((form,) => (
             <FormListItem
               key={form.id}
               formRecord={form}

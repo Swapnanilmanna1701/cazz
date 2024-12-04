@@ -1,15 +1,15 @@
 import GradientBg from "@/app/_data/GradientBg";
 import Style from "@/app/_data/Style";
 import Themes from "@/app/_data/Themes";
-import { Button } from "@/app/components/ui/button";
-import { Checkbox } from "@/app/components/ui/checkbox";
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/app/components/ui/select";
+} from "@/components/ui/select";
 import React, { useState } from "react";
 
 function Controller({
