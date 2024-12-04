@@ -98,20 +98,20 @@ function AddNewInterview() {
         </h2>
       </div>
       <Dialog open={openDailog}>
-        <DialogContent className="max-w-2xl">
+        <DialogContent className="max-w-2xl bg-white text-black">
           <DialogHeader>
             <DialogTitle className="text-2xl">
               Tell us more about your job interviwing
             </DialogTitle>
             <DialogDescription>
               <form onSubmit={onSubmit}>
-                <div>
-                  <h2>
+                <div className="text-black">
+                  <h2 className="text-black">
                     Add Details about yout job position/role, Job description
                     and years of experience
                   </h2>
 
-                  <div className="mt-7 my-3">
+                  <div className="mt-7 my-3 text-black">
                     <label>Job Role/Job Position</label>
                     <Input
                       placeholder="Ex. Full Stack Developer"
@@ -140,13 +140,14 @@ function AddNewInterview() {
                 </div>
                 <div className="flex gap-5 justify-end">
                   <Button
+                  className="text-white bg-red-500"
                     type="button"
                     variant="ghost"
                     onClick={() => setOpenDailog(false)}
                   >
                     Cancel
                   </Button>
-                  <Button type="submit" disabled={loading}>
+                  <Button type="submit" disabled={loading} className="bg-blue-700 text-white hover:bg-blue-500">
                     {loading ? (
                       <>
                         <LoaderCircle className="animate-spin" /> Generating
