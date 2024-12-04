@@ -85,10 +85,10 @@ const AddResume = ({ userId }: { userId: string | undefined }) => {
       </div>
 
       <Dialog open={openDialog} onOpenChange={setOpenDialog}>
-        <DialogContent>
+        <DialogContent className="bg-white text-black">
           <DialogHeader>
             <DialogTitle>Create New Resume</DialogTitle>
-            <DialogDescription>
+            <DialogDescription className="text-slate-800">
               Enter the title of your resume here. Click create when you&apos are
               done.
             </DialogDescription>
@@ -125,12 +125,12 @@ const AddResume = ({ userId }: { userId: string | undefined }) => {
                 <button
                   type="button"
                   onClick={() => setOpenDialog(false)}
-                  className="btn-ghost"
+                  className="btn-ghost bg-red-600 text-white hover:bg-red-500 border-radius-md"
                   disabled={isLoading}
                 >
                   Cancel
                 </button>
-                <Button type="submit" disabled={isLoading}>
+                <Button type="submit" disabled={isLoading} className="bg-blue-700 text-white hover:bg-blue-600">
                   {isLoading ? (
                     <>
                       <Loader2 size={20} className="animate-spin" /> &nbsp;
