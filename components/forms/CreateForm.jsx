@@ -26,7 +26,7 @@ const PROMPT =
   "On Basis of description create JSON form with formTitle, formHeading along with fieldName, FieldTitle, FieldType, Placeholder, label , required fields, and checkbox and select field type options will be in array only and in JSON format";
 
 export default function CreateForm() {
-  const [openDialog, setOpenDailog] = useState(false);
+  const [openDialog, setOpenDialog] = useState(false);
   const [userInput, setUserInput] = useState();
   const [loading, setLoading] = useState();
   const { user } = useUser();
@@ -73,7 +73,7 @@ export default function CreateForm() {
   };
   return (
     <div>
-      <Button onClick={() => setOpenDailog(true)}>+ Create Form</Button>
+      <Button onClick={() => setOpenDialog(true)}>+ Create Form</Button>
       <Dialog open={openDialog}>
         <DialogContent className="bg-white text-black">
           <DialogHeader>
@@ -82,12 +82,12 @@ export default function CreateForm() {
               <Textarea
                 className="my-2 text-black"
                 onChange={(event) => setUserInput(event.target.value)}
-                placeholder="Write descrition of your form"
+                placeholder="Write description of your form"
               />
               <div className="flex gap-2 my-3 justify-end text-black">
                 <Button
                 className="bg-red-700 text-white hover:bg-red-600"
-                  onClick={() => setOpenDailog(false)}
+                  onClick={() => setOpenDialog(false)}
                   variant="destructive"
                 >
                   Cancel

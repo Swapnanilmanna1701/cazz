@@ -17,7 +17,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/app/components/ui/alert-dialog";
+} from "@/components/ui/alert-dialog";
 
 function FieldEdit({ defaultValue, onUpdate, deleteField }) {
   const [label, setLabel] = useState(defaultValue?.label);
