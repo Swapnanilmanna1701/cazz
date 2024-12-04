@@ -96,7 +96,7 @@ function AddNewInterview() {
         </h2>
       </div>
       <Dialog open={openDailog}>
-        <DialogContent className="max-w-2xl">
+        <DialogContent className="max-w-2xl bg-white text-black">
           <DialogHeader>
             <DialogTitle className="text-2xl">
               Tell us more about your job interviwing
@@ -104,12 +104,12 @@ function AddNewInterview() {
             <DialogDescription>
               <form onSubmit={onSubmit}>
                 <div>
-                  <h2>
+                  <h2 className="text-black">
                     Add Details about yout job position/role, Job description
                     and years of experience
                   </h2>
 
-                  <div className="mt-7 my-3">
+                  <div className="mt-7 my-3 text-black">
                     <label>Job Role/Job Position</label>
                     <Input
                       placeholder="Ex. Full Stack Developer"
@@ -117,7 +117,7 @@ function AddNewInterview() {
                       onChange={(event) => setJobPosition(event.target.value)}
                     />
                   </div>
-                  <div className="my-3">
+                  <div className="my-3 text-black">
                     <label>Job Description/ Tech Stack (In Short)</label>
                     <Textarea
                       placeholder="Ex. React, Angular, NodeJs, MySql etc"
@@ -125,7 +125,7 @@ function AddNewInterview() {
                       onChange={(event) => setJobDesc(event.target.value)}
                     />
                   </div>
-                  <div className="my-3">
+                  <div className="my-3 text-black">
                     <label>Years of experience</label>
                     <Input
                       placeholder="Ex.5"
@@ -139,12 +139,13 @@ function AddNewInterview() {
                 <div className="flex gap-5 justify-end">
                   <Button
                     type="button"
+                    className="bg-red-700 text-white hover:bg-red-500"
                     variant="ghost"
                     onClick={() => setOpenDailog(false)}
                   >
                     Cancel
                   </Button>
-                  <Button type="submit" disabled={loading}>
+                  <Button type="submit" disabled={loading} className="bg-blue-700 text-white hover:bg-blue-500">
                     {loading ? (
                       <>
                         <LoaderCircle className="animate-spin" /> Generating

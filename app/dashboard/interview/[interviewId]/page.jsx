@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { db } from "@/lib/utils/db";
-import { MockInterview } from "@/lib/utils/schema";
+import { db } from "@/utils/db/dbConfig";
+import { MockInterview } from "@/utils/db/schema";
 import { eq } from "drizzle-orm";
 import { Lightbulb, WebcamIcon } from "lucide-react";
 import Link from "next/link";

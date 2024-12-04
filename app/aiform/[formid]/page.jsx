@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 "use client";
 
 import FormUi from "@/components/forms/edit-form/FormUi";
-import { db } from "@/lib/utils/db";
-import { JsonForms } from "@/lib/utils/schema";
+import { db } from "@/utils/db/dbConfig";
+import { JsonForms } from "@/utils/db/schema";
 import { eq } from "drizzle-orm";
 import Image from "next/image";
 import Link from "next/link";
