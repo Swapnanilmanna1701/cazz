@@ -17,8 +17,8 @@ function DashboardLayout() {
 
       <Tabs defaultValue="Forms" className="w-full">
         <TabsList>
-          <TabsTrigger value="Forms">Forms</TabsTrigger>
-          <TabsTrigger value="Responses">Responses</TabsTrigger>
+          <TabsTrigger value="Forms" className="bg-blue-700 text-white hover:bg-blue-500">Forms</TabsTrigger>
+          <TabsTrigger value="Responses" className="bg-blue-700 text-white hover:bg-blue-500">Responses</TabsTrigger>
         </TabsList>
         <TabsContent value="Forms">
           <Suspense

@@ -3,8 +3,8 @@
 import { Button } from "@/components/ui/button";
 import Controller from "@/components/forms/edit-form/Controller";
 import FormUi from "@/components/forms/edit-form/FormUi";
-import { db } from "@/lib/utils/db";
-import { JsonForms } from "@/lib/utils/schema";
+import { db } from "@/utils/db/dbConfig";
+import { JsonForms } from "@/utils/db/schema";
 import { useUser } from "@clerk/nextjs";
 import { and, eq } from "drizzle-orm";
 import { ArrowLeft, Share2, SquareArrowOutUpRight } from "lucide-react";
