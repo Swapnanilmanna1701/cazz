@@ -24,7 +24,7 @@ function Interview({ params }) {
     setInterviewData(result[0]);
   };
   return (
-    <div className="my-10 bg-white text-black">
+    <div className="my-10">
       <h2 className="font-bold text-2xl">Let&apos;s Get Started</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="flex flex-col my-5 gap-5 ">

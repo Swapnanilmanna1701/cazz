@@ -1,7 +1,6 @@
-
 "use client";
 
-
+import generateQuestions from "@/actions/generateQuestions";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -10,7 +9,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-//import generateQuestions from "@/actions/generateQuesions";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { db } from "@/utils/db/dbConfig";
@@ -98,20 +96,20 @@ function AddNewInterview() {
         </h2>
       </div>
       <Dialog open={openDailog}>
-        <DialogContent className="max-w-2xl bg-white text-black">
+        <DialogContent className="max-w-2xl">
           <DialogHeader>
             <DialogTitle className="text-2xl">
               Tell us more about your job interviwing
             </DialogTitle>
             <DialogDescription>
               <form onSubmit={onSubmit}>
-                <div className="text-black">
-                  <h2 className="text-black">
+                <div>
+                  <h2>
                     Add Details about yout job position/role, Job description
                     and years of experience
                   </h2>
 
-                  <div className="mt-7 my-3 text-black">
+                  <div className="mt-7 my-3">
                     <label>Job Role/Job Position</label>
                     <Input
                       placeholder="Ex. Full Stack Developer"
@@ -140,14 +138,13 @@ function AddNewInterview() {
                 </div>
                 <div className="flex gap-5 justify-end">
                   <Button
-                  className="text-white bg-red-500"
                     type="button"
                     variant="ghost"
                     onClick={() => setOpenDailog(false)}
                   >
                     Cancel
                   </Button>
-                  <Button type="submit" disabled={loading} className="bg-blue-700 text-white hover:bg-blue-500">
+                  <Button type="submit" disabled={loading}>
                     {loading ? (
                       <>
                         <LoaderCircle className="animate-spin" /> Generating

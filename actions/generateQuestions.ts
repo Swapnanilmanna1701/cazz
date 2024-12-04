@@ -2,16 +2,18 @@
 
 import { generateObject } from "ai";
 import { z } from "zod";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { createOpenAI } from "@ai-sdk/openai";
 
-const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY as string);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+export const groq = createOpenAI({
+  baseURL: "https://api.groq.com/openai/v1",
+  apiKey: process.env.GROQ_API_KEY,
+});
 export async function generateQuestions(inputPrompt: string) {
   console.log(inputPrompt);
   const {
     object: { questions },
   } = await generateObject({
-    model: model.("mixtral-8x7b-32768"),
+    model: groq.chat("llama3-8b-8192"),
     schema: z.object({
       questions: z.array(
         z.object({

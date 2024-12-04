@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
@@ -10,7 +10,11 @@ interface Interview {
   createdAt: string;
 }
 
-export default function InterviewItemCard({ interview }: { interview: Interview }) {
+export default function InterviewItemCard({
+  interview,
+}: {
+  interview: Interview;
+}) {
   const router = useRouter();
 
   const onStart = () => {
