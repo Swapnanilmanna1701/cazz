@@ -9,7 +9,7 @@ import cohort3Image from '@/assets/existing-cohorts/cohort3.png'
 import fullStackCohort from '@/assets/existing-cohorts/full-stack-cohort.png'
 
 import { Course, CourseCard } from "./courses";
-import Marquee from "../ui/marquee";
+import Marquee from "@/components/ui/marquee";
 
 
 const courseData = [

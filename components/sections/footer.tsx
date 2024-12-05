@@ -1,7 +1,7 @@
-import { siteConfig } from 'lib/config'
+import { siteConfig } from '@/lib/config'
 import Image from 'next/image'
 import Link from 'next/link'
-import devLogo from '~/public/logo.svg'
+import devLogo from '@/public/logo.svg'
 
 export default function Footer() {
    return (

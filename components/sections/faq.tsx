@@ -1,11 +1,11 @@
-import Section from 'components/section'
+import Section from '@/components/section'
 import {
    Accordion,
    AccordionContent,
    AccordionItem,
    AccordionTrigger,
-} from 'components/ui/accordion'
-import { siteConfig } from 'lib/config'
+} from '@/components/ui/accordion'
+import { siteConfig } from '@/lib/config'
 
 export default function FAQ() {
    return (

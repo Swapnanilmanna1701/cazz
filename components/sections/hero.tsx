@@ -2,12 +2,12 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { RainbowButton } from '../ui/rainbow-button'
-import ShinyButton from '../ui/shiny-button'
-import { siteConfig } from '~/lib/config'
+import { RainbowButton } from '@/components/ui/rainbow-button'
+import ShinyButton from '@/components/ui/shiny-button'
+import { siteConfig } from '@/lib/config'
 import Image from 'next/image'
-import heroImage from '~/public/heroImage.png'
-import { BorderBeam } from '../ui/border-beam'
+import heroImage from '@/public/heroImage.png'
+import { BorderBeam } from '@/components/ui/border-beam'
 
 const ease = [0.16, 1, 0.3, 1]
 

@@ -1,10 +1,10 @@
 'use client'
 
-import Marquee from 'components/ui/marquee'
+import Marquee from '@/components/ui/marquee'
 import Section from '@/components/section'
 import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
-import { ClientTweetCard } from '../ui/client-tweet-card'
+import { ClientTweetCard } from '@/components/ui/client-tweet-card'
 
 const tweetIds = [
    '1805677333350957154',
