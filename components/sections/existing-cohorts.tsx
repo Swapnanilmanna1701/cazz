@@ -1,12 +1,12 @@
 'use client';
 
-import Section from "../section";
+import Section from "@/components/section";
 import { motion } from "framer-motion";
 
-import cohort1Image from '~/assets/existing-cohorts/cohort1.png'
-import cohort2Image from '~/assets/existing-cohorts/cohort2.png'
-import cohort3Image from '~/assets/existing-cohorts/cohort3.png'
-import fullStackCohort from '~/assets/existing-cohorts/full-stack-cohort.png'
+import cohort1Image from '@/assets/existing-cohorts/cohort1.png'
+import cohort2Image from '@/assets/existing-cohorts/cohort2.png'
+import cohort3Image from '@/assets/existing-cohorts/cohort3.png'
+import fullStackCohort from '@/assets/existing-cohorts/full-stack-cohort.png'
 
 import { Course, CourseCard } from "./courses";
 import Marquee from "../ui/marquee";

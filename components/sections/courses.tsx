@@ -1,16 +1,16 @@
 'use client';
 
-import Section from "../section";
+import Section from "@/components/section";
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import { Card, CardFooter, } from "../ui/card";
-import ShinyButton from "../ui/shiny-button";
+import ShinyButton from "@/components/ui/shiny-button";
 
-import webdevImage from '~/assets/course/webdev.png'
-import webDevOpsImage from '~/assets/course/webDevOps.png'
-import web3CohortImage from '~/assets/course/web3Cohort.png'
-import cohort3Image from '~/assets/course/cohort3.0.png'
-import devOpsCohortImage from '~/assets/course/devOpsCohort.png'
+import webdevImage from '@/assets/course/webdev.png'
+import webDevOpsImage from '@/assets/course/webDevOps.png'
+import web3CohortImage from '@/assets/course/web3Cohort.png'
+import cohort3Image from '@/assets/course/cohort3.0.png'
+import devOpsCohortImage from '@/assets/course/devOpsCohort.png'
 import Link from "next/link";
 
 

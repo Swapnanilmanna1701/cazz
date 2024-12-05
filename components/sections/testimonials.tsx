@@ -1,8 +1,8 @@
 'use client'
 
 import Marquee from 'components/ui/marquee'
-import Section from 'components/section'
-import { cn } from 'lib/utils'
+import Section from '@/components/section'
+import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
 import { ClientTweetCard } from '../ui/client-tweet-card'
 
