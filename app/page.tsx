@@ -10,13 +10,15 @@ import {
   ArrowRightIcon,
   CheckCircleIcon,
   SparklesIcon,
-  TrendingUpIcon,
+  
   ZapIcon,
   RocketIcon,
+  YoutubeIcon,
 } from "lucide-react";
 import { auth } from "@clerk/nextjs/server";
 import { SignUpButton } from "@clerk/nextjs";
 import { Navbar } from "@/components/Navbar";
+import Spline from '@splinetool/react-spline/next';
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -35,7 +37,7 @@ export default function Home() {
           <ZapIcon className="w-10 h-10 text-blue-500 opacity-50" />
         </div>
         <div className="absolute bottom-20 left-1/4 animate-float animation-delay-4000">
-          <TrendingUpIcon className="w-12 h-12 text-green-400 opacity-50" />
+          
         </div>
 
         {/* Hero Section */}
@@ -70,7 +72,7 @@ export default function Home() {
         {/* Features Section */}
         <div className="py-20" id="features">
           <h2 className="text-3xl font-bold mb-16 text-center text-white">
-            Supercharge Your Social Media Presence
+            Major Services We Provided 
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
             {[
@@ -94,6 +96,7 @@ export default function Home() {
                 description:
                   "Craft professional content for your LinkedIn network to establish thought leadership.",
               },
+              
             ].map((feature, index) => (
               <div
                 key={index}
@@ -208,8 +211,11 @@ export default function Home() {
           )}
           <p className="mt-4 text-gray-400">No credit card required</p>
         </div>
-        <Footer/>
+        <Footer />
       </main>
+      <Spline
+        scene="https://prod.spline.design/MytTi80smgNGtE-h/scene.splinecode" 
+      />
     </div>
   );
 }

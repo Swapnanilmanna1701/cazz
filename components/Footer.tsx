@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import SparklesText from "@/components/ui/sparklestxt";
 import {  Zap } from "lucide-react";
+//import Spline from '@splinetool/react-spline/next';
+
 
 // MIDDLE LINKS DATA
 interface ProductType {
@@ -153,7 +155,11 @@ export function Footer  () {
           </div>
         </div>
       </div>
+      <div>
+      
+      </div>
     </div>
+    
   );
 };
 

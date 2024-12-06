@@ -11,12 +11,10 @@ export default function Home() {
   return (
     <main>
       <Navbar />
-
       <Hero />
       <Courses />
       <ExistingCohorts />
       <Testimonials />
-
       <Footer />
     </main>
   );
