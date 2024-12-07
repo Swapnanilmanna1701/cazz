@@ -26,11 +26,75 @@ const config: Config = {
       },
       animation: {
         'glow-purple': 'glow 2s infinite',
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        white: "#ffffff",
+        black: "#000000",
+        lightblue: "#DAEBFF",
+        lightgrey: "#AEC7E4",
+        navyblue: "#002834",
+        beach: "#8EA9C1",
+        circlebg: "rgba(77, 213, 143, 0.25)",
+        darkblue: " #000321",
+        offwhite: "rgba(255, 255, 255, 0.75);",
+        bordertop: "rgba(196, 196, 196, 0.5);",
+        darkgray: "#90A3B4",
+        babyblue: "#E2F3F9",
+        grey500: "#ECECEC",
+        bluegray: "#7D82A1",
+        bluegrey: "#7C8F9E",
+        midnightblue: "#183B56",
+        midblue: "#00276F",
+        bluebg: "rgba(47, 184, 227, 0.2)",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
       },
 
     },
   },
   plugins: [
+    require("daisyui"),
+    require("tailwindcss-animate"),
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(

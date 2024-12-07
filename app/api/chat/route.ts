@@ -1,23 +1,30 @@
-// Make sure to include these imports:
-import { GoogleGenerativeAI } from "@google/generative-ai";
-//import { StreamingTextResponse, streamText } from "ai";
-const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY as string);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+import { google } from "@ai-sdk/google";
+import { GoogleGenerativeAI } from '@google/generative-ai';
 
+import { streamObject } from "ai";
+import { z } from "zod";
 export const dynamic = "force-dynamic";
-const prompt = "You are a proffessional job counsellor and psychologist who talks in light and casual way , always ready to help poeple in need of job and career advice, mental health ,etc.";
+export const maxDuration = 30;
+const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY as string);
 
 
 
-export async function POST() {
-    try {
-      //const { messages } = await req.json();
-  
-      const result = await model.generateContent(prompt);
-console.log(result.response.text());
+export async function POST(req: Request) {
+  const context = await req.json();
 
-    } catch (error) {
-      console.log(error);
-      throw error;
-    }
-  }
+  const result = await streamObject({
+    model: google("gemini-1.5-pro-latest"),
+    system:
+      "You are the best coder and code generator. you take the code and give the converted code in the perfect format with some bit of explanations. you will reject everything except codes.",
+    prompt: context,
+    schemaDescription: "Code and its explanation",
+    schema: z.object({
+      code: z.string(),
+      explanation: z.string(),
+    }),
+  });
+
+  return result.toTextStreamResponse();
+}
+
+

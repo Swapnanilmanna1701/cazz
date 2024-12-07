@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 import { Button } from "@/components/ui/button";
 import { Suspense } from "react";
@@ -63,7 +64,7 @@ export default function Dashboard({}: Props) {
                 </Link>
               </Button>
             </CardContent>
-          </Card>
+          </Card> 
           <Card className="hover:-translate-y-1 shadow hover:shadow-blue-500/40 hover:shadow-md duration-500 transition-all border border-cyan-500">
             <CardHeader className="flex gap-4">
               <TableProperties size={50} />
