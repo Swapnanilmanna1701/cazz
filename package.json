@@ -11,12 +11,14 @@
     "db:studio": "npx drizzle-kit studio"
   },
   "dependencies": {
+    "@ai-sdk/google": "^1.0.5",
     "@ai-sdk/openai": "^1.0.6",
     "@ai-sdk/react": "^0.0.64",
     "@clerk/nextjs": "^5.7.5",
     "@clerk/themes": "^2.1.37",
     "@google/generative-ai": "^0.21.0",
     "@hookform/resolvers": "^3.9.0",
+    "@monaco-editor/react": "^4.6.0",
     "@neondatabase/serverless": "^0.10.1",
     "@radix-ui/react-alert-dialog": "^1.1.2",
     "@radix-ui/react-avatar": "^1.1.1",
