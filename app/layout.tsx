@@ -19,7 +19,7 @@ export default function RootLayout({
       }}
     >
       <html lang="en" suppressHydrationWarning>
-        <body className={`${inter.className} bg-black text-white antialiased`}>
+        <body className={`${inter.className} bg-black text-white antialiased bg-grid-white/[0.02]`}>
           <ThemeProvider attribute="class" defaultTheme="dark">
             {children}
           </ThemeProvider>

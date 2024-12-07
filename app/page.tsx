@@ -13,13 +13,15 @@ import {
   
   ZapIcon,
   RocketIcon,
-  YoutubeIcon,
+  
 } from "lucide-react";
 import { auth } from "@clerk/nextjs/server";
 import { SignUpButton } from "@clerk/nextjs";
 import { Navbar } from "@/components/Navbar";
-import Spline from '@splinetool/react-spline/next';
+//import Spline from '@splinetool/react-spline/next';
 import { Footer } from "@/components/Footer";
+
+
 
 export default function Home() {
   const { userId } = auth();
@@ -212,10 +214,9 @@ export default function Home() {
           <p className="mt-4 text-gray-400">No credit card required</p>
         </div>
         <Footer />
+        
       </main>
-      <Spline
-        scene="https://prod.spline.design/MytTi80smgNGtE-h/scene.splinecode" 
-      />
+      
     </div>
   );
 }
