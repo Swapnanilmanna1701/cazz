@@ -1,6 +1,6 @@
 //import FAQPage from "@/components/FAQ";
 //import Footer from "@/components/Footer";
-import { ScrollBody } from "@/components/ScrollBody";
+//import { ScrollBody } from "@/components/ScrollBody";
 //import Testimonials from "@/components/Testimonial";
 //import WalletContextProvider from "@/components/WaletContextProvider";
 import { HeroBody } from "@/components/Hero";
@@ -14,7 +14,7 @@ export default function Home() {
         <Navbar />
       
       <HeroBody />
-      <ScrollBody />
+      
       {/* <Lamp /> */}
       
       

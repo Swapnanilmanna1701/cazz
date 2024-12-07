@@ -47,6 +47,7 @@
     "mailtrap": "^3.4.0",
     "marked": "^15.0.3",
     "micro": "^10.0.1",
+    "mini-svg-data-uri": "^1.4.4",
     "moment": "^2.30.1",
     "mongoose": "^8.7.3",
     "next": "14.2.15",

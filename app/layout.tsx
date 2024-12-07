@@ -4,8 +4,14 @@ import { dark } from "@clerk/themes";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
+export const metadata: Metadata = {
+  title: "Cazz",
+  description: "Your Smartest Companion",
+};
+
 
 export default function RootLayout({
   children,
