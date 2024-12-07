@@ -1,6 +1,6 @@
 import { db } from "./dbConfig";
 import { Users, Subscriptions, GeneratedContent } from "./schema";
-import { eq, sql, and, desc } from "drizzle-orm";
+import { eq, sql, desc } from "drizzle-orm";
 import { sendWelcomeEmail } from "../mailtrap";
 
 export async function updateUserPoints(userId: string, points: number) {
