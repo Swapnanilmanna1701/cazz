@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { Particles } from "@/components/ui/particles";
+
 import  AnimationContainer from "@/components/ui/animation-container"
 
 const Footer = () => {
@@ -6,6 +8,13 @@ const Footer = () => {
         <div className="flex flex-col relative items-center justify-center border-t border-border pt-16 pb-8 md:pb-0 px-6 lg:px-8 w-full max-w-6xl mx-auto lg:pt-32 bg-[radial-gradient(35%_128px_at_50%_0%,theme(backgroundColor.white/8%),transparent)]">
 
             <div className="absolute top-0 left-1/2 right-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-1.5 bg-foreground rounded-full"></div>
+            <Particles
+                        className="absolute inset-0 w-full -z-10"
+                        quantity={40}
+                        ease={10}
+                        color="#d4d4d8"
+                        refresh
+                    />
 
             <div className="grid gap-8 xl:grid-cols-3 xl:gap-8 w-full">
 

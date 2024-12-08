@@ -20,9 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider
-      appearance={{
-        baseTheme: dark,
-      }}
+      
     >
       <html lang="en" suppressHydrationWarning>
         <body className={`${inter.className} bg-black text-white antialiased bg-grid-white/[0.02]`}>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
+import Footer from "@/components/Footer1"
 
 const docsSections = [
   {
@@ -64,6 +65,7 @@ export default function DocsPage() {
             </div>
           ))}
         </div>
+        
       </main>
     </div>
   );

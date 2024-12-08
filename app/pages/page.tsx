@@ -10,7 +10,8 @@ export default function Home() {
     <div className="scroll-smooth">
       <Navbar />
       <HeroBody />
-      {/* <Lamp /> */}
+      
+      
     </div>
   );
 }

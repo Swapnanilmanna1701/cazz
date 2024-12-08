@@ -1,8 +1,8 @@
 import Link from "next/link";
 //import { useState, useEffect } from 'react';
 //import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
-import AnimationContainer from "@/components/ui/animation-container";
-import  Footer  from "@/components/Footer";
+//import AnimationContainer from "@/components/ui/animation-container";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 //import { RainbowButton } from '@/components/ui/rainbow-button'
 //import Blobby from "@/components/ui/blobby";
@@ -25,6 +25,7 @@ import RotatingText from "@/components/ui/RotatingText";
 import { LampContainer } from "@/components/ui/lamp";
 
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
+import Perks from "@/components/perks";
 
 export default function Home() {
   const { userId } = auth();
@@ -125,55 +126,7 @@ export default function Home() {
         </div>
 
         {/* Benefits Section */}
-        <div className="py-20 bg-gray-900 rounded-3xl my-20 relative">
-          <div className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-3xl">
-            <svg
-              className="absolute w-full h-full"
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M0,0 L100,0 L100,100 L0,100 Z"
-                fill="url(#grid-pattern)"
-              />
-            </svg>
-            <defs>
-              <pattern
-                id="grid-pattern"
-                width="10"
-                height="10"
-                patternUnits="userSpaceOnUse"
-              >
-                <path
-                  d="M 10 0 L 0 0 0 10"
-                  fill="none"
-                  stroke="rgba(255,255,255,0.05)"
-                  strokeWidth="0.5"
-                />
-              </pattern>
-            </defs>
-          </div>
-          <div className="relative z-10">
-            <h2 className="text-3xl font-bold mb-12 text-center text-white">
-              Why Choose Our AI Content Generator?
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {[
-                "Save time and effort on content creation",
-                "Consistently produce high-quality posts",
-                "Increase engagement across all platforms",
-                "Stay ahead of social media trends",
-                "Customize content to match your brand voice",
-                "Scale your social media presence effortlessly",
-              ].map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircleIcon className="w-6 h-6 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <Perks />
 
         {/* CTA Section */}
         <div className="text-center py-20 relative">
@@ -222,21 +175,20 @@ export default function Home() {
           <p className="mt-4 text-gray-400">No credit card required</p>
         </div>
         <div>
-        <LampContainer>
-              <div className="flex flex-col items-center justify-center relative w-full text-center">
-                <h2 className="bg-gradient-to-b from-neutral-200 to-neutral-400 py-4 bg-clip-text text-center text-4xl md:text-7xl !leading-[1.15] font-medium font-heading tracking-tight text-transparent mt-8">
-                  Step into the future of link management
-                </h2>
-              </div>
-            </LampContainer>
+          <LampContainer>
+            <div className="flex flex-col items-center justify-center relative w-full text-center">
+              <h2 className="bg-gradient-to-b from-neutral-200 to-neutral-400 py-4 bg-clip-text text-center text-4xl md:text-7xl !leading-[1.15] font-medium font-heading tracking-tight text-transparent mt-8">
+                Step into the future of link management
+              </h2>
+            </div>
+          </LampContainer>
         </div>
+
         <Footer />
-            
-          
+
         <div className="h-[20rem] lg:h-[20rem] hidden md:flex items-center justify-center">
           <TextHoverEffect text="CAZZAI" />
         </div>
-        
       </main>
     </div>
   );
