@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { useState, useEffect } from 'react';
+
 import { Button } from "@/components/ui/button";
 //import { RainbowButton } from '@/components/ui/rainbow-button'
 //import Blobby from "@/components/ui/blobby";
@@ -19,12 +21,17 @@ import { auth } from "@clerk/nextjs/server";
 import { SignUpButton } from "@clerk/nextjs";
 import { Navbar } from "@/components/Navbar";
 //import Spline from '@splinetool/react-spline/next';
-import { Footer } from "@/components/Footer";
+//import { Footer } from "@/components/Footer";
+import BlurFade from "@/components/magicui/blur-fade";
+import RotatingText from "@/components/ui/RotatingText";
+
+
 
 
 
 export default function Home() {
   const { userId } = auth();
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-gray-100 overflow-hidden pt-20">
@@ -73,9 +80,25 @@ export default function Home() {
 
         {/* Features Section */}
         <div className="py-20" id="features">
-          <h2 className="text-3xl font-bold mb-16 text-center text-white">
-            Major Services We Provided 
-          </h2>
+        
+                    <h1 className="h1">
+                        <BlurFade delay={0.3} blur="6px" duration={1} inView>
+                            <span className="leftSectionTitle">
+                                <span className="leftSectionFirstLine">
+                                    Swasthya Sampark
+                                </span>
+                                <span className="leftSectionSecondLine">
+                                    trusted, online{' '}
+                                    { (
+                                        <RotatingText />
+                                    )} : {(
+                                        <span className="staticText">healthcare</span>
+                                    )}
+                                </span>
+                            </span>
+                        </BlurFade>
+                    </h1>
+                
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
             {[
               {
@@ -213,7 +236,7 @@ export default function Home() {
           )}
           <p className="mt-4 text-gray-400">No credit card required</p>
         </div>
-        <Footer />
+        
         
       </main>
       
