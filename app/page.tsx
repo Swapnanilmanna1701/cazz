@@ -11,8 +11,6 @@ import {
   LinkedinIcon,
   ArrowRightIcon,
   CheckCircleIcon,
-  SparklesIcon,
-  ZapIcon,
   RocketIcon,
 } from "lucide-react";
 import { auth } from "@clerk/nextjs/server";
@@ -22,6 +20,8 @@ import { Navbar } from "@/components/Navbar";
 //import { Footer } from "@/components/Footer";
 import BlurFade from "@/components/magicui/blur-fade";
 import RotatingText from "@/components/ui/RotatingText";
+import { LampContainer } from "@/components/ui/lamp";
+
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 
 export default function Home() {
@@ -33,13 +33,8 @@ export default function Home() {
 
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Decorative elements */}
-        <div className="absolute top-20 left-10 animate-float">
-          <SparklesIcon className="w-8 h-8 text-yellow-400 opacity-50" />
-        </div>
-        <div className="absolute top-40 right-20 animate-float animation-delay-2000">
-          <ZapIcon className="w-10 h-10 text-blue-500 opacity-50" />
-        </div>
-        <div className="absolute bottom-20 left-1/4 animate-float animation-delay-4000"></div>
+        
+        
 
         {/* Hero Section */}
         <div className="text-center py-20 lg:py-32 relative">
@@ -85,7 +80,7 @@ export default function Home() {
               </span>
             </BlurFade>
           </h1>
-          <div className=" py-10 text-center align-column-center">1
+          <div className=" py-10 text-center align-column-center">
             <BlurFade delay={0.1} blur="6px" duration={1} inView>
               <RotatingText />
             </BlurFade>
@@ -227,6 +222,22 @@ export default function Home() {
           )}
           <p className="mt-4 text-gray-400">No credit card required</p>
         </div>
+        <LampContainer>
+                        <div className="flex flex-col items-center justify-center relative w-full text-center">
+                            <h2 className="bg-gradient-to-b from-neutral-200 to-neutral-400 py-4 bg-clip-text text-center text-4xl md:text-7xl !leading-[1.15] font-medium font-heading tracking-tight text-transparent mt-8">
+                                Step into the future of link management
+                            </h2>
+                            <p className="text-muted-foreground mt-6 max-w-md mx-auto">
+                                Experience the cutting-edge solution that transforms how you handle your links. Elevate your online presence with our next-gen platform.
+                            </p>
+                            <div className="mt-6">
+                                <Button>
+                                    Get started for free
+                                    <ArrowRightIcon className="w-4 h-4 ml-2" />
+                                </Button>
+                            </div>
+                        </div>
+                    </LampContainer>
         <div className="h-[20rem] lg:h-[20rem] hidden md:flex items-center justify-center">
           <TextHoverEffect text="CAZZAI" />
         </div>
