@@ -3,8 +3,8 @@ import { useState, useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import '@/styles/RotatingText.css';
 
-const words = ['Triage', 'Health Guidance', 'HealthGPT', 'Symptom Analysis', 'Report Summary'];
-const colors = ['#122431', '#175134', '#922F10', '#141518', '#B66E28'];
+const words = ['LinkedIn Post', 'Interview Preparation', 'Twitter Threads', 'Symptom Analysis', 'Report Summary'];
+const colors = ['#0000FF', '#175134', '#922F10', '#141518', '#B66E28'];
 
 const RotatingText = () => {
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -51,7 +51,7 @@ const RotatingText = () => {
             className="rotatingTextContainer"
             style={{
                 backgroundColor: colors[colorIndex],
-                width: containerWidth ? `${Math.max(containerWidth + 240, 200)}px` : 'auto',
+                width: containerWidth ? `${Math.max(containerWidth + 720, 200)}px` : 'auto',
             }}
         >
             <div ref={textRef} className="rotatingTextContent">
