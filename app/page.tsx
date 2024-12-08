@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState, useEffect } from 'react';
+//import { useState, useEffect } from 'react';
 
 import { Button } from "@/components/ui/button";
 //import { RainbowButton } from '@/components/ui/rainbow-button'
@@ -79,7 +79,7 @@ export default function Home() {
         </div>
 
         {/* Features Section */}
-        <div className="py-20" id="features">
+        <div className="py-20 mb-10" id="features">
         
                     <h1 className="h1">
                         <BlurFade delay={0.3} blur="6px" duration={1} inView>
