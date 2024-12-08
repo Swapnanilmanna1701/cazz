@@ -1,166 +1,149 @@
-import Link from "next/link";
-import Image from "next/image";
-import SparklesText from "@/components/ui/sparklestxt";
-import {  Zap } from "lucide-react";
-//import Spline from '@splinetool/react-spline/next';
+import Link from 'next/link';
+import  AnimationContainer from "@/components/ui/animation-container"
 
+const Footer = () => {
+    return (
+        <div className="flex flex-col relative items-center justify-center border-t border-border pt-16 pb-8 md:pb-0 px-6 lg:px-8 w-full max-w-6xl mx-auto lg:pt-32 bg-[radial-gradient(35%_128px_at_50%_0%,theme(backgroundColor.white/8%),transparent)]">
 
-// MIDDLE LINKS DATA
-interface ProductType {
-  id: number;
-  link: string[];
+            <div className="absolute top-0 left-1/2 right-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-1.5 bg-foreground rounded-full"></div>
+
+            <div className="grid gap-8 xl:grid-cols-3 xl:gap-8 w-full">
+
+                <AnimationContainer delay={0.1}>
+                    <div className="flex flex-col items-start justify-start md:max-w-[200px]">
+                        <div className="flex items-start">
+                            
+                        </div>
+                        <p className="text-muted-foreground mt-4 text-sm text-start">
+                            Manage your links with ease.
+                        </p>
+                        <span className="mt-4 text-neutral-200 text-sm flex items-center">
+                            Made by <Link href="https://github.com/Swapnanilmanna1701" className="font-semibold ml-1">Swapnanil</Link>
+                        </span>
+                    </div>
+                </AnimationContainer>
+
+                <div className="grid-cols-2 gap-8 grid mt-16 xl:col-span-2 xl:mt-0">
+                    <div className="md:grid md:grid-cols-2 md:gap-8">
+                        <AnimationContainer delay={0.2}>
+                            <div className="">
+                                <h3 className="text-base font-medium text-white">
+                                    Product
+                                </h3>
+                                <ul className="mt-4 text-sm text-muted-foreground">
+                                    <li className="mt-2">
+                                        <Link href="" className="hover:text-foreground transition-all duration-300">
+                                            Features
+                                        </Link>
+                                    </li>
+                                    <li className="mt-2">
+                                        <Link href="" className="hover:text-foreground transition-all duration-300">
+                                            Pricing
+                                        </Link>
+                                    </li>
+                                    <li className="mt-2">
+                                        <Link href="" className="hover:text-foreground transition-all duration-300">
+                                            Testimonials
+                                        </Link>
+                                    </li>
+                                    <li className="mt-2">
+                                        <Link href="" className="hover:text-foreground transition-all duration-300">
+                                            Integration
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </AnimationContainer>
+                        <AnimationContainer delay={0.3}>
+                            <div className="mt-10 md:mt-0 flex flex-col">
+                                <h3 className="text-base font-medium text-white">
+                                    Integrations
+                                </h3>
+                                <ul className="mt-4 text-sm text-muted-foreground">
+                                    <li className="">
+                                        <Link href="" className="hover:text-foreground transition-all duration-300">
+                                            Facebook
+                                        </Link>
+                                    </li>
+                                    <li className="mt-2">
+                                        <Link href="" className="hover:text-foreground transition-all duration-300">
+                                            Instagram
+                                        </Link>
+                                    </li>
+                                    <li className="mt-2">
+                                        <Link href="" className="hover:text-foreground transition-all duration-300">
+                                            Twitter
+                                        </Link>
+                                    </li>
+                                    <li className="mt-2">
+                                        <Link href="" className="hover:text-foreground transition-all duration-300">
+                                            LinkedIn
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </AnimationContainer>
+                    </div>
+                    <div className="md:grid md:grid-cols-2 md:gap-8">
+                        <AnimationContainer delay={0.4}>
+                            <div className="">
+                                <h3 className="text-base font-medium text-white">
+                                    Resources
+                                </h3>
+                                <ul className="mt-4 text-sm text-muted-foreground">
+                                    <li className="mt-2">
+                                        <Link href="/resources/blog" className="hover:text-foreground transition-all duration-300">
+                                            Blog
+                                        </Link>
+                                    </li>
+                                    <li className="mt-2">
+                                        <Link href="/resources/help" className="hover:text-foreground transition-all duration-300">
+                                            Support
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </AnimationContainer>
+                        <AnimationContainer delay={0.5}>
+                            <div className="mt-10 md:mt-0 flex flex-col">
+                                <h3 className="text-base font-medium text-white">
+                                    Company
+                                </h3>
+                                <ul className="mt-4 text-sm text-muted-foreground">
+                                    <li className="">
+                                        <Link href="" className="hover:text-foreground transition-all duration-300">
+                                            About Us
+                                        </Link>
+                                    </li>
+                                    <li className="mt-2">
+                                        <Link href="/privacy" className="hover:text-foreground transition-all duration-300">
+                                            Privacy Policy
+                                        </Link>
+                                    </li>
+                                    <li className="mt-2">
+                                        <Link href="/terms" className="hover:text-foreground transition-all duration-300">
+                                            Terms & Conditions
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </AnimationContainer>
+                    </div>
+                </div>
+
+            </div>
+
+            
+            <div className="mt-8 border-t border-border/40 pt-4 md:pt-8 md:flex md:items-center md:justify-between w-full">
+                <AnimationContainer delay={0.6}>
+                    <p className="text-sm text-muted-foreground mt-8 md:mt-0">
+                        &copy; {new Date().getFullYear()} CAZZ INC. All rights reserved.
+                    </p>
+                </AnimationContainer>
+            </div>
+            
+        </div>
+    )
 }
 
-const products: ProductType[] = [
-  {
-    id: 1,
-    link: ["Home", "Popular", "About", "Contact"],
-  },
-  {
-    id: 2,
-    link: ["Help", "Resources", "Application", "Team"],
-  },
-];
-
-export function Footer  () {
-  return (
-    <div className="bg-darkblue -mt-40 w-full">
-      <div className="mx-auto max-w-2xl pt-48 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-        <div className="my-24 grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 lg:grid-cols-12 xl:gap-x-8">
-          {/* COLUMN-1 */}
-
-          <div className="col-span-4 md:col-span-12 lg:col-span-4">
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <Zap className="w-8 h-8 text-blue-500 text-2xl" />
-              <span className="text-3xl">
-                <SparklesText text="Cazz" />{" "}
-              </span>
-            </Link>
-          </div>
-            <div className="flex gap-4">
-              <Link href="https://facebook.com" className="footer-fb-icons">
-                <Image
-                  src={"https://icons8.com/icon/MR3dZdlA53te/linkedin"}
-                  alt="facebook"
-                  width={15}
-                  height={20}
-                />
-              </Link>
-              <Link href="https://twitter.com" className="footer-icons">
-                <Image
-                  src={"/assets/footer/twitter.svg"}
-                  alt="twitter"
-                  width={20}
-                  height={20}
-                />
-              </Link>
-              <Link href="https://instagram.com" className="footer-icons">
-                <Image
-                  src={"/assets/footer/instagram.svg"}
-                  alt="instagram"
-                  width={20}
-                  height={20}
-                />
-              </Link>
-            </div>
-          </div>
-
-          {/* CLOUMN-2/3 */}
-
-          {products.map((product) => (
-            <div
-              key={product.id}
-              className="group relative col-span-2 md:col-span-4 lg:col-span-2"
-            >
-              <ul>
-                {product.link.map((link: string, index: number) => (
-                  <li key={index} className="mb-5">
-                    <Link
-                      href="/"
-                      className="text-white text-sm font-normal mb-6 space-links"
-                    >
-                      {link}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-
-          {/* CLOUMN-4 */}
-
-          <div className="col-span-4 md:col-span-4 lg:col-span-4">
-            <div className="flex gap-2">
-              <Image
-                src={"/assets/footer/mask.svg"}
-                alt="mask-icon"
-                width={24}
-                height={24}
-              />
-              <h5 className="text-base font-normal text-offwhite">
-                Built for Hack4Bengal3.0
-              </h5>
-            </div>
-            <div className="flex gap-2 mt-10">
-              <Image
-                src={"/assets/footer/telephone.svg"}
-                alt="telephone-icon"
-                width={24}
-                height={24}
-              />
-              <h5 className="text-base font-normal text-offwhite">
-                +91 8945896607
-              </h5>
-            </div>
-            <div className="flex gap-2 mt-10">
-              <Image
-                src={"/assets/footer/email.svg"}
-                alt="email-icon"
-                width={24}
-                height={24}
-              />
-              <a
-                href="mailto:edgexofficial@outlook.com"
-                className="text-base font-normal text-offwhite"
-              >
-                swapnanilmanna06694@gmail.com
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* All Rights Reserved */}
-
-        <div className="py-10 lg:flex items-center justify-between border-t border-t-bordertop">
-          <h4 className="text-offwhite text-sm text-center lg:text-start font-normal">
-            @2024 Cazz. All Rights Reserved by{" "}
-            <Link href="https://adminmart.com/" target="_blank">
-              {" "}
-              Cazz
-            </Link>
-          </h4>
-          <div className="flex gap-5 mt-5 lg:mt-0 justify-center lg:justify-start">
-            <h4 className="text-offwhite text-sm font-normal">
-              <Link href="/" target="_blank">
-                Privacy policy
-              </Link>
-            </h4>
-            <div className="h-5 bg-bordertop w-0.5"></div>
-            <h4 className="text-offwhite text-sm font-normal">
-              <Link href="/" target="_blank">
-                Terms & conditions
-              </Link>
-            </h4>
-          </div>
-        </div>
-      </div>
-      <div>
-      
-      </div>
-    </div>
-    
-  );
-};
-
-
+export default Footer

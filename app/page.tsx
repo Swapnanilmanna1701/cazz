@@ -1,6 +1,8 @@
 import Link from "next/link";
 //import { useState, useEffect } from 'react';
-
+//import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
+import AnimationContainer from "@/components/ui/animation-container";
+import  Footer  from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 //import { RainbowButton } from '@/components/ui/rainbow-button'
 //import Blobby from "@/components/ui/blobby";
@@ -28,13 +30,11 @@ export default function Home() {
   const { userId } = auth();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-gray-100 overflow-hidden pt-20">
+    <div className="min-h-screen bg-black overflow-hidden pt-20 w-full">
       <Navbar />
 
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Decorative elements */}
-        
-        
 
         {/* Hero Section */}
         <div className="text-center py-20 lg:py-32 relative">
@@ -71,11 +71,10 @@ export default function Home() {
             <BlurFade delay={0.1} blur="6px" duration={1} inView>
               <span className="">
                 <span className="text-3xl font-bold mb-12 text-center text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text inline-bloc">
-                  Services We Provide {" "}
+                  Services We Provide{" "}
                   <span>
-              <SparklesText text="Cazz" />{" "}
-            </span>
-
+                    <SparklesText text="Cazz" />{" "}
+                  </span>
                 </span>
               </span>
             </BlurFade>
@@ -222,25 +221,22 @@ export default function Home() {
           )}
           <p className="mt-4 text-gray-400">No credit card required</p>
         </div>
+        <div>
         <LampContainer>
-                        <div className="flex flex-col items-center justify-center relative w-full text-center">
-                            <h2 className="bg-gradient-to-b from-neutral-200 to-neutral-400 py-4 bg-clip-text text-center text-4xl md:text-7xl !leading-[1.15] font-medium font-heading tracking-tight text-transparent mt-8">
-                                Step into the future of link management
-                            </h2>
-                            <p className="text-muted-foreground mt-6 max-w-md mx-auto">
-                                Experience the cutting-edge solution that transforms how you handle your links. Elevate your online presence with our next-gen platform.
-                            </p>
-                            <div className="mt-6">
-                                <Button>
-                                    Get started for free
-                                    <ArrowRightIcon className="w-4 h-4 ml-2" />
-                                </Button>
-                            </div>
-                        </div>
-                    </LampContainer>
+              <div className="flex flex-col items-center justify-center relative w-full text-center">
+                <h2 className="bg-gradient-to-b from-neutral-200 to-neutral-400 py-4 bg-clip-text text-center text-4xl md:text-7xl !leading-[1.15] font-medium font-heading tracking-tight text-transparent mt-8">
+                  Step into the future of link management
+                </h2>
+              </div>
+            </LampContainer>
+        </div>
+        <Footer />
+            
+          
         <div className="h-[20rem] lg:h-[20rem] hidden md:flex items-center justify-center">
           <TextHoverEffect text="CAZZAI" />
         </div>
+        
       </main>
     </div>
   );
