@@ -12,10 +12,8 @@ import {
   ArrowRightIcon,
   CheckCircleIcon,
   SparklesIcon,
-  
   ZapIcon,
   RocketIcon,
-  
 } from "lucide-react";
 import { auth } from "@clerk/nextjs/server";
 import { SignUpButton } from "@clerk/nextjs";
@@ -24,14 +22,10 @@ import { Navbar } from "@/components/Navbar";
 //import { Footer } from "@/components/Footer";
 import BlurFade from "@/components/magicui/blur-fade";
 import RotatingText from "@/components/ui/RotatingText";
-
-
-
-
+import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 
 export default function Home() {
   const { userId } = auth();
-  
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-gray-100 overflow-hidden pt-20">
@@ -45,9 +39,7 @@ export default function Home() {
         <div className="absolute top-40 right-20 animate-float animation-delay-2000">
           <ZapIcon className="w-10 h-10 text-blue-500 opacity-50" />
         </div>
-        <div className="absolute bottom-20 left-1/4 animate-float animation-delay-4000">
-          
-        </div>
+        <div className="absolute bottom-20 left-1/4 animate-float animation-delay-4000"></div>
 
         {/* Hero Section */}
         <div className="text-center py-20 lg:py-32 relative">
@@ -80,25 +72,19 @@ export default function Home() {
 
         {/* Features Section */}
         <div className="py-20 mb-10" id="features">
-        
-                    <h1 className="h1">
-                        <BlurFade delay={0.3} blur="6px" duration={1} inView>
-                            <span className="leftSectionTitle">
-                                <span className="leftSectionFirstLine">
-                                    Swasthya Sampark
-                                </span>
-                                <span className="leftSectionSecondLine">
-                                    trusted, online{' '}
-                                    { (
-                                        <RotatingText />
-                                    )} : {(
-                                        <span className="staticText">healthcare</span>
-                                    )}
-                                </span>
-                            </span>
-                        </BlurFade>
-                    </h1>
-                
+          <h1 className="h1">
+            <BlurFade delay={0.1} blur="6px" duration={1} inView>
+              <span className="">
+                <span className="text-3xl font-bold mb-12 text-center text-white">
+                  Services We Provide
+                </span>
+                <span className="">
+                  <RotatingText />
+                </span>
+              </span>
+            </BlurFade>
+          </h1>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
             {[
               {
@@ -121,7 +107,6 @@ export default function Home() {
                 description:
                   "Craft professional content for your LinkedIn network to establish thought leadership.",
               },
-              
             ].map((feature, index) => (
               <div
                 key={index}
@@ -236,10 +221,10 @@ export default function Home() {
           )}
           <p className="mt-4 text-gray-400">No credit card required</p>
         </div>
-        
-        
+        <div className="h-[20rem] lg:h-[20rem] hidden md:flex items-center justify-center">
+          <TextHoverEffect text="CAZZAI" />
+        </div>
       </main>
-      
     </div>
   );
 }
