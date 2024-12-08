@@ -71,21 +71,27 @@ export default function Home() {
         </div>
 
         {/* Features Section */}
-        <div className="py-20 mb-10" id="features">
-          <h1 className="h1">
+        <div className=" " id="features">
+          <h1 className="h1 text-center">
             <BlurFade delay={0.1} blur="6px" duration={1} inView>
               <span className="">
-                <span className="text-3xl font-bold mb-12 text-center text-white">
-                  Services We Provide
-                </span>
-                <span className="">
-                  <RotatingText />
+                <span className="text-3xl font-bold mb-12 text-center text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text inline-bloc">
+                  Services We Provide {" "}
+                  <span>
+              <SparklesText text="Cazz" />{" "}
+            </span>
+
                 </span>
               </span>
             </BlurFade>
           </h1>
+          <div className=" py-10 text-center align-column-center">1
+            <BlurFade delay={0.1} blur="6px" duration={1} inView>
+              <RotatingText />
+            </BlurFade>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+          <div className=" py-20 grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
             {[
               {
                 title: "Twitter Threads",
