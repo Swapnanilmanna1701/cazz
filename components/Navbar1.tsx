@@ -7,10 +7,20 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 //import MobileNav from './MobileNav';
+import {
+    SignInButton,
+    SignUpButton,
+    UserButton,
+    SignedOut,
+    SignedIn,
+    useAuth,
+  } from "@clerk/nextjs";
 
 const Header = () => {
 
     const pathname = usePathname();
+    const { userId } = useAuth();
+
 
     const [activeLink, setActiveLink] = useState("Home");
 
@@ -84,6 +94,36 @@ const Header = () => {
                             </Link>
                         </motion.li>
                     ))}
+                    {userId && (
+                <Link
+                  href="/generate"
+                  className="text-gray-300 hover:text-white transition-colors py-2 sm:py-0 relative group"
+                >
+                  Dashboard
+                  <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                </Link>
+              )}
+              <SignedOut>
+                <SignInButton mode="modal">
+                  <button className="text-gray-300 hover:text-white transition-colors mt-2 sm:mt-0">
+                    Sign In
+                  </button>
+                </SignInButton>
+                <SignUpButton mode="modal">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full transition-colors mt-2 sm:mt-0">
+                    Sign Up
+                  </button>
+                </SignUpButton>
+              </SignedOut>
+              <SignedIn>
+                <UserButton
+                  appearance={{
+                    elements: {
+                      avatarBox: "w-10 h-10",
+                    },
+                  }}
+                />
+              </SignedIn>
                 </ul>
             </nav>
 
