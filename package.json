@@ -43,6 +43,7 @@
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.34.1",
     "framer-motion": "^10.12.5-alpha.1",
+    "hamburger-react": "^2.5.1",
     "html2canvas-pro": "^1.5.8",
     "jspdf": "^2.5.2",
     "lucide-react": "^0.453.0",

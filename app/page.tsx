@@ -16,7 +16,8 @@ import {
 } from "lucide-react";
 import { auth } from "@clerk/nextjs/server";
 import { SignUpButton } from "@clerk/nextjs";
-import { Navbar } from "@/components/Navbar";
+import  Header from "@/components/Navbar1"
+//import { Navbar } from "@/components/Navbar";
 //import Spline from '@splinetool/react-spline/next';
 //import { Footer } from "@/components/Footer";
 import BlurFade from "@/components/magicui/blur-fade";
@@ -31,7 +32,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black overflow-hidden pt-20 w-full">
-      <Navbar />
+      <Header />
 
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Decorative elements */}
