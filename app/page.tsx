@@ -58,7 +58,7 @@ export default function Home() {
             </Button>
             <Button
               asChild
-              className="bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-full text-lg transition duration-300 ease-in-out"
+              className="bg-transparent border border-blue-600 text-blue-600 hover:bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 hover:text-white px-8 py-3 rounded-full text-lg transition duration-300 ease-in-out"
             >
               <Link href="#features">Learn More</Link>
             </Button>
@@ -152,7 +152,7 @@ export default function Home() {
               />
             </svg>
           </div>
-          <h2 className="text-4xl font-bold mb-8 text-white">
+          <h2 className="text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 font-bold mb-8 ">
             Ready to revolutionize your social media strategy?
           </h2>
           {userId ? (
