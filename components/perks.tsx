@@ -2,15 +2,17 @@ import { PERKS } from "@/constants/perks";
 import { cn } from "@/lib/utils";
 import { LucideIcon } from "lucide-react";
 import Container from "@/components/ui/container";
-import { SectionBadge } from "@/components/ui/section-bade";
+//import { SectionBadge } from "@/components/ui/section-bade";
+import MagicBadge from "@/components/ui/magic-badge";
+
 
 const Perks = () => {
     return (
         <div className="flex flex-col items-center justify-center py-12 md:py-16 lg:py-24 w-full">
             <Container>
                 <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
-                    <SectionBadge title="Perks" />
-                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
+                <MagicBadge title="Perks" />
+                    <h2 className="text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
                         Discover the benefits
                     </h2>
                     <p className="text-base md:text-lg text-center text-accent-foreground/80 mt-6">

@@ -12,7 +12,6 @@ import {
   InstagramIcon,
   LinkedinIcon,
   ArrowRightIcon,
-  CheckCircleIcon,
   RocketIcon,
 } from "lucide-react";
 import { auth } from "@clerk/nextjs/server";
@@ -40,7 +39,7 @@ export default function Home() {
         {/* Hero Section */}
         <div className="text-center py-20 lg:py-32 relative">
           <RocketIcon className="w-16 h-16 text-purple-500 mx-auto mb-6 animate-bounce" />
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-100 to-purple-900">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
             Sky-Rocket Your Carrier with{" "}
             <span>
               <SparklesText text="Cazz" />{" "}
@@ -71,7 +70,7 @@ export default function Home() {
           <h1 className="h1 text-center">
             <BlurFade delay={0.1} blur="6px" duration={1} inView>
               <span className="">
-                <span className="text-3xl font-bold mb-12 text-center text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text inline-bloc">
+                <span className="text-4xl font-bold mb-12 text-center text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text inline-bloc">
                   Services We Provide{" "}
                   <span>
                     <SparklesText text="Cazz" />{" "}
