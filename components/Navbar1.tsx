@@ -29,11 +29,11 @@ const Header = () => {
                     damping: 20,
                     duration: 0.7,
                 }}
-                className="fixed top-10 -translate-x-1/2 w-full h-30 bg-black/20 border border-neutral-800/50 rounded-none shadow-lg left-1/2 bg-opacity-80 shadow-black/50 backdrop-blur-md sm:top-6 sm:h-12 sm:w-[28rem] sm:rounded-full mx-auto overflow-hidden hidden lg:inline-block"
+                className="fixed top-10 -translate-x-1/2 w-full h-30 bg-black/20 border border-neutral-800/50 rounded-none shadow-lg left-1/2 bg-opacity-80 shadow-black/50 backdrop-blur-sm sm:top-6 sm:h-12 sm:w-[50rem] sm:rounded-full mx-auto overflow-hidden lg:inline-block"
             >
                 <motion.div
                     initial={{ opacity: 0, x: "-50%" }}
-                    animate={{ opacity: 1, x: "-50%" }}
+                    animate={{ opacity: 1, x: "-50%" }} 
                     transition={{
                         type: "spring",
                         stiffness: 260,
@@ -46,7 +46,7 @@ const Header = () => {
 
             {/* Desktop Navbar */}
             <nav className="fixed lg:flex z-[9999] top-[0.5rem] left-1/2 -translate-x-1/2 py-2 overflow-x-scroll max-w-full sm:top-[1.5rem] sm:h-12 sm:py-0 h-12 scrollbar-hide">
-                <ul className="flex items-center justify-center gap-x-4 w-[28rem] h-full">
+                <ul className="flex items-center justify-center gap-x-4 w-[50rem] h-full">
                     {links?.map((link, index) => (
                         <motion.li
                             key={index}
@@ -58,7 +58,7 @@ const Header = () => {
                                 duration: 0.5,
                                 delay: 0.1 + index * 0.1,
                             }}
-                            className="relative text-sm text-gray-400"
+                            className="relative text-sm text-blue-500"
                         >
                             <Link
                                 href={link.hash}

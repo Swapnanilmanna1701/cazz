@@ -95,6 +95,7 @@ const config: Config = {
   plugins: [
     require("daisyui"),
     require("tailwindcss-animate"),
+    require("@tailwindcss/aspect-ratio"),
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(

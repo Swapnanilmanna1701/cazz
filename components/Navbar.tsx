@@ -9,7 +9,7 @@ import {
   useAuth,
 } from "@clerk/nextjs";
 import { useState, useEffect } from "react";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import SparklesText from "@/components/ui/sparklestxt";
 
 export function Navbar() {
@@ -35,7 +35,7 @@ export function Navbar() {
         <div className="flex flex-wrap justify-between items-center max-w-6xl mx-auto">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <Zap className="w-8 h-8 text-blue-500 text-2xl" />
+              
               <span className="text-3xl">
                 <SparklesText text="Cazz" />{" "}
               </span>
