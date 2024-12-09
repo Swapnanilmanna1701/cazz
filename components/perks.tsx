@@ -58,6 +58,7 @@ const Perk = ({
             )}
             <div className="group-hover/feature:-translate-y-1 transform-gpu transition-all duration-300 flex flex-col w-full">
                 <div className="mb-4 relative z-10 px-10">
+                    
                     <Icon strokeWidth={1.3} className="w-10 h-10 origin-left transform-gpu text-neutral-500 transition-all duration-300 ease-in-out group-hover/feature:scale-75 group-hover/feature:text-foreground" />
                 </div>
                 <div className="text-lg font-medium font-heading mb-2 relative z-10 px-10">

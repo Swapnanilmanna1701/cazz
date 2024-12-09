@@ -1,6 +1,6 @@
 //import { Icons } from "@/components";
 import { ZapIcon, ChartSplineIcon, LifeBuoyIcon, PaletteIcon, ShieldCheckIcon, WaypointsIcon, BrainCircuitIcon, SparklesIcon } from "lucide-react";
-import React from "react";
+//import React from "react";
 
 export const PERKS = [
     {
