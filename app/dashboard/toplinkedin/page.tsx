@@ -75,7 +75,7 @@ export default function TopLinkedIn() {
     }
 
     return (
-        <div className="w-full flex flex-col gap-8 md:p-5">
+        <div className="w-full h-100vh bg-black flex flex-col gap-8 md:p-5">
             <div className="bg-gradient-to-tl from-green-300 via-blue-500 to-purple-600 p-10 rounded-lg mb-10">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-start gap-x-10 gap-y-4">
                     <div>
