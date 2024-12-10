@@ -160,6 +160,25 @@ export default function Dashboard({}: Props) {
               </Button>
             </CardContent>
           </Card>
+          <Card className="hover:-translate-y-1 shadow hover:shadow-blue-500/40 hover:shadow-md duration-500 transition-all border border-violet-500">
+            <CardHeader className="flex gap-4">
+              <LinkedIn  />
+              <div>
+                <CardTitle>AI Resume Analyser ✨</CardTitle>
+                <CardDescription>
+                  Send Emails to multiple persons with AI generated content.
+                </CardDescription>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <Button asChild size={"sm"}>
+                <Link href="/dashboard/resumeanalyzer">
+                  Create
+                  <ArrowRight size={18} />
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
         </div>
         <div className="flex flex-col">
           <h2 className="text-2xl md:text-3xl font-semibold py-2 text-zinc-700">
