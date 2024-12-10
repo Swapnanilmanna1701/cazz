@@ -15,6 +15,8 @@ import {
   RocketIcon,
 } from "lucide-react";
 import { auth } from "@clerk/nextjs/server";
+import TypewriterEffectSmoothDemo from "@/components/typewritter";
+
 import { SignUpButton } from "@clerk/nextjs";
 import  Header from "@/components/Navbar1"
 //import { Navbar } from "@/components/Navbar";
@@ -46,10 +48,7 @@ export default function Home() {
               <SparklesText text="Cazz" />{" "}
             </span>
           </h1>
-          <p className="text-xl mb-10 text-gray-300 max-w-2xl mx-auto">
-            Create engaging content for Twitter, Instagram, and LinkedIn with
-            cutting-edge AI technology.
-          </p>
+          <TypewriterEffectSmoothDemo/>
           <div className="flex justify-center space-x-4">
             <Button
               asChild

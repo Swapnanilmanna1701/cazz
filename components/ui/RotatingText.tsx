@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import '@/styles/RotatingText.css';
 
-const words = ['LinkedIn Post', 'Interview Preparation', 'Twitter Threads', 'Symptom Analysis', 'Report Summary'];
+const words = ['LinkedIn Post', ' Code Converter','AI Mock Interview','AI Form', 'Twitter Threads', 'AI Emailer', 'AI Resume', 'Text Improver','Explain Code', ];
 const colors = ['#0000FF', '#175134', '#922F10', '#141518', '#B66E28'];
 
 const RotatingText = () => {
