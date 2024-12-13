@@ -39,7 +39,7 @@ const Header = () => {
                     damping: 20,
                     duration: 0.7,
                 }}
-                className="fixed top-10 -translate-x-1/2 w-full h-40 bg-black/20 border border-neutral-800/50 rounded-none shadow-lg left-1/2 bg-opacity-80 shadow-black/50 backdrop-blur-lg sm:top-6 sm:h-12 sm:w-[80rem] sm:rounded-full mx-auto overflow-hidden lg:inline-block"
+                className="fixed top-10 -translate-x-1/2 w-full h-60 bg-black/20 border border-neutral-800/50 rounded-none shadow-lg left-1/2 bg-opacity-80 shadow-black/50 backdrop-blur-lg sm:top-6 sm:h-12 sm:w-[80rem] sm:rounded-full mx-auto overflow-hidden lg:inline-block"
             >
                 <motion.div
                     initial={{ opacity: 0, x: "-50%" }}
