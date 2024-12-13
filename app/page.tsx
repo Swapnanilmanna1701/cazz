@@ -3,6 +3,8 @@ import Link from "next/link";
 //import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 //import AnimationContainer from "@/components/ui/animation-container";
 import Footer from "@/components/Footer";
+import { SectionBadge } from "@/components/ui/badge";
+
 import { Button } from "@/components/ui/button";
 //import { RainbowButton } from '@/components/ui/rainbow-button'
 //import Blobby from "@/components/ui/blobby";
@@ -18,7 +20,7 @@ import { auth } from "@clerk/nextjs/server";
 import TypewriterEffectSmoothDemo from "@/components/typewritter";
 
 import { SignUpButton } from "@clerk/nextjs";
-import  Header from "@/components/Navbar1"
+import Header from "@/components/Navbar1";
 //import { Navbar } from "@/components/Navbar";
 //import Spline from '@splinetool/react-spline/next';
 //import { Footer } from "@/components/Footer";
@@ -42,13 +44,13 @@ export default function Home() {
         {/* Hero Section */}
         <div className="text-center py-20 lg:py-32 relative">
           <RocketIcon className="w-16 h-16 text-purple-500 mx-auto mb-6 animate-bounce" />
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-600 via-purple-500 to-indigo-500">
             Sky-Rocket Your Carrier with{" "}
             <span>
               <SparklesText text="CazzAI" />{" "}
             </span>
           </h1>
-          
+
           <div className="flex justify-center space-x-4">
             <Button
               asChild
@@ -58,13 +60,12 @@ export default function Home() {
             </Button>
             <Button
               asChild
-              className="bg-transparent border border-blue-600 text-blue-600 hover:bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 hover:text-white px-8 py-3 rounded-full text-lg transition duration-300 ease-in-out"
+              className="bg-transparent border border-blue-600 text-blue-600 hover:bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-700 hover:text-white px-8 py-3 rounded-full text-lg transition duration-300 ease-in-out"
             >
               <Link href="#features">Learn More</Link>
             </Button>
           </div>
         </div>
-        
 
         {/* Features Section */}
         <div className=" " id="features">
@@ -172,12 +173,15 @@ export default function Home() {
               </Button>
             </SignUpButton>
           )}
-          <p className="mt-4 text-gray-400">No credit card required</p>
         </div>
+        <div className="mb--20 text-2xl text-center relative">
+          <SectionBadge title="No credit card is required!!" />
+        </div>
+
         <div>
           <LampContainer>
             <div className="flex flex-col items-center justify-center relative w-full text-center">
-            <TypewriterEffectSmoothDemo/>
+              <TypewriterEffectSmoothDemo />
             </div>
           </LampContainer>
         </div>

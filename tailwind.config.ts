@@ -28,6 +28,7 @@ const config: Config = {
         'glow-purple': 'glow 2s infinite',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "background-shine": "background-shine 2s linear infinite",
       },
       borderRadius: {
         lg: "var(--radius)",
