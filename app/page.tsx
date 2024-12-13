@@ -45,10 +45,10 @@ export default function Home() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
             Sky-Rocket Your Carrier with{" "}
             <span>
-              <SparklesText text="Cazz" />{" "}
+              <SparklesText text="CazzAI" />{" "}
             </span>
           </h1>
-          <TypewriterEffectSmoothDemo/>
+          
           <div className="flex justify-center space-x-4">
             <Button
               asChild
@@ -64,6 +64,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
+        
 
         {/* Features Section */}
         <div className=" " id="features">
@@ -176,9 +177,7 @@ export default function Home() {
         <div>
           <LampContainer>
             <div className="flex flex-col items-center justify-center relative w-full text-center">
-              <h2 className="bg-gradient-to-b from-neutral-200 to-neutral-400 py-4 bg-clip-text text-center text-4xl md:text-7xl !leading-[1.15] font-medium font-heading tracking-tight text-transparent mt-8">
-                Step into the future of link management
-              </h2>
+            <TypewriterEffectSmoothDemo/>
             </div>
           </LampContainer>
         </div>
