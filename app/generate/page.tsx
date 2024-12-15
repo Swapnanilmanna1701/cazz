@@ -1,5 +1,7 @@
 
 "use client";
+import React from "react";
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,6 +13,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  TextRevealCard,
+  TextRevealCardDescription,
+  TextRevealCardTitle,
+} from "@/components/ui/text-reveal-card"
 import {
   Loader2,
   Upload,
@@ -274,8 +281,22 @@ export default function GenerateContent() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 to-black min-h-screen text-white">
+    <div className="bg-black min-h-screen text-white">
       <Navbar />
+      <div className="flex items-center justify-center bg-black h-[40rem] rounded-2xl w-full">
+      <TextRevealCard
+        text="You know the business"
+        revealText="I know the chemistry "
+      >
+        <TextRevealCardTitle>
+          Sometimes, you just need to see it.
+        </TextRevealCardTitle>
+        <TextRevealCardDescription>
+          This is a text reveal card. Hover over the card to reveal the hidden
+          text.
+        </TextRevealCardDescription>
+      </TextRevealCard>
+    </div>
       <div className="container mx-auto px-4 mb-8 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 mt-14 lg:grid-cols-3 gap-8">
           {/* Left sidebar - History */}
