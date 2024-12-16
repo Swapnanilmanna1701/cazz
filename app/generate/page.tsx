@@ -15,8 +15,7 @@ import {
 } from "@/components/ui/select";
 import {
   TextRevealCard,
-  TextRevealCardDescription,
-  TextRevealCardTitle,
+  
 } from "@/components/ui/text-reveal-card"
 import {
   Loader2,
@@ -288,13 +287,8 @@ export default function GenerateContent() {
         text="You know the business"
         revealText="I know the chemistry "
       >
-        <TextRevealCardTitle>
-          Sometimes, you just need to see it.
-        </TextRevealCardTitle>
-        <TextRevealCardDescription>
-          This is a text reveal card. Hover over the card to reveal the hidden
-          text.
-        </TextRevealCardDescription>
+        
+        
       </TextRevealCard>
     </div>
       <div className="container mx-auto px-4 mb-8 sm:px-6 lg:px-8 py-8">
