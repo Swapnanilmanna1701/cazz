@@ -5,16 +5,29 @@ import "@/styles/RotatingText.css";
 
 const words = [
   "LinkedIn Post",
-  " Code Converter",
+  "Code Converter",
   "AI Mock Interview",
   "AI Form",
   "Twitter Threads",
+  "AI Code Writer",
+  "AI Code explainer" ,
   "AI Emailer",
   "AI Resume",
   "Text Improver",
   "Explain Code",
+  "Resume Analyzer",
+  "AI Blog",
+  "AI Chatbot",
+  "AI Summary",
+  "Youtube Tags",
+  "SEO Optimization",
+  "Insta Post Idea",
+  "Insta Post Generator",
+  "Code Bug Detector",
+  "Tagline Generator",
+
 ];
-const colors = ["#0000FF", "#175134", "#922F10", "#141518", "#B66E28"];
+const colors = ["#ff0000", "	#ff0040", "#ff0080", "#ff00bf", "#ff00ff","#bf00ff","#8000ff","#4000ff","#0000ff","#0040ff","#0066ff","#0080ff","#00bfff","#00ffff","#00ffbf","#00ff80","#00ff40","#00ff00","#40ff00","#80ff00","#bfff00","#ffff00","#ffbf00","#ff8000","#ff4000","#ff0000"];
 
 const RotatingText = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);

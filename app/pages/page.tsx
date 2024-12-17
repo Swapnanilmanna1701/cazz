@@ -5,12 +5,18 @@
 //import WalletContextProvider from "@/components/WaletContextProvider";
 import { HeroBody } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
+
 export default function Home() {
   return (
-    <div className="scroll-smooth">
+    <div>
       <Navbar />
+      <div className="scroll-smooth">
+
+      
       <HeroBody />
     </div>
+    </div>
+    
   );
 }
 // import Link from 'next/link'

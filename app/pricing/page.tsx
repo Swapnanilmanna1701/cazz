@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/accordion";
 import MagicBadge from "@/components/ui/magic-badge";
 import { FAQ } from "@/constants/faq";
+import { TextRevealCard } from "@/components/ui/text-reveal-card";
+
 
 const PricingPage = () => {
   return (
@@ -18,9 +20,12 @@ const PricingPage = () => {
       <AnimationContainer delay={0.1}>
         <div className="flex flex-col items-center justify-center py-10 max-w-lg mx-auto">
           <MagicBadge title="Pricing" />
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold font-heading text-center mt-6 !leading-tight">
-            Simple and transparent pricing
-          </h1>
+          <div className="flex  items-center justify-center bg-black h-[10rem] rounded-2xl w-full">
+            <TextRevealCard
+              text="You know the business"
+              revealText="I know the chemistry "
+            ></TextRevealCard>
+          </div>
           <p className="text-base md:text-lg mt-6 text-center text-muted-foreground">
             Choose a plan that works for you. No hidden fees. No surprises.
           </p>

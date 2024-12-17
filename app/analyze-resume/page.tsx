@@ -5,6 +5,9 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { IconUpload } from "@tabler/icons-react";
 import ResumeCard from "@/components/ResumeCard";
+import { TextRevealCard } from "@/components/ui/text-reveal-card";
+import  { Navbar} from "@/components/Navbar";
+
 
 const mainVariant = {
   initial: {
@@ -70,9 +73,17 @@ const AnalyzeResume = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-4 bg-gray-950">
+    <div className="min-h-screen flex flex-col items-center px-4">
+      <div className="bg-black text-gray-100 h-20">
+              <Navbar />
+            </div>
       <div className="mt-16 w-full">
-        <h1 className="text-center mb-6 text-3xl font-bold">Analyze Resume</h1>
+        <div className="flex  items-center justify-center bg-black h-[10rem] rounded-2xl w-full">
+                    <TextRevealCard
+                      text="Get Hired Instantly✨"
+                      revealText="Analyze Your Resume"
+                    ></TextRevealCard>
+                  </div>
         <div className="w-full max-w-4xl mx-auto ">
           {!(content || error) && (
             <div className="mt-6 ">
@@ -91,8 +102,8 @@ const AnalyzeResume = () => {
                   }
                   className="hidden"
                 />
-                <div className="flex flex-col items-center justify-center">
-                  <p className="relative z-20 font-sans font-bold text-neutral-300 text-base">
+                <div className="flex flex-col mt-5 items-center justify-center">
+                  <p className="relative z-20 font-sans font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-600 via-purple-500 to-indigo-500 text-2xl">
                     Upload file
                   </p>
                   <p className="relative z-20 font-sans font-normal text-neutral-400 text-base mt-2">
@@ -169,7 +180,7 @@ const AnalyzeResume = () => {
               <div className="space-y-4 mt-6 flex flex-col w-full max-w-xl mx-auto">
                 <div className="w-full space-y-2">
                   <label htmlFor="job-role" className="text-white text-base">
-                    Mention the role you want to apply for
+                    You are expert in...
                   </label>
                   <input
                     id="job-role"
@@ -184,7 +195,7 @@ const AnalyzeResume = () => {
                 </div>
                 <div className="w-full space-y-2">
                   <label htmlFor="tips" className="text-white text-base">
-                    Any additional modification tips
+                    For Modification Purpose
                   </label>
                   <input
                     id="tips"

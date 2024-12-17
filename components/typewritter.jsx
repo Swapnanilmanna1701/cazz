@@ -5,12 +5,11 @@ import SparklesText from "@/components/ui/sparklestxt";
 
 export default function FlipWordsDemo() {
   const words = [
-    "Unthreatened",
-    "beautiful",
-    "Contemporary",
-    "Accelerated",
-    "optimized",
-    "innovative",
+    "UNLEASH",
+    "YOUR",
+    "POTENTIAL",
+    "WITH",
+    
   ];
 
   return (

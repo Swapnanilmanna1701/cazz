@@ -5,6 +5,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import { SectionBadge } from "@/components/ui/badge";
 
+
 import { Button } from "@/components/ui/button";
 //import { RainbowButton } from '@/components/ui/rainbow-button'
 //import Blobby from "@/components/ui/blobby";
@@ -185,8 +186,12 @@ export default function Home() {
             </div>
           </LampContainer>
         </div>
+        
+      <div>
+      <Footer />
+      </div>
 
-        <Footer />
+        
 
         <div className="h-[20rem] lg:h-[20rem] hidden md:flex items-center justify-center">
           <TextHoverEffect text="CAZZAI" />

@@ -12,7 +12,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { TextRevealCard } from "@/components/ui/text-reveal-card";
 import {
   Loader2,
   Upload,
@@ -250,7 +249,7 @@ export default function GenerateContent() {
       <div className="flex items-center justify-center min-h-screen bg-[#0a0a0a]">
         <div className="text-center bg-[#111111] p-8 rounded-lg shadow-lg">
           <h1 className="text-3xl font-bold text-white mb-4">
-            Welcome to ThreadCraft AI
+            Welcome to CazzAI
           </h1>
           <p className="text-gray-400 mb-6">
             To start generating amazing content, please sign in or create an
@@ -278,12 +277,7 @@ export default function GenerateContent() {
   return (
     <div className="bg-black min-h-screen text-white">
       <Navbar />
-      <div className="flex items-center justify-center bg-black h-[40rem] rounded-2xl w-full">
-        <TextRevealCard
-          text="You know the business"
-          revealText="I know the chemistry "
-        ></TextRevealCard>
-      </div>
+      
       <div className="container mx-auto px-4 mb-8 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 mt-14 lg:grid-cols-3 gap-8">
           {/* Left sidebar - History */}
