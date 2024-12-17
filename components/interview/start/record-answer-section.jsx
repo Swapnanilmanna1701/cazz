@@ -1,14 +1,14 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { db } from "@/lib/utils/db";
-import { chatSession } from "@/lib/utils/gemini-model";
-import { UserAnswer } from "@/lib/utils/schema";
+import { db } from "@/utils/db/dbConfig";
+import { chatSession } from "@/utils/db/gemini-model";
+import { UserAnswer } from "@/utils/db/schema";
 import { useUser } from "@clerk/nextjs";
 import { Mic, StopCircle } from "lucide-react";
 import moment from "moment";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import useSpeechToText from "react-hook-speech-to-text";
+import { useVoiceToText } from "react-speakup";
 import Webcam from "react-webcam";
 import { toast } from "sonner";
 
@@ -20,38 +20,48 @@ export default function RecordAnswerSection({
   const [userAnswer, setUserAnswer] = useState("");
   const { user } = useUser();
   const [loading, setLoading] = useState(false);
-  const {
-    isRecording,
-    results,
-    startSpeechToText,
-    stopSpeechToText,
-    setResults,
-  } = useSpeechToText({
-    continuous: false,
-    useLegacyResults: false,
+  const [isRecording, setIsRecording] = useState(false);
+  // const {
+  //   isRecording,
+  //   results,
+  //   startSpeechToText,
+  //   stopSpeechToText,
+  //   setResults,
+  // } = useSpeechToText({
+  //   continuous: true,
+  //   useLegacyResults: false,
+  // });
+  const { startListening, stopListening, transcript } = useVoiceToText({
+    continuous: true,
+    lang: "en-US",
   });
 
-  useEffect(() => {
-    results?.map((result) => {
-      if (typeof result === "string") {
-        return setUserAnswer((prevAns) => prevAns + result);
-      } else {
-        return setUserAnswer((prevAns) => prevAns + result.transcript);
-      }
-    });
-  }, [results]);
+  // console.log(isRecording)
+
+  // useEffect(() => {
+  //   results?.map((result) => {
+  //     if (typeof result === "string") {
+  //       return setUserAnswer((prevAns) => prevAns + result);
+  //     } else {
+  //       return setUserAnswer((prevAns) => prevAns + result.transcript);
+  //     }
+  //   });
+  // }, [results]);
 
   useEffect(() => {
-    if (!isRecording && userAnswer?.length > 30) {
+    if (!isRecording && userAnswer?.length > 10) {
       UpdateUserAnswer();
     }
-  }, [isRecording, userAnswer]);
+  }, [isRecording, transcript]);
 
   const StartStopRecording = async () => {
     if (isRecording) {
-      stopSpeechToText();
+      setUserAnswer(transcript);
+      stopListening();
+      setIsRecording(false);
     } else {
-      startSpeechToText();
+      startListening();
+      setIsRecording(true);
     }
   };
 
@@ -129,6 +139,7 @@ export default function RecordAnswerSection({
           </h2>
         )}
       </Button>
+      <p>{transcript}</p>
     </div>
   );
 }
