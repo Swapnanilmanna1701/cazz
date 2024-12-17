@@ -61,8 +61,6 @@ export function Navbar() {
                 "Pricing",
                 "Docs",
                 "Contents",
-                "Courses",
-                "Pages",
               ].map((item) => (
                 <Link
                   key={item}

@@ -1,30 +1,32 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 import { Button } from "@/components/ui/button";
-import { Suspense } from "react";
 import LinkedIn from "@/components/ui/LinkedInIcon";
+import { Suspense } from "react";
 
+import Templates from "@/app/(data)/Templates";
+import TemplateCard from "@/components/content/TemplateCard";
+import { Navbar } from "@/components/Navbar";
 import {
   Card,
+  CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
-  CardDescription,
-  CardContent,
 } from "@/components/ui/card";
+import Welcome from "@/components/Welcome";
 import {
   ArrowRight,
   BotMessageSquare,
+  Code,
   FileHeart,
+  FileUser,
   Loader2,
   MailPlus,
   Speech,
   TableProperties,
 } from "lucide-react";
-import Welcome from "@/components/Welcome";
 import Link from "next/link";
-import TemplateCard from "@/components/content/TemplateCard";
-import Templates from "@/app/(data)/Templates";
-import { Navbar } from "@/components/Navbar";
 
 type Props = {};
 
@@ -141,7 +143,7 @@ export default function Dashboard({}: Props) {
 
           <Card className="hover:-translate-y-1 shadow hover:shadow-blue-500/40 hover:shadow-md duration-500 transition-all border border-violet-500">
             <CardHeader className="flex gap-4">
-              <LinkedIn />
+              <LinkedIn className="size-10" />
               <div>
                 <CardTitle>Top LinkedIn Search ✨</CardTitle>
                 <CardDescription>
@@ -160,17 +162,37 @@ export default function Dashboard({}: Props) {
           </Card>
           <Card className="hover:-translate-y-1 shadow hover:shadow-blue-500/40 hover:shadow-md duration-500 transition-all border border-violet-500">
             <CardHeader className="flex gap-4">
-              <LinkedIn />
+              <FileUser className="size-10" />
               <div>
                 <CardTitle>AI Resume Analyser ✨</CardTitle>
                 <CardDescription>
-                  Send Emails to multiple persons with AI generated content.
+                  Analyze your resume with ATS Score.
                 </CardDescription>
               </div>
             </CardHeader>
             <CardContent>
               <Button asChild size={"sm"}>
-                <Link href="/dashboard/resumeanalyzer">
+                <Link href="/dashboard/pages">
+                  Create
+                  <ArrowRight size={18} />
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card className="hover:-translate-y-1 shadow hover:shadow-blue-500/40 hover:shadow-md duration-500 transition-all border border-violet-500">
+            <CardHeader className="flex gap-4">
+              <Code className="size-10" />
+              <div>
+                <CardTitle>Code Converter</CardTitle>
+                <CardDescription>
+                  Convert your code to other languages.
+                </CardDescription>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <Button asChild size={"sm"}>
+                <Link href="/dashboard/code-converter">
                   Create
                   <ArrowRight size={18} />
                 </Link>
