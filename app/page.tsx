@@ -74,9 +74,9 @@ export default function Home() {
             <BlurFade delay={0.1} blur="6px" duration={1} inView>
               <span className="">
                 <span className="text-4xl font-bold mb-12 text-center text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text inline-bloc">
-                  Services We Provide{" "}
+                  Services We Provide In {" "}
                   <span>
-                    <SparklesText text="Cazz" />{" "}
+                    <SparklesText text="CazzAI" />{" "}
                   </span>
                 </span>
               </span>
