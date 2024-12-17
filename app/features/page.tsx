@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 import { Button } from "@/components/ui/button";
 import { Suspense } from "react";
-import Navbar from "@/components/Navbar1";
 import LinkedIn from "@/components/ui/LinkedInIcon";
 
 import {
@@ -25,6 +24,7 @@ import Welcome from "@/components/Welcome";
 import Link from "next/link";
 import TemplateCard from "@/components/content/TemplateCard";
 import Templates from "@/app/(data)/Templates";
+import { Navbar } from "@/components/Navbar";
 
 type Props = {};
 

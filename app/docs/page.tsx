@@ -1,7 +1,7 @@
+import { Navbar } from "@/components/Navbar";
 import { Timeline } from "@/components/ui/timeline";
 //import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 export default function TimelineDemo() {
   const data = [
@@ -58,7 +58,10 @@ export default function TimelineDemo() {
   ];
   return (
     <div className="w-full">
-      <Timeline data={data} />
+      <Navbar />
+      <div className="pt-10">
+        <Timeline data={data} />
+      </div>
     </div>
   );
 }
@@ -131,7 +134,7 @@ export default function DocsPage() {
             </div>
           ))}
         </div>
-        
+
       </main>
     </div>
   );

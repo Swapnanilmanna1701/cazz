@@ -1,5 +1,4 @@
-import Chatbox from "@/components/Chatbot";
-import React from "react";
+import GeminiAI from "@/components/GeminiAI";
 import { Navbar } from "@/components/Navbar";
 
 const page = () => {
@@ -8,7 +7,9 @@ const page = () => {
       <div className="bg-black text-gray-100 h-20">
         <Navbar />
       </div>
-      <Chatbox />
+      <>
+        <GeminiAI />
+      </>
     </div>
   );
 };

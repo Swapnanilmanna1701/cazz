@@ -2,6 +2,7 @@
 
 import AnimationContainer from "@/components/animation-container";
 import MaxWidthWrapper from "@/components/max-width-wrapper";
+import { Navbar } from "@/components/Navbar";
 import PricingCards from "@/components/pricing-cards";
 import {
   Accordion,
@@ -17,8 +18,10 @@ import { TextRevealCard } from "@/components/ui/text-reveal-card";
 const PricingPage = () => {
   return (
     <MaxWidthWrapper className="mb-40">
+      <Navbar />
+
       <AnimationContainer delay={0.1}>
-        <div className="flex flex-col items-center justify-center py-10 max-w-lg mx-auto">
+        <div className="flex flex-col items-center justify-center py-24 max-w-lg mx-auto">
           <MagicBadge title="Pricing" />
           <div className="flex  items-center justify-center bg-black h-[10rem] rounded-2xl w-full">
             <TextRevealCard
