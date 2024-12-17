@@ -49,16 +49,17 @@ const FinalResumeView = ({
                 your friends and family.
               </p>
               <p className="text-center text-sm text-gray-500 font-light">
-                For better print quality, adjust your browser&apos s print settings:
-                save as PDF, disable headers and footers, set margins to none,
-                and enable background graphics.
+                For better print quality, adjust your browser&apos s print
+                settings: save as PDF, disable headers and footers, set margins
+                to none, and enable background graphics.
               </p>
             </>
           ) : (
             <>
               <h2 className="text-center text-2xl font-bold">Resume Preview</h2>
               <p className="text-center text-gray-600">
-                You are currently viewing a preview of someone else&apos s resume.
+                You are currently viewing a preview of someone else&apos s
+                resume.
               </p>
               <p className="text-center text-sm text-gray-500 font-light">
                 For the ultimate experience, create your own AI-generated
@@ -77,7 +78,7 @@ const FinalResumeView = ({
               className="flex px-12 py-6 gap-2 rounded-full bg-slate-200 hover:bg-primary/20 focus:ring-4 focus:ring-primary-700/30 text-black"
               onClick={() => {
                 navigator.clipboard.writeText(
-                  `${window.location.origin}${path}`
+                  `${window.location.origin}${path}`,
                 );
                 toast("Copied to clipboard!");
               }}

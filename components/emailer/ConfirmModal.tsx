@@ -30,7 +30,7 @@ export function ConfirmModal({
   const preprocessContentForEmail = (content: string) => {
     const lines = content.split("\n");
     setFinalSubject(
-      lines[0].replace("Subject: ", "").replace(/[#*]/g, "").trim()
+      lines[0].replace("Subject: ", "").replace(/[#*]/g, "").trim(),
     );
     setProcessedContent(lines.slice(1).join("\n"));
   };
@@ -56,7 +56,7 @@ export function ConfirmModal({
       sendToAll(
         emails.map((email: any) => email.receiver),
         processedContent,
-        finalSubject
+        finalSubject,
       );
 
       setLoading(false);

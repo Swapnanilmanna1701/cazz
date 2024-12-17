@@ -2,8 +2,8 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 import { Button } from "@/components/ui/button";
 import { Suspense } from "react";
-import  Navbar  from "@/components/Navbar1";
-import LinkedIn from "@/components/ui/LinkedInIcon"
+import Navbar from "@/components/Navbar1";
+import LinkedIn from "@/components/ui/LinkedInIcon";
 
 import {
   Card,
@@ -20,7 +20,6 @@ import {
   MailPlus,
   Speech,
   TableProperties,
-  
 } from "lucide-react";
 import Welcome from "@/components/Welcome";
 import Link from "next/link";
@@ -32,11 +31,10 @@ type Props = {};
 export default function Dashboard({}: Props) {
   return (
     <>
-    <div className="bg-black text-gray-100 h-20">
-        <Navbar/>
-    </div>
+      <div className="bg-black text-gray-100 h-20">
+        <Navbar />
+      </div>
       <div className="w-full flex flex-col gap-8 md:p-5">
-        
         <Suspense
           fallback={
             <div className="bg-gradient-to-l from-cyan-300 via-blue-500 to-purple-500 text-white relative group overflow-hidden rounded-lg transition-all hover:shadow min-h-36 sm:min-h-52">
@@ -64,7 +62,7 @@ export default function Dashboard({}: Props) {
                 </Link>
               </Button>
             </CardContent>
-          </Card> 
+          </Card>
           <Card className="hover:-translate-y-1 shadow hover:shadow-blue-500/40 hover:shadow-md duration-500 transition-all border border-cyan-500">
             <CardHeader className="flex gap-4">
               <TableProperties size={50} />
@@ -143,7 +141,7 @@ export default function Dashboard({}: Props) {
 
           <Card className="hover:-translate-y-1 shadow hover:shadow-blue-500/40 hover:shadow-md duration-500 transition-all border border-violet-500">
             <CardHeader className="flex gap-4">
-              <LinkedIn  />
+              <LinkedIn />
               <div>
                 <CardTitle>Top LinkedIn Search ✨</CardTitle>
                 <CardDescription>
@@ -162,7 +160,7 @@ export default function Dashboard({}: Props) {
           </Card>
           <Card className="hover:-translate-y-1 shadow hover:shadow-blue-500/40 hover:shadow-md duration-500 transition-all border border-violet-500">
             <CardHeader className="flex gap-4">
-              <LinkedIn  />
+              <LinkedIn />
               <div>
                 <CardTitle>AI Resume Analyser ✨</CardTitle>
                 <CardDescription>

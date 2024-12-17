@@ -1,4 +1,4 @@
-import {  Edit, Trash } from "lucide-react";
+import { Edit, Trash } from "lucide-react";
 import React, { useState } from "react";
 import {
   Popover,

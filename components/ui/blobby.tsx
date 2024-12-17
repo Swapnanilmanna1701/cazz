@@ -5,7 +5,7 @@ const Blobby = ({ className }: { className?: string }) => {
     <div
       className={cn(
         "duration-500 transition-all min-h-24 min-w-24 rounded-full blur-3xl absolute",
-        className
+        className,
       )}
     />
   );

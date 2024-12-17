@@ -17,7 +17,7 @@ const SummaryForm = ({ params }: { params: { id: string } }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isAiLoading, setIsAiLoading] = useState(false);
   const [aiGeneratedSummaryList, setAiGeneratedSummaryList] = useState(
-    [] as any
+    [] as any,
   );
   const { toast } = useToast();
 

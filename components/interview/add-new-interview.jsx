@@ -145,7 +145,11 @@ function AddNewInterview() {
                   >
                     Cancel
                   </Button>
-                  <Button type="submit" disabled={loading} className="bg-blue-700 text-white hover:bg-blue-500">
+                  <Button
+                    type="submit"
+                    disabled={loading}
+                    className="bg-blue-700 text-white hover:bg-blue-500"
+                  >
                     {loading ? (
                       <>
                         <LoaderCircle className="animate-spin" /> Generating

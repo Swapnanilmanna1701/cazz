@@ -35,7 +35,6 @@ export function Navbar() {
         <div className="flex flex-wrap justify-between items-center max-w-6xl mx-auto">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              
               <span className="text-3xl">
                 <SparklesText text="Cazz" />{" "}
               </span>
@@ -57,7 +56,14 @@ export function Navbar() {
             } sm:block mt-4 sm:mt-0`}
           >
             <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-8">
-              {["Features", "Pricing", "Docs", "Contents", "Courses", "Pages"].map((item) => (
+              {[
+                "Features",
+                "Pricing",
+                "Docs",
+                "Contents",
+                "Courses",
+                "Pages",
+              ].map((item) => (
                 <Link
                   key={item}
                   href={`/${item.toLowerCase()}`}

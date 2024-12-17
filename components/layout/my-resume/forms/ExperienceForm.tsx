@@ -17,7 +17,7 @@ const ExperienceForm = ({ params }: { params: { id: string } }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isAiLoading, setIsAiLoading] = useState(false);
   const [aiGeneratedSummaryList, setAiGeneratedSummaryList] = useState(
-    [] as any
+    [] as any,
   );
   const [experienceList, setExperienceList] = useState(
     formData?.experience.length > 0
@@ -32,10 +32,10 @@ const ExperienceForm = ({ params }: { params: { id: string } }) => {
             endDate: "",
             workSummary: "",
           },
-        ]
+        ],
   );
   const [currentAiIndex, setCurrentAiIndex] = useState(
-    experienceList.length - 1
+    experienceList.length - 1,
   );
   const { toast } = useToast();
 
@@ -115,7 +115,7 @@ const ExperienceForm = ({ params }: { params: { id: string } }) => {
     setIsAiLoading(true);
 
     const result = await generateExperienceDescription(
-      `${formData?.experience[index]?.title} at ${formData?.experience[index]?.companyName}`
+      `${formData?.experience[index]?.title} at ${formData?.experience[index]?.companyName}`,
     );
 
     setAiGeneratedSummaryList(result);
@@ -233,7 +233,10 @@ const ExperienceForm = ({ params }: { params: { id: string } }) => {
                     className="no-focus"
                   />
                 </div>
-                <div className="col-span-2 space-y-2" style={{height: "400px"}}>
+                <div
+                  className="col-span-2 space-y-2"
+                  style={{ height: "400px" }}
+                >
                   <div className="flex justify-between items-end">
                     <label className=" text-slate-700 font-semibold">
                       Summary:

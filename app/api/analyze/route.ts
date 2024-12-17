@@ -22,7 +22,9 @@ export async function POST(req: NextRequest) {
       throw new Error("Please provide a PDF file and job role");
     }
 
-    const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY!);
+    const genAI = new GoogleGenerativeAI(
+      process.env.NEXT_PUBLIC_GEMINI_API_KEY!,
+    );
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-8b" });
 
     const buffer = Buffer.from(await pdfFile.arrayBuffer());
@@ -74,7 +76,7 @@ export async function POST(req: NextRequest) {
       result.response
         .text()
         .replace(/^\s*```json/, "")
-        .replace(/```$/, "")
+        .replace(/```$/, ""),
     );
 
     if (content.error) {

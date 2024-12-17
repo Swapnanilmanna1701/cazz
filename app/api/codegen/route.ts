@@ -1,9 +1,3 @@
-
-
-
-
-
-
 import { google } from "@ai-sdk/google";
 import { streamObject } from "ai";
 import { z } from "zod";
@@ -27,14 +21,6 @@ export async function POST(req: Request) {
 
   return result.toTextStreamResponse();
 }
-
-
-
-
-
-
-
-
 
 // import { createOpenAI } from "@ai-sdk/openai";
 

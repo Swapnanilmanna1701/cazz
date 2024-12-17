@@ -13,9 +13,6 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      
-      
-      
     </main>
   );
 }

@@ -21,7 +21,7 @@ const SkillsForm = ({ params }: { params: { id: string } }) => {
             name: "",
             rating: 1,
           },
-        ]
+        ],
   );
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();

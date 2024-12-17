@@ -1,31 +1,34 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import React, { useEffect, useRef } from 'react'
-import '@toast-ui/editor/dist/toastui-editor.css';
-import { Editor } from '@toast-ui/react-editor';
-import { Copy } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import React, { useEffect, useRef } from "react";
+import "@toast-ui/editor/dist/toastui-editor.css";
+import { Editor } from "@toast-ui/react-editor";
+import { Copy } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-interface props{
-  aiOutput:string;
+interface props {
+  aiOutput: string;
 }
 
-function OutputSection({aiOutput}:props) {
-  const editorRef:any=useRef();
+function OutputSection({ aiOutput }: props) {
+  const editorRef: any = useRef();
 
-  useEffect(()=>{
-    const editorInstance=editorRef.current.getInstance();
+  useEffect(() => {
+    const editorInstance = editorRef.current.getInstance();
     editorInstance.setMarkdown(aiOutput);
-  },[aiOutput])
+  }, [aiOutput]);
 
   return (
-    <div className='bg-white shadow-lg border rounded-lg'>
-      <div className='flex justify-between items-center p-5'>
-        <h2 className='font-medium text-lg'>Your Result</h2>
-        <Button className='flex gap-2 bg-blue-700 text-white'
-        onClick={()=>navigator.clipboard.writeText(aiOutput)}
-        ><Copy className='w-4 h-4'/> Copy </Button>
+    <div className="bg-white shadow-lg border rounded-lg">
+      <div className="flex justify-between items-center p-5">
+        <h2 className="font-medium text-lg">Your Result</h2>
+        <Button
+          className="flex gap-2 bg-blue-700 text-white"
+          onClick={() => navigator.clipboard.writeText(aiOutput)}
+        >
+          <Copy className="w-4 h-4" /> Copy{" "}
+        </Button>
       </div>
       <Editor
         ref={editorRef}
@@ -33,10 +36,12 @@ function OutputSection({aiOutput}:props) {
         initialEditType="wysiwyg"
         height="600px"
         useCommandShortcut={true}
-        onChange={()=>console.log(editorRef.current.getInstance().getMarkdown())}
+        onChange={() =>
+          console.log(editorRef.current.getInstance().getMarkdown())
+        }
       />
     </div>
-  )
+  );
 }
 
-export default OutputSection
+export default OutputSection;

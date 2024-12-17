@@ -19,7 +19,7 @@ import { userResponses } from "@/utils/db/schema";
 import moment from "moment";
 import { toast } from "sonner";
 import { SignInButton, useUser } from "@clerk/nextjs";
-import {  useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 function FormUi({
   jsonForm,
@@ -168,7 +168,7 @@ function FormUi({
                         handleCheckboxChange(
                           field?.label,
                           item.label ? item.label : item,
-                          v
+                          v,
                         )
                       }
                     />

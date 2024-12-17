@@ -47,7 +47,7 @@ const Chatbox = () => {
                   <div
                     className={cn(
                       inter.className,
-                      "flex max-w-3xl items-center"
+                      "flex max-w-3xl items-center",
                     )}
                   >
                     <p>{m.content}</p>
@@ -66,7 +66,7 @@ const Chatbox = () => {
                   <div
                     className={cn(
                       inter.className,
-                      "max-w-3xl rounded-xl markdown-body w-full overflow-x-auto"
+                      "max-w-3xl rounded-xl markdown-body w-full overflow-x-auto",
                     )}
                   >
                     <Markdown>{m.content}</Markdown>
@@ -96,7 +96,7 @@ const Chatbox = () => {
               <span
                 className={cn(
                   "text-blue-500 text-2xl md:text-4xl",
-                  inter.className
+                  inter.className,
                 )}
               >
                 Brave

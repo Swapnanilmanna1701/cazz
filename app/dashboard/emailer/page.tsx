@@ -20,12 +20,12 @@ import { Navbar } from "@/components/Navbar";
 
 const OutputSection2 = dynamic(
   () => import("@/components/emailer/OutputSection2"),
-  { ssr: false }
+  { ssr: false },
 );
 
-export default function page  ()  {
+export default function page() {
   const selectedTemplate: TEMPLATE | undefined = Templates?.find(
-    (item) => item.slug === "email-writeup"
+    (item) => item.slug === "email-writeup",
   );
 
   const [loading, setLoading] = useState(false);
@@ -46,7 +46,7 @@ export default function page  ()  {
     await SaveInDb(
       JSON.stringify(formData),
       selectedTemplate?.slug,
-      result?.response.text()
+      result?.response.text(),
     );
     setLoading(false);
   };
@@ -71,16 +71,15 @@ export default function page  ()  {
       emails.concat({
         id: emails.length + 1,
         receiver: inputtedEmail,
-      })
+      }),
     );
   };
 
   return (
-    
     <div>
       <div className="bg-black text-gray-100 h-20 ">
-        <Navbar/>
-    </div>
+        <Navbar />
+      </div>
       <div className="p-5 mb-4 shadow-md border rounded-lg bg-gradient-to-tl from-green-300 via-blue-500 to-purple-600">
         <h2 className="font-bold text-2xl mb-2 text-white">
           Scheduler Your Emails
@@ -126,5 +125,4 @@ export default function page  ()  {
       </div>
     </div>
   );
-};
-
+}

@@ -136,7 +136,7 @@ export async function updateResume({
 
 export async function addExperienceToResume(
   resumeId: string,
-  experienceDataArray: any
+  experienceDataArray: any,
 ) {
   try {
     const resume = await Resume.findOne({ resumeId: resumeId });
@@ -149,19 +149,19 @@ export async function addExperienceToResume(
       experienceDataArray.map(async (experienceData: any) => {
         if (experienceData._id) {
           const existingExperience = await Experience.findById(
-            experienceData._id
+            experienceData._id,
           );
           if (existingExperience) {
             return await Experience.findByIdAndUpdate(
               experienceData._id,
               experienceData,
-              { new: true }
+              { new: true },
             );
           }
         }
         const newExperience = new Experience(experienceData);
         return await newExperience.save();
-      })
+      }),
     );
 
     const experienceIds = savedExperiences.map((experience) => experience._id);
@@ -178,7 +178,7 @@ export async function addExperienceToResume(
 
 export async function addEducationToResume(
   resumeId: string,
-  educationDataArray: any
+  educationDataArray: any,
 ) {
   try {
     const resume = await Resume.findOne({ resumeId: resumeId });
@@ -195,13 +195,13 @@ export async function addEducationToResume(
             return await Education.findByIdAndUpdate(
               educationData._id,
               educationData,
-              { new: true }
+              { new: true },
             );
           }
         }
         const newEducation = new Education(educationData);
         return await newEducation.save();
-      })
+      }),
     );
 
     const educationIds = savedEducation.map((education) => education._id);
@@ -216,10 +216,7 @@ export async function addEducationToResume(
   }
 }
 
-export async function addSkillToResume(
-  resumeId: string,
-  skillDataArray: any
-) {
+export async function addSkillToResume(resumeId: string, skillDataArray: any) {
   try {
     const resume = await Resume.findOne({ resumeId: resumeId });
 
@@ -239,7 +236,7 @@ export async function addSkillToResume(
         }
         const newSkill = new Skill(skillData);
         return await newSkill.save();
-      })
+      }),
     );
 
     const skillIds = savedSkills.map((skill) => skill._id);

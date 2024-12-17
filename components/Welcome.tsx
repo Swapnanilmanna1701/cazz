@@ -19,8 +19,7 @@ const Welcome = async () => {
         !👋
       </h1>
       <p className="text-white text-lg">
-        Hey there:)
-        Welcome to the AI powered platform for all your needs.
+        Hey there:) Welcome to the AI powered platform for all your needs.
       </p>
     </div>
   );

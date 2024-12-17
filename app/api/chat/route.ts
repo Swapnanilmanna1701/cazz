@@ -1,13 +1,13 @@
 import { google } from "@ai-sdk/google";
-import { GoogleGenerativeAI } from '@google/generative-ai';
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 import { streamObject } from "ai";
 import { z } from "zod";
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
-const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY as string);
-
-
+const genAI = new GoogleGenerativeAI(
+  process.env.NEXT_PUBLIC_GEMINI_API_KEY as string,
+);
 
 export async function POST(req: Request) {
   const context = await req.json();
@@ -26,5 +26,3 @@ export async function POST(req: Request) {
 
   return result.toTextStreamResponse();
 }
-
-

@@ -14,12 +14,12 @@ function Dashboard() {
         <Navbar />
       </div>
       <div>
-      <h1 className="md:text-6xl text-2xl text-center md:mt-12 font-bold">
-            Create All Types of Content <br /> With{" "}
-            <Cover>
-              <span className=" dark:text-neutral-100">Lightning Speed</span>
-            </Cover>
-          </h1>
+        <h1 className="md:text-6xl text-2xl text-center md:mt-12 font-bold">
+          Create All Types of Content <br /> With{" "}
+          <Cover>
+            <span className=" dark:text-neutral-100">Lightning Speed</span>
+          </Cover>
+        </h1>
       </div>
       {/* Search Section  */}
       <SearchSection

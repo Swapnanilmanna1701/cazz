@@ -1,13 +1,12 @@
-"use server"
+"use server";
 
 import { generateEmailBody, sendEmail } from "./generateEmail";
-import {marked} from 'marked';
-
+import { marked } from "marked";
 
 export async function sendToAll(
   emails: string[],
   content: string,
-  subject: string
+  subject: string,
 ) {
   const sendPromises = emails.map((email) => send(content, email, subject));
 

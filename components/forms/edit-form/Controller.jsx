@@ -69,7 +69,7 @@ function Controller({
               >
                 {index == 0 && "None"}
               </div>
-            )
+            ),
         )}
       </div>
       <Button

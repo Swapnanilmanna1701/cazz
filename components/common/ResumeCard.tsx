@@ -78,10 +78,7 @@ const ResumeCard = ({
 
   return (
     <div className="relative aspect-[1/1.2] flex flex-col hover:scale-105 transition-all">
-      <Link
-        href={"/resume/" + myResume.resumeId}
-        className="flex-grow"
-      >
+      <Link href={"/resume/" + myResume.resumeId} className="flex-grow">
         <div
           className="bg-gradient-to-b from-pink-100 via-purple-200 to-blue-200 rounded-t-lg border-t-4 h-full"
           style={{
@@ -114,9 +111,7 @@ const ResumeCard = ({
             </DropdownMenuItem>
 
             <DropdownMenuItem
-              onClick={() =>
-                router.push("/resume/" + myResume.resumeId)
-              }
+              onClick={() => router.push("/resume/" + myResume.resumeId)}
             >
               View
             </DropdownMenuItem>

@@ -1,56 +1,55 @@
-'use client';
+"use client";
 
 import Section from "@/components/section";
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
-import { Card, CardFooter, } from "../ui/card";
+import { Card, CardFooter } from "../ui/card";
 import ShinyButton from "@/components/ui/shiny-button";
 
-import webdevImage from '@/assets/course/webdev.png'
-import webDevOpsImage from '@/assets/course/webDevOps.png'
-import web3CohortImage from '@/assets/course/web3Cohort.png'
-import cohort3Image from '@/assets/course/cohort3.0.png'
-import devOpsCohortImage from '@/assets/course/devOpsCohort.png'
+import webdevImage from "@/assets/course/webdev.png";
+import webDevOpsImage from "@/assets/course/webDevOps.png";
+import web3CohortImage from "@/assets/course/web3Cohort.png";
+import cohort3Image from "@/assets/course/cohort3.0.png";
+import devOpsCohortImage from "@/assets/course/devOpsCohort.png";
 import Link from "next/link";
-
 
 const courseData = [
   {
     id: 1,
-    link: 'https://harkirat.classx.co.in/new-courses/15-complete-web-development-cohort',
+    link: "https://harkirat.classx.co.in/new-courses/15-complete-web-development-cohort",
     image: webdevImage,
   },
   {
     id: 2,
-    link: 'https://harkirat.classx.co.in/new-courses/12-complete-web-development-devops-cohort',
+    link: "https://harkirat.classx.co.in/new-courses/12-complete-web-development-devops-cohort",
     image: webDevOpsImage,
   },
   {
     id: 3,
-    link: 'https://harkirat.classx.co.in/new-courses/13-complete-web3-blockchain-cohort',
+    link: "https://harkirat.classx.co.in/new-courses/13-complete-web3-blockchain-cohort",
     image: web3CohortImage,
   },
   {
     id: 4,
-    link: 'https://harkirat.classx.co.in/new-courses/14-complete-web-development-devops-blockchain-cohort',
+    link: "https://harkirat.classx.co.in/new-courses/14-complete-web-development-devops-blockchain-cohort",
     image: cohort3Image,
   },
   {
     id: 5,
-    link: 'https://harkirat.classx.co.in/new-courses/16-complete-devops-cohort',
+    link: "https://harkirat.classx.co.in/new-courses/16-complete-devops-cohort",
     image: devOpsCohortImage,
   },
-]
+];
 
 export interface Course {
-  id: number,
-  link: string,
-  image: StaticImageData,
+  id: number;
+  link: string;
+  image: StaticImageData;
 }
 
 type CourseCardProps = {
-  course: Course
-}
+  course: Course;
+};
 
 export const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
   return (
@@ -63,7 +62,7 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
       </CardFooter>
     </Card>
   );
-}
+};
 
 export default function Courses() {
   return (
@@ -89,5 +88,5 @@ export default function Courses() {
         ))}
       </div>
     </Section>
-  )
+  );
 }

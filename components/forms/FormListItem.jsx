@@ -28,8 +28,8 @@ function FormListItem({ formRecord, jsonForm }) {
       .where(
         and(
           eq(JsonForms.id, formRecord.id),
-          eq(JsonForms.createdBy, user?.primaryEmailAddress?.emailAddress)
-        )
+          eq(JsonForms.createdBy, user?.primaryEmailAddress?.emailAddress),
+        ),
       );
     if (result) {
       toast.success("Form Deleted!!!");

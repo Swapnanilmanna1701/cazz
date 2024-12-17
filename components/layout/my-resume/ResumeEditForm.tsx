@@ -91,17 +91,17 @@ const ResumeEditForm = ({
 
                 const experienceResult = await addExperienceToResume(
                   params.id,
-                  updates.experience
+                  updates.experience,
                 );
 
                 const educationResult = await addEducationToResume(
                   params.id,
-                  updates.education
+                  updates.education,
                 );
 
                 const skillsResult = await addSkillToResume(
                   params.id,
-                  updates.skills
+                  updates.skills,
                 );
 
                 setIsLoading(false);

@@ -20,12 +20,7 @@ const ParticlesDemo = () => {
 
   return (
     <div className="relative flex min-h-svh w-full flex-col items-center pt-20 md:pt-28 overflow-hidden rounded-lg border border-t-0 bg-background md:shadow-xl">
-      
-      
-      
-      
       <Convertor />
-      
     </div>
   );
 };

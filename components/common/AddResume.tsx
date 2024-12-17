@@ -7,7 +7,7 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "../ui/dialog"
+} from "../ui/dialog";
 import { v4 as uuidv4 } from "uuid";
 import React, { useState } from "react";
 import { z } from "zod";
@@ -23,7 +23,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from  "../ui/form";
+} from "../ui/form";
 import { createResume } from "@/lib/actions/resume.actions";
 import { toast } from "../ui/use-toast";
 import { useRouter } from "next-nprogress-bar";
@@ -41,12 +41,12 @@ const AddResume = ({ userId }: { userId: string | undefined }) => {
   });
 
   const onSubmit = async (
-    values: z.infer<typeof ResumeNameValidationSchema>
+    values: z.infer<typeof ResumeNameValidationSchema>,
   ) => {
     if (userId === undefined) {
       return;
     }
-    
+
     setIsLoading(true);
 
     const uuid = uuidv4();
@@ -89,8 +89,8 @@ const AddResume = ({ userId }: { userId: string | undefined }) => {
           <DialogHeader>
             <DialogTitle>Create New Resume</DialogTitle>
             <DialogDescription className="text-slate-800">
-              Enter the title of your resume here. Click create when you&apos are
-              done.
+              Enter the title of your resume here. Click create when you&apos
+              are done.
             </DialogDescription>
           </DialogHeader>
           <Form {...form}>
@@ -130,7 +130,11 @@ const AddResume = ({ userId }: { userId: string | undefined }) => {
                 >
                   Cancel
                 </button>
-                <Button type="submit" disabled={isLoading} className="bg-blue-700 text-white hover:bg-blue-600">
+                <Button
+                  type="submit"
+                  disabled={isLoading}
+                  className="bg-blue-700 text-white hover:bg-blue-600"
+                >
                   {isLoading ? (
                     <>
                       <Loader2 size={20} className="animate-spin" /> &nbsp;

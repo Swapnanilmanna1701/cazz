@@ -1,4 +1,3 @@
-
 "use client";
 import React from "react";
 
@@ -13,10 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import {
-  TextRevealCard,
-  
-} from "@/components/ui/text-reveal-card"
+import { TextRevealCard } from "@/components/ui/text-reveal-card";
 import {
   Loader2,
   Upload,
@@ -105,7 +101,7 @@ export default function GenerateContent() {
         const updatedUser = await createOrUpdateUser(
           user.id,
           user.emailAddresses[0].emailAddress,
-          user.fullName || ""
+          user.fullName || "",
         );
         console.log("Updated user:", updatedUser);
         if (updatedUser) {
@@ -190,7 +186,7 @@ export default function GenerateContent() {
       // Update points
       const updatedUser = await updateUserPoints(
         user.id,
-        -POINTS_PER_GENERATION
+        -POINTS_PER_GENERATION,
       );
       if (updatedUser) {
         setUserPoints(updatedUser.points);
@@ -201,7 +197,7 @@ export default function GenerateContent() {
         user.id,
         content.join("\n\n"),
         prompt,
-        contentType
+        contentType,
       );
 
       if (savedContent) {
@@ -222,7 +218,7 @@ export default function GenerateContent() {
     setGeneratedContent(
       item.contentType === "twitter"
         ? item.content.split("\n\n")
-        : [item.content]
+        : [item.content],
     );
   };
 
@@ -283,14 +279,11 @@ export default function GenerateContent() {
     <div className="bg-black min-h-screen text-white">
       <Navbar />
       <div className="flex items-center justify-center bg-black h-[40rem] rounded-2xl w-full">
-      <TextRevealCard
-        text="You know the business"
-        revealText="I know the chemistry "
-      >
-        
-        
-      </TextRevealCard>
-    </div>
+        <TextRevealCard
+          text="You know the business"
+          revealText="I know the chemistry "
+        ></TextRevealCard>
+      </div>
       <div className="container mx-auto px-4 mb-8 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 mt-14 lg:grid-cols-3 gap-8">
           {/* Left sidebar - History */}

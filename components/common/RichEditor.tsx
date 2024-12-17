@@ -34,7 +34,7 @@ const RichTextEditor = ({
         matchVisual: true,
       },
     }),
-    []
+    [],
   );
 
   return (

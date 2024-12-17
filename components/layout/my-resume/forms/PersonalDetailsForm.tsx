@@ -63,9 +63,7 @@ const PersonalDetailsForm = ({ params }: { params: { id: string } }) => {
       <form onSubmit={onSave}>
         <div className="grid grid-cols-2 mt-5 gap-3">
           <div className="space-y-2">
-            <label className="mt-2 text-black font-semibold">
-              First Name:
-            </label>
+            <label className="mt-2 text-black font-semibold">First Name:</label>
             <Input
               name="firstName"
               defaultValue={formData?.firstName}

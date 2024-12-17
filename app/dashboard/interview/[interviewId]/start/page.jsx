@@ -10,11 +10,11 @@ import dynamic from "next/dynamic";
 
 const QuestionsSection = dynamic(
   () => import("@/components/interview/start/questions-section"),
-  { ssr: false }
+  { ssr: false },
 );
 const RecordAnswerSection = dynamic(
   () => import("@/components/interview/start/record-answer-section"),
-  { ssr: false }
+  { ssr: false },
 );
 
 // import { MockInterviewProps } from "@/lib/utils/types";

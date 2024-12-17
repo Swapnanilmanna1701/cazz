@@ -94,7 +94,10 @@ export default function Feedback({ params }) {
         </>
       )}
 
-      <Button onClick={() => router.replace("/dashboard/interview")} className="mt-2">
+      <Button
+        onClick={() => router.replace("/dashboard/interview")}
+        className="mt-2"
+      >
         Go Home
       </Button>
     </div>

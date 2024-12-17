@@ -17,7 +17,7 @@ const EducationForm = ({ params }: { params: { id: string } }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isAiLoading, setIsAiLoading] = useState(false);
   const [aiGeneratedDescriptionList, setAiGeneratedDescriptionList] = useState(
-    [] as any
+    [] as any,
   );
   const [educationList, setEducationList] = useState(
     formData?.education.length > 0
@@ -31,10 +31,10 @@ const EducationForm = ({ params }: { params: { id: string } }) => {
             endDate: "",
             description: "",
           },
-        ]
+        ],
   );
   const [currentAiIndex, setCurrentAiIndex] = useState(
-    educationList.length - 1
+    educationList.length - 1,
   );
   const { toast } = useToast();
 
@@ -124,7 +124,7 @@ const EducationForm = ({ params }: { params: { id: string } }) => {
     setIsAiLoading(true);
 
     const result = await generateEducationDescription(
-      `${formData?.education[index]?.universityName} on ${formData?.education[index]?.degree} in ${formData?.education[index]?.major}`
+      `${formData?.education[index]?.universityName} on ${formData?.education[index]?.degree} in ${formData?.education[index]?.major}`,
     );
 
     setAiGeneratedDescriptionList(result);
@@ -259,7 +259,7 @@ const EducationForm = ({ params }: { params: { id: string } }) => {
                   onChange={(e) => handleChange(e, index)}
                   defaultValue={item?.description || ""}
                   className="no-focus"
-                  style={{height: "300px", resize: "none"}}
+                  style={{ height: "300px", resize: "none" }}
                 />
               </div>
             </div>
@@ -309,7 +309,7 @@ const EducationForm = ({ params }: { params: { id: string } }) => {
                   {
                     target: { name: "description", value: item?.description },
                   },
-                  currentAiIndex
+                  currentAiIndex,
                 )
               }
               className={`p-5 shadow-lg my-4 rounded-lg border-t-2 ${

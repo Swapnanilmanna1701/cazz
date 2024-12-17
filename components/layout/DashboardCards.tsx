@@ -41,10 +41,10 @@ const DashboardCards = () => {
               />
             ))
           : [1, 2, 3].map((index) => (
-            <div
-            key={index}
-            className="h-full w-full bg-gray-200 animate-pulse rounded-lg "
-          ></div>
+              <div
+                key={index}
+                className="h-full w-full bg-gray-200 animate-pulse rounded-lg "
+              ></div>
             ))}
       </div>
     </>

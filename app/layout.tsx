@@ -1,4 +1,3 @@
-
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -12,18 +11,17 @@ export const metadata: Metadata = {
   description: "Your Smartest Companion",
 };
 
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider
-      
-    >
+    <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
-        <body className={`${inter.className} bg-black text-white antialiased bg-grid-white/[0.02]`}>
+        <body
+          className={`${inter.className} bg-black text-white antialiased bg-grid-white/[0.02]`}
+        >
           <ThemeProvider attribute="class" defaultTheme="dark">
             {children}
           </ThemeProvider>

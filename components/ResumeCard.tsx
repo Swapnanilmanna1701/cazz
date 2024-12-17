@@ -18,8 +18,8 @@ const ResumeCard = ({ content }: { content: ResumeCardProps }) => {
             content.score > 80
               ? `text-green-500`
               : content.score > 60 && content.score < 80
-              ? `text-yellow-500`
-              : `text-red-600`
+                ? `text-yellow-500`
+                : `text-red-600`
           }
         >
           {content.score}

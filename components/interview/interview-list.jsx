@@ -17,14 +17,14 @@ export default function InterviewList() {
   }, [user]);
 
   const GetInterviewList = async () => {
-    const result =  db
+    const result = db
       .select()
       .from(MockInterview)
       .where(
         eq(
           MockInterview.createdBy,
-          user?.primaryEmailAddress?.emailAddress || ""
-        )
+          user?.primaryEmailAddress?.emailAddress || "",
+        ),
       )
       .orderBy(desc(MockInterview.id));
 

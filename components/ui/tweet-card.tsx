@@ -9,7 +9,6 @@ import {
 import { getTweet, type Tweet } from "react-tweet/api";
 import { cn } from "@/lib/utils";
 
-
 interface TwitterIconProps {
   className?: string;
   [key: string]: any;
@@ -209,10 +208,8 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => (
     )}
     {!tweet.video &&
       !tweet.photos &&
-      
       tweet?.card?.binding_values?.thumbnail_image_large?.image_value.url && (
         <img
-          
           src={tweet.card.binding_values.thumbnail_image_large.image_value.url}
           className="h-64 rounded-xl border object-cover shadow-sm"
         />
@@ -222,7 +219,7 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => (
 
 export const MagicTweet = ({
   tweet,
-  
+
   className,
   ...props
 }: {
@@ -260,12 +257,12 @@ export const TweetCard = async ({
 }) => {
   const tweet = id
     ? await getTweet(id).catch((err) => {
-      if (onError) {
-        onError(err);
-      } else {
-        console.error(err);
-      }
-    })
+        if (onError) {
+          onError(err);
+        } else {
+          console.error(err);
+        }
+      })
     : undefined;
 
   if (!tweet) {

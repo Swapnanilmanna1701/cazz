@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -37,8 +36,8 @@ function EditForm({ params }) {
       .where(
         and(
           eq(JsonForms.id, params?.formId),
-          eq(JsonForms.createdBy, user?.primaryEmailAddress?.emailAddress)
-        )
+          eq(JsonForms.createdBy, user?.primaryEmailAddress?.emailAddress),
+        ),
       );
 
     setRecord(result[0]);
@@ -71,8 +70,8 @@ function EditForm({ params }) {
       .where(
         and(
           eq(JsonForms.id, record.id),
-          eq(JsonForms.createdBy, user?.primaryEmailAddress?.emailAddress)
-        )
+          eq(JsonForms.createdBy, user?.primaryEmailAddress?.emailAddress),
+        ),
       )
       .returning({ id: JsonForms.id });
 
@@ -82,7 +81,7 @@ function EditForm({ params }) {
 
   const deleteField = (indexToRemove) => {
     const result = jsonForm.fields.filter(
-      (item, index) => index != indexToRemove
+      (item, index) => index != indexToRemove,
     );
 
     jsonForm.fields = result;
@@ -99,8 +98,8 @@ function EditForm({ params }) {
       .where(
         and(
           eq(JsonForms.id, record.id),
-          eq(JsonForms.createdBy, user?.primaryEmailAddress?.emailAddress)
-        )
+          eq(JsonForms.createdBy, user?.primaryEmailAddress?.emailAddress),
+        ),
       )
       .returning({ id: JsonForms.id });
     if (result) toast.success("Updated!!!");
@@ -109,7 +108,6 @@ function EditForm({ params }) {
   return (
     <>
       <div className="w-full h-full mb-8 flex flex-col gap-8 md:p-5">
-      
         <div className="space-y-4">
           <div className="flex justify-between items-center">
             <Button

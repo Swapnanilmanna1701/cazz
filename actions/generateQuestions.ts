@@ -1,4 +1,3 @@
-
 "use server";
 
 import { generateObject } from "ai";
@@ -20,7 +19,7 @@ export async function generateQuestions(inputPrompt: string) {
         z.object({
           question: z.string(),
           answer: z.string(),
-        })
+        }),
       ),
     }),
     prompt: inputPrompt,

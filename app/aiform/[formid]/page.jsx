@@ -33,7 +33,6 @@ function LiveAiForm({ params }) {
         backgroundImage: record?.background,
       }}
     >
-      
       {record && (
         <FormUi
           jsonForm={jsonForm}

@@ -10,9 +10,7 @@ function TemplateCard(item: TEMPLATE) {
       <div
         className={cn(
           "p-5 shadow rounded-lg border flex flex-col gap-3 cursor-pointer h-full hover:scale-105 duration-500 transition-all",
-          Math.random() > 0.5
-            ? "border-cyan-400"
-            : "border-purple-400"
+          Math.random() > 0.5 ? "border-cyan-400" : "border-purple-400",
         )}
       >
         <Image src={item.icon} alt="icon" width={50} height={50} />

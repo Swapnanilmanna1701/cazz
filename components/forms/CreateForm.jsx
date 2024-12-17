@@ -50,7 +50,7 @@ export default function CreateForm() {
   const onCreateForm = async () => {
     setLoading(true);
     const result = await AiChatSession.sendMessage(
-      "Description:" + userInput + PROMPT
+      "Description:" + userInput + PROMPT,
     );
     console.log(result.response.text());
     if (result.response.text()) {
@@ -86,13 +86,17 @@ export default function CreateForm() {
               />
               <div className="flex gap-2 my-3 justify-end text-black">
                 <Button
-                className="bg-red-700 text-white hover:bg-red-600"
+                  className="bg-red-700 text-white hover:bg-red-600"
                   onClick={() => setOpenDialog(false)}
                   variant="destructive"
                 >
                   Cancel
                 </Button>
-                <Button className="bg-blue-700 text-white hover:bg-blue-600" disabled={loading} onClick={() => onCreateForm()}>
+                <Button
+                  className="bg-blue-700 text-white hover:bg-blue-600"
+                  disabled={loading}
+                  onClick={() => onCreateForm()}
+                >
                   {loading ? <Loader2 className="animate-spin" /> : "Create"}
                 </Button>
               </div>

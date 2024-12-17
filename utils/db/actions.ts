@@ -44,7 +44,7 @@ export async function createOrUpdateSubscription(
   plan: string,
   status: string,
   currentPeriodStart: Date,
-  currentPeriodEnd: Date
+  currentPeriodEnd: Date,
 ) {
   try {
     const [user] = await db
@@ -105,7 +105,7 @@ export async function saveGeneratedContent(
   userId: string,
   content: string,
   prompt: string,
-  contentType: string
+  contentType: string,
 ) {
   try {
     const [savedContent] = await db
@@ -127,7 +127,7 @@ export async function saveGeneratedContent(
 
 export async function getGeneratedContentHistory(
   userId: string,
-  limit: number = 10
+  limit: number = 10,
 ) {
   try {
     const history = await db
@@ -142,8 +142,8 @@ export async function getGeneratedContentHistory(
       .where(
         eq(
           GeneratedContent.userId,
-          sql`(SELECT id FROM ${Users} WHERE stripe_customer_id = ${userId})`
-        )
+          sql`(SELECT id FROM ${Users} WHERE stripe_customer_id = ${userId})`,
+        ),
       )
       .orderBy(desc(GeneratedContent.createdAt))
       .limit(limit)
@@ -158,7 +158,7 @@ export async function getGeneratedContentHistory(
 export async function createOrUpdateUser(
   clerkUserId: string,
   email: string,
-  name: string
+  name: string,
 ) {
   try {
     console.log("Creating or updating user:", clerkUserId, email, name);
