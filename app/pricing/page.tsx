@@ -2,6 +2,7 @@
 
 import AnimationContainer from "@/components/animation-container";
 import MaxWidthWrapper from "@/components/max-width-wrapper";
+import { Navbar } from "@/components/Navbar";
 import PricingCards from "@/components/pricing-cards";
 import {
   Accordion,
@@ -15,8 +16,10 @@ import { FAQ } from "@/constants/faq";
 const PricingPage = () => {
   return (
     <MaxWidthWrapper className="mb-40">
+      <Navbar />
+
       <AnimationContainer delay={0.1}>
-        <div className="flex flex-col items-center justify-center py-10 max-w-lg mx-auto">
+        <div className="flex flex-col items-center justify-center py-24 max-w-lg mx-auto">
           <MagicBadge title="Pricing" />
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold font-heading text-center mt-6 !leading-tight">
             Simple and transparent pricing

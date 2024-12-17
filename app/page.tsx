@@ -20,8 +20,8 @@ import { auth } from "@clerk/nextjs/server";
 import TypewriterEffectSmoothDemo from "@/components/typewritter";
 
 import { SignUpButton } from "@clerk/nextjs";
-import Header from "@/components/Navbar1";
-//import { Navbar } from "@/components/Navbar";
+// import Header from "@/components/Navbar1";
+import { Navbar } from "@/components/Navbar";
 //import Spline from '@splinetool/react-spline/next';
 //import { Footer } from "@/components/Footer";
 import BlurFade from "@/components/magicui/blur-fade";
@@ -36,7 +36,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black overflow-hidden pt-20 w-full">
-      <Header />
+      <Navbar />
 
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Decorative elements */}
