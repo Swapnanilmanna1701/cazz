@@ -27,7 +27,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "drizzle.config.js",
-    "utils/db/dbConfig.jsx",
+    "utils/db/dbConfig.ts",
     "app/aiform/[formid]/page.jsx",
     "app/dashboard/resume/page.jsx",
     "components/forms/CreateForm.jsx",

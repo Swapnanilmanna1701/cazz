@@ -1,7 +1,7 @@
 "use client";
 
-import { db } from "@/lib/utils/db";
-import { UserAnswer } from "@/lib/utils/schema";
+import { db } from "@/utils/db/dbConfig";
+import { UserAnswer } from "@/utils/db/schema";
 import { eq } from "drizzle-orm";
 import React, { useEffect, useState } from "react";
 import {

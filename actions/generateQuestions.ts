@@ -13,7 +13,7 @@ export async function generateQuestions(inputPrompt: string) {
   const {
     object: { questions },
   } = await generateObject({
-    model: groq.chat("llama3-8b-8192"),
+    model: groq.chat("llama-3.3-70b-versatile"),
     schema: z.object({
       questions: z.array(
         z.object({

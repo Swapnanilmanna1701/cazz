@@ -1,21 +1,23 @@
 "use client";
 
+import QuestionsSection from "@/components/interview/start/question-section";
+import RecordAnswerSection from "@/components/interview/start/record-answer-section";
 import { Button } from "@/components/ui/button";
-import { db } from "@/lib/utils/db";
-import { MockInterview } from "@/lib/utils/schema";
+import { db } from "@/utils/db/dbConfig";
+import { MockInterview } from "@/utils/db/schema";
 import { eq } from "drizzle-orm";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 
-const QuestionsSection = dynamic(
-  () => import("@/components/interview/start/questions-section"),
-  { ssr: false },
-);
-const RecordAnswerSection = dynamic(
-  () => import("@/components/interview/start/record-answer-section"),
-  { ssr: false },
-);
+// const QuestionsSection = dynamic(
+//   () => import("@/components/interview/start/questions-section"),
+//   { ssr: false },
+// );
+// const RecordAnswerSection = dynamic(
+//   () => import("@/components/interview/start/record-answer-section"),
+//   { ssr: false },
+// );
 
 // import { MockInterviewProps } from "@/lib/utils/types";
 
