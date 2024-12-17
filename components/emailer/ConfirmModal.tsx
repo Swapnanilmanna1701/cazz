@@ -23,7 +23,7 @@ export function ConfirmModal({
   emails: any;
 }) {
   const [processedContent, setProcessedContent] = useState(content);
-  const [finalSubject, setFinalSubject] = useState("Email from Brave AI");
+  const [finalSubject, setFinalSubject] = useState("Email from CazzAI");
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -42,7 +42,7 @@ export function ConfirmModal({
   const downloadEmailAsImage = () => {
     if (emailmodal.current) {
       domtoimage.toPng(emailmodal.current).then(function (dataUrl: string) {
-        let link = document.createElement("a");
+        const link = document.createElement("a");
         link.download = `${finalSubject}.png`;
         link.href = dataUrl;
         link.click();
@@ -86,12 +86,12 @@ export function ConfirmModal({
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-3">
                 <Avatar className="h-10 w-10">
-                  <AvatarFallback>BA</AvatarFallback>
+                  <AvatarFallback>SM</AvatarFallback>
                 </Avatar>
                 <div>
                   <h3 className="text-lg font-semibold">{finalSubject}</h3>
                   <p className="text-sm text-muted-foreground">
-                    edgexofficial@gmail.com
+                    swapnanilmanna06694@gmail.com
                   </p>
                 </div>
               </div>
@@ -147,7 +147,7 @@ export function ConfirmModal({
                 <div>
                   <h3 className="text-lg font-semibold">{finalSubject}</h3>
                   <p className="text-sm text-muted-foreground">
-                    edgexofficial@gmail.com
+                    swapnanilmanna06694@gmail.com
                   </p>
                 </div>
               </div>
@@ -161,7 +161,7 @@ export function ConfirmModal({
                 height={500}
                 className="w-28 h-28 mx-auto rounded-full"
               />
-              <h4 className="text-4xl text-gray-800 font-bold mt-4">
+              <h4 className="text-4xl text-white font-bold mt-4">
                 All the emails have been sent to the following recipients
               </h4>
               <div className="mt-6">
