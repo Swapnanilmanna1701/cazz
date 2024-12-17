@@ -23,13 +23,7 @@ const Footer = () => {
               CazzAI, Your Ultimate Companion.
             </p>
             <span className="mt-4 text-neutral-200 text-sm flex items-center">
-              Made by{" "}
-              <Link
-                href="https://github.com/Swapnanilmanna1701"
-                className="font-semibold ml-1"
-              >
-                Swapnanil
-              </Link>
+              Made by Swapnanil & Purbayan
             </span>
           </div>
         </AnimationContainer>

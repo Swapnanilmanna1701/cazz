@@ -4,12 +4,7 @@ import AnimationContainer from "@/components/animation-container";
 import MaxWidthWrapper from "@/components/max-width-wrapper";
 import { Navbar } from "@/components/Navbar";
 import PricingCards from "@/components/pricing-cards";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+//import {Accordion,AccordionContent,AccordionItem,AccordionTrigger,} from "@/components/ui/accordion";
 import MagicBadge from "@/components/ui/magic-badge";
 import { FAQ } from "@/constants/faq";
 //import { TextRevealCard } from "@/components/ui/text-reveal-card";
@@ -17,7 +12,7 @@ import { FAQ } from "@/constants/faq";
 
 const PricingPage = () => {
   return (
-    <MaxWidthWrapper className="mb-40">
+    <MaxWidthWrapper className="">
       <Navbar />
 
       <AnimationContainer delay={0.1}>
@@ -35,30 +30,7 @@ const PricingPage = () => {
         <PricingCards />
       </AnimationContainer>
 
-      <AnimationContainer delay={0.3}>
-        <div className="mt-20 w-full">
-          <div className="flex flex-col items-center justify-center w-full pt-12">
-            <h2 className="mt-6 text-2xl font-semibold text-center lg:text-3xl xl:text-4xl">
-              Frequently Asked Questions
-            </h2>
-            <p className="max-w-lg mt-6 text-center text-neutral-500">
-              Here are some of the most common questions we get asked. If you
-              have a question that isn&apos;t answered here, feel free to reach
-              out to us.
-            </p>
-          </div>
-          <div className="max-w-3xl mx-auto w-full mt-20">
-            <Accordion type="single" collapsible>
-              {FAQ?.map((faq) => (
-                <AccordionItem key={faq.id} value={faq.id}>
-                  <AccordionTrigger>{faq.question}</AccordionTrigger>
-                  <AccordionContent>{faq.answer}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </div>
-      </AnimationContainer>
+      
     </MaxWidthWrapper>
   );
 };

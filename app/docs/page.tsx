@@ -18,7 +18,7 @@ const docsSections = [
     title: "Twitter Threads",
     description:
       "Discover how to create engaging Twitter threads using our AI technology.",
-    link: "/docs/twitter-threads",
+    link: "https://help.x.com/en/using-x/create-a-thread",
   },
   {
     title: "Instagram Captions",
@@ -30,13 +30,13 @@ const docsSections = [
     title: "LinkedIn Posts",
     description:
       "Explore techniques for crafting professional LinkedIn content with AI assistance.",
-    link: "/docs/linkedin-posts",
+    link: "https://www.linkedin.com/pulse/how-create-post-linkedin-documents-adrian-shiel",
   },
   {
     title: "API Reference",
     description:
       "Detailed documentation for integrating our AI content generation into your applications.",
-    link: "/docs/api-reference",
+    link: "https://ai.google.dev/gemini-api/docs/quickstart?_gl=1*1pdctbl*_up*MQ..&gclid=CjwKCAiA34S7BhAtEiwACZzv4eVwMvfC6WHLjG3VEfIK_r02k7jkuUDmWbBxu3OhQvoga5JWDpZtUhoC-eEQAvD_BwE&lang=node",
   },
 ];
 
@@ -45,7 +45,7 @@ export default function DocsPage() {
     <div className="min-h-screen bg-black text-gray-100">
       <Navbar />
       <main className="container mx-auto px-8 py-20">
-        <h1 className="text-5xl font-bold mb-12 text-center text-white">
+        <h1 className="text-5xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-700 via-purple-500 to-indigo-500">
           Documentation
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
