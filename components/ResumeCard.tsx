@@ -61,14 +61,14 @@ const ResumeCard = ({ content }: { content: ResumeCardProps }) => {
             </p>
           )}
           <div className="flex gap-4">
-            <Link href={""}>
+            <Link href={"https://www.youtube.com/"}>
               <button className="mt-6 bg-blue-600 hover:bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-700 hover:text-white text-white font-bold py-2 px-4 rounded">
                 Start Learning
               </button>
             </Link>
-            <Link href={""}>
+            <Link href={"/"}>
               <button className="mt-6 bg-blue-600 hover:bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-700 hover:text-white text-white font-bold py-2 px-4 rounded">
-                Explore courses
+                Use CazzAI
               </button>
             </Link>
           </div>
