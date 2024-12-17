@@ -96,9 +96,7 @@ export default function RecordAnswerSection({
     if (resp) {
       toast("User Answer recorded successfully");
       setUserAnswer("");
-      setResults([]);
     }
-    setResults([]);
 
     setLoading(false);
   };
