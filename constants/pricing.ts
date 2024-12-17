@@ -7,7 +7,7 @@ export const PLANS = [
       yearly: 0,
     },
     features: [
-      { text: "Shorten links" },
+      { text: "Unlimited Content Creation" },
       { text: "Up to 100 tags", limit: "100 tags" },
       { text: "Customizable branded links" },
       { text: "Track clicks", tooltip: "1K clicks/month" },
@@ -47,7 +47,7 @@ export const PLANS = [
     ],
     btn: {
       text: "Get started",
-      href: "/auth/sign-up?plan=pro",
+      href: "",
       variant: "purple",
     },
   },
@@ -75,7 +75,7 @@ export const PLANS = [
     ],
     btn: {
       text: "Contact team",
-      href: "/auth/sign-up?plan=business",
+      href: "",
       variant: "default",
     },
   },

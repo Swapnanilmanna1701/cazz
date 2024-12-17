@@ -17,7 +17,7 @@ import { FAQ } from "@/constants/faq";
 
 const PricingPage = () => {
   return (
-    <MaxWidthWrapper className="mb-40">
+    <MaxWidthWrapper className="">
       <Navbar />
 
       
