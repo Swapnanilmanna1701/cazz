@@ -156,7 +156,7 @@ export default function Home() {
             </svg>
           </div>
           <h2 className="text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 font-bold mb-8 ">
-            Ready to revolutionize your social media strategy?
+            Want to elevate yourself to one step ahead?
           </h2>
           {userId ? (
             <Button

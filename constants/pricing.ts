@@ -22,7 +22,7 @@ export const PLANS = [
     ],
     btn: {
       text: "Start for free",
-      href: "/auth/sign-up?plan=free",
+      href: "/",
       variant: "default",
     },
   },

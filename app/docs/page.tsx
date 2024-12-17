@@ -1,73 +1,8 @@
-import { Navbar } from "@/components/Navbar";
-import { Timeline } from "@/components/ui/timeline";
-//import Image from "next/image";
+
+
 import Link from "next/link";
+import { HeroHighlight, Highlight } from "@/components/ui/hero";
 
-export default function TimelineDemo() {
-  const data = [
-    {
-      title: "Analysis",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-lg font-bold mb-8">
-            Analyze your resume with our ATS
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Scorings",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-lg font-bold mb-8">
-            Get Proper Scoring For Your Resume
-          </p>
-
-          <div className="grid grid-cols-2 gap-4">
-            
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Resolution",
-      content: (
-        <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-lg font-bold mb-8">
-            Suggestions & platform redirection to improve your skills
-          </p>
-          <div className="mb-8">
-            <div className="grid grid-cols-2 gap-4">
-              
-            </div>
-            <Link href={"/analyze-resume"}>
-              <button className="p-[3px] mt-6 relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-                <div className="px-8 py-2  bg-black rounded-[6px] font-bold relative group transition duration-200 text-white hover:bg-transparent">
-                  Analyze Resume
-                </div>
-              </button>
-            </Link>
-          </div>
-        </div>
-      ),
-    },
-  ];
-  return (
-    <div className="w-full">
-      <Navbar />
-      <div className="pt-10">
-        <Timeline data={data} />
-      </div>
-    </div>
-  );
-}
-
-/*
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 //import Footer from "@/components/Footer1"
@@ -139,4 +74,4 @@ export default function DocsPage() {
     </div>
   );
 }
-*/
+

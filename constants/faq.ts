@@ -1,9 +1,9 @@
 export const FAQ = [
   {
     id: "item-1",
-    question: "Is it accessible?",
+    question: "What is cazzAI",
     answer:
-      "Yes. It adheres to the WAI-ARIA design pattern, ensuring accessibility for all users.",
+      "It's an Unified and Generalized Platform that surely your ultimate companion.",
   },
   {
     id: "item-2",

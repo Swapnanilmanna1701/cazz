@@ -1,5 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
+
 import { HeroHighlight, Highlight } from "@/components/ui/hero";
 
 export function HeroBody() {
@@ -22,8 +24,18 @@ export function HeroBody() {
       >
         
         <Highlight className="text-black dark:text-white">
-          Welcome to CazzAi
+          Analyze Your Resume with CazzAI
         </Highlight>
+        <div className="pt-10">
+      <Link href={"/analyze-resume"}>
+              <button className="p-[3px] mt-6 relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+                <div className="px-8 py-2  bg-black rounded-[6px] font-bold relative group transition duration-200 text-white hover:bg-transparent">
+                  Analyze Resume
+                </div>
+              </button>
+            </Link>
+      </div>
         
       </motion.h1>
     </HeroHighlight>

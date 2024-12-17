@@ -169,6 +169,14 @@ const Footer = () => {
                       Terms & Conditions
                     </Link>
                   </li>
+                  <li className="mt-2">
+                    <Link
+                      href="/faq"
+                      className="hover:text-foreground transition-all duration-300"
+                    >
+                      FAQ
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </AnimationContainer>
