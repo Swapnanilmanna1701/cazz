@@ -144,7 +144,7 @@ const GeminiAI: React.FC = () => {
               </h1>
 
               <Image
-                src="/bg.gif"
+                src="/assets/2.png"
                 width={800}
                 height={800}
                 alt="Gemini AI"

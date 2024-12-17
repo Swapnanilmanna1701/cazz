@@ -3,7 +3,7 @@ import Link from "next/link";
 //import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 //import AnimationContainer from "@/components/ui/animation-container";
 import Footer from "@/components/Footer";
-import { SectionBadge } from "@/components/ui/badge";
+//import { SectionBadge } from "@/components/ui/badge";
 
 
 import { Button } from "@/components/ui/button";
@@ -161,7 +161,7 @@ export default function Home() {
           {userId ? (
             <Button
               asChild
-              className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105"
+              className="bg-blue-600 hover:bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white px-10 py-4 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105"
             >
               <Link href="/generate">
                 Generate Content Now <ArrowRightIcon className="ml-2 h-5 w-5" />
@@ -176,7 +176,7 @@ export default function Home() {
           )}
         </div>
         <div className="mb--20 text-2xl text-center relative">
-          <SectionBadge title="No credit card is required!!" />
+          
         </div>
 
         <div>
