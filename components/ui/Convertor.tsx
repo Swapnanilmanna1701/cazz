@@ -1,4 +1,6 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable@typescript-eslint/no-explicit-any */
+'use client'
+
 import { useState } from "react";
 import CodeEditor from "@/components/ui/Codeeditor";
 import { Button } from "@/components/ui/button";
@@ -118,7 +120,7 @@ const Convertor = () => {
               <CodeEditor
                 language={sourceLanguage}
                 value={sourceCode}
-                onChange={(value: any) => setSourceCode(value)}
+                onChange={(value: string) => setSourceCode(value)}
               />
             </div>
           </ShineBorder>
@@ -210,7 +212,7 @@ const Convertor = () => {
               <CodeEditor
                 language={translatedLanguage}
                 value={object?.code || ""}
-                onChange={(value: any) => setTranslatedCode(value)}
+                onChange={(value: string) => setTranslatedCode(value)}
               />
             </div>
           </ShineBorder>
