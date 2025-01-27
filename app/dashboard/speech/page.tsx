@@ -7,7 +7,9 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
 import useClipboard from "react-use-clipboard"
 import { BiSolidCopyAlt } from "react-icons/bi"
 import { BsFillMicFill } from "react-icons/bs"
-import { BsFillMicMuteFill } from "react-icons/bs"
+import { BsFillMicMuteFill } from "react-icons/bs";
+import { RiResetLeftFill } from "react-icons/ri";
+
 //import { SiConvertio } from "react-icons/si"
 
 const Home = () => {
@@ -27,10 +29,10 @@ const Home = () => {
 
   return (
     <>
-      <div className="text-center">
+      <div className="text-center h-full ">
         <h1 className='text-black'>Speech to Text Converter</h1>
-        <p id="para" className=' mt-6 pb-32 mb-4 rounded-md bg-base-100 lg:w-96 lg:h-48 w-64 h-64'>Note: To copy written text, firstly click once on the white board after clicking Stop button.</p>
-        <div className="" onClick={() => setCopyTxt(transcript)}>
+        <p id="para" className=' '>Note: To copy written text, firstly click once on the white board after clicking Stop button.</p>
+        <div className="mt-6 pb-32 mb-4 rounded-md bg-black  w-100 h-64" onClick={() => setCopyTxt(transcript)}>
           {transcript}
         </div>
         <div className="">
@@ -39,7 +41,8 @@ const Home = () => {
           <button onClick={setCopied}>
             <BiSolidCopyAlt />{isCopied ? " Copied" : " Copy to clipboard"}
           </button>
-          <button className="btn btn-accent btn-sm" onClick={resetTranscript}>Reset</button>
+          <button className="" onClick={resetTranscript}><RiResetLeftFill />
+          Reset</button>
         </div>
       </div>
     </>
