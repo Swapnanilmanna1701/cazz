@@ -8,7 +8,7 @@ import { ButtonWithLoader } from './button-with-loader'
 
 const ImagePicker = () => {
   const imageRef = useRef<HTMLInputElement | null>(null)
-  const { setValue } = useFormContext();
+  //const {setValue } = useFormContext();
   const [loading, setLoading] = useState(false)
 
   const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
