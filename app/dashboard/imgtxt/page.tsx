@@ -3,14 +3,14 @@
 import {useRef, useState} from 'react';
 import dynamic from 'next/dynamic';
 
-import {ContentDisplay} from '@/components/content-display';
+import {ContentDisplay} from '@/components/imgtxt/content-display';
 import {Button} from '@/components/ui/button';
 import {cn} from '@/lib/utils';
 import {Loader2, XIcon} from 'lucide-react';
 import type {ImageResult, PageResult} from 'ocr-llm';
 import {toast} from 'sonner';
 
-const FileUpload = dynamic(() => import('@/components/file-upload'), {
+const FileUpload = dynamic(() => import('@/components/imgtxt/file-upload'), {
   ssr: false,
 });
 
@@ -62,7 +62,7 @@ export default function Home() {
     setContents([]);
   };
 
-  const showContent = isLoading || contents.length > 0;
+  const showContent = isLoading || contents?.length > 0;
 
   return (
     <div className="w-full min-h-screen bg-neutral-50 flex overflow-hidden">

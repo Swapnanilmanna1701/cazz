@@ -272,7 +272,7 @@ export default function Dashboard({}: Props) {
             </CardHeader>
             <CardContent>
               <Button asChild size={"sm"}>
-                <Link href="/dashboard/pdf-parse">
+                <Link href="/dashboard/imgtxt">
                   Create
                   <ArrowRight size={18} />
                 </Link>
