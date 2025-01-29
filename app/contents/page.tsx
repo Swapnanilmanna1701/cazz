@@ -9,15 +9,15 @@ import TemplateListSection from "@/components/content/TemplateListSection";
 function Dashboard() {
   const [userSearchInput, setUserSearchInput] = useState<string>();
   return (
-    <div>
+    <div >
       <div className="bg-black text-gray-100 h-20">
         <Navbar />
       </div>
-      <div>
+      <div className="">
         <h1 className="md:text-6xl text-2xl text-center md:mt-12 font-bold">
           Create All Types of Content <br /> With{" "}
           <Cover>
-            <span className=" dark:text-neutral-100">Lightning Speed</span>
+            <span className=" bg-clip-text text-transparent bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300">Lightning Speed</span>
           </Cover>
         </h1>
       </div>

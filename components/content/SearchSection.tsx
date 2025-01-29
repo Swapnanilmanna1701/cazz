@@ -13,7 +13,7 @@ function SearchSection({ onSearchInput }: any) {
     setColor(resolvedTheme === "dark" ? "#0182fd" : "#000000");
   }, [resolvedTheme]);
   return (
-    <div className="relative p-10 m-5 border flex flex-col justify-center items-center text-white overflow-hidden rounded-lg  bg-black md:shadow-xl">
+    <div className="relative p-10 mt-5 border flex flex-col justify-center items-center text-white overflow-hidden rounded-lg  bg-black md:shadow-xl">
       <span className="pointer-events-none z-10 whitespace-pre-wrap text-center font-semibold leading-none">
       <div className="pointer-events-auto w-full h-full rounded-lg items-center justify-center font-overusedGrotesk p-5 bg-gradient-to-br text-teal bg-none ">
       <div className="w-full h-full items-center justify-center flex">

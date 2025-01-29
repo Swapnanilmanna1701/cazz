@@ -45,9 +45,9 @@ export default function Home() {
         {/* Hero Section */}
         <div className="text-center py-20 lg:py-32 relative">
           <RocketIcon className="w-16 h-16 text-purple-500 mx-auto mb-6 animate-bounce" />
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-600 via-purple-500 to-indigo-500">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300">
             Sky-Rocket Your Carrier with{" "}
-            <span>
+            <span className="text-8xl">
               <SparklesText text="CazzAI" />{" "}
             </span>
           </h1>

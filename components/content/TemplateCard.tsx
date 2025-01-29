@@ -15,7 +15,7 @@ function TemplateCard(item: TEMPLATE) {
     <Link href={"/dashboard/content/" + item?.slug}>
       <MagicCard
         className={cn(
-          "p-5 shadow rounded-lg flex flex-col gap-3 cursor-pointer h-full hover:scale-105 duration-500 transition-all",
+          "p-5 mt-5 shadow rounded-lg flex flex-col gap-3 cursor-pointer h-full hover:scale-105 duration-500 transition-all",
           Math.random() > 0.5 ? "border-cyan-400" : "border-purple-400",
         )} gradientColor={theme === "dark" ? "#0182fd" : "#ff00b3"}
       >
