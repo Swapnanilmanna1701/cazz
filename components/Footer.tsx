@@ -11,7 +11,7 @@ const Footer = () => {
         className="absolute inset-0 w-full -z-10"
         quantity={40}
         ease={10}
-        color="#d4d4d8"
+        color="#2682ff"
         refresh
       />
 

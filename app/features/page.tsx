@@ -2,9 +2,10 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 import { Button } from "@/components/ui/button";
 import LinkedIn from "@/components/ui/LinkedInIcon";
+import TextRevealButton from "@/components/textRevealbutton";
 import { Suspense } from "react";
 //import { MagicCard } from "@/components/magiccard";
-import { useTheme } from "next-themes";
+//import { useTheme } from "next-themes";
 
 
 import Templates from "@/app/(data)/Templates";
@@ -63,11 +64,11 @@ export default function Dashboard({}:Props) {
               </div>
             </CardHeader>
             <CardContent>
-              <Button size={"sm"} asChild>
+              
                 <Link href="/dashboard/interview">
-                  Prepare <ArrowRight size={18} />
+                <TextRevealButton />
                 </Link>
-              </Button>
+              
             </CardContent>
           </Card>
           <Card className="hover:-translate-y-1 shadow hover:shadow-blue-500/40 hover:shadow-md duration-500 transition-all border border-cyan-500">
