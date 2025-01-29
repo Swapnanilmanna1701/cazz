@@ -3,6 +3,9 @@
 import { Button } from "@/components/ui/button";
 import LinkedIn from "@/components/ui/LinkedInIcon";
 import { Suspense } from "react";
+//import { MagicCard } from "@/components/magiccard";
+import { useTheme } from "next-themes";
+
 
 import Templates from "@/app/(data)/Templates";
 import TemplateCard from "@/components/content/TemplateCard";
@@ -30,7 +33,8 @@ import Link from "next/link";
 
 type Props = {};
 
-export default function Dashboard({}: Props) {
+export default function Dashboard({}:Props) {
+  //const { theme } = useTheme();
   return (
     <>
       <div className="bg-black text-gray-100 h-20">
@@ -47,7 +51,8 @@ export default function Dashboard({}: Props) {
           <Welcome />
         </Suspense>
         <div className="max-w-6xl mx-auto w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Card className="hover:-translate-y-1 shadow hover:shadow-blue-500/40 hover:shadow-md duration-500 transition-all border border-purple-500">
+          <Card
+        className="hover:-translate-y-1 shadow hover:shadow-blue-500/40 hover:shadow-md duration-500 transition-all border border-cyan-500">
             <CardHeader className="flex gap-4">
               <Speech size={50} />
               <div>
