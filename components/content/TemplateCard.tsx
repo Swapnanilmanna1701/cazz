@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { TEMPLATE } from "./TemplateListSection";
 import Image from "next/image";
@@ -16,7 +17,7 @@ function TemplateCard(item: TEMPLATE) {
         className={cn(
           "p-5 shadow rounded-lg  flex flex-col gap-3 cursor-pointer h-full hover:scale-105 duration-500 transition-all",
           Math.random() > 0.5 ? "border-cyan-400" : "border-purple-400",
-        )} gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
+        )} gradientColor={theme === "dark" ? "#0182fd" : "#ff00b3"}
       >
         
         <Image src={item.icon} alt="icon" width={50} height={50} />
