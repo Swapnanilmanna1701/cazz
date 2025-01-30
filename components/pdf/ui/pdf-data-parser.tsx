@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Button } from "@/components/pdf/ui/button";
+import { Navbar } from "@/components/Navbar";
 import { Input } from "@/components/pdf/ui/input";
 import { Label } from "@/components/pdf/ui/label";
 import { Textarea } from "@/components/pdf/ui/textarea";
@@ -52,17 +53,15 @@ export default function PDFParser() {
     };
 
     return (
-        <div className="flex flex-col min-h-screen bg-gray-50">
-            <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white shadow-sm">
-                <div className="flex items-center justify-center">
-                    <FileText className="h-6 w-6 mr-2 text-blue-600" />
-                    <span className="text-xl font-semibold text-gray-800">PDF Data Parser</span>
-                </div>
-            </header>
+        <div className="min-h-screen bg-black overflow-hidden pt-20 w-full">
+            <Navbar />
+            <div className="flex flex-col min-h-screen bg-black">
+            
+           
             <main className="flex-1 container mx-auto px-4 py-8 max-w-3xl">
                 <h1 className="text-3xl font-bold mb-6 text-gray-800">Parse Data from PDF</h1>
                 <div className="space-y-6">
-                    <div className="bg-white p-6 rounded-lg shadow-md">
+                    <div className="bg-gradient-to-r from-cyan-300 via-violet-500 to-pink-600 p-6 rounded-lg shadow-md">
                         <Label htmlFor="pdf-file" className="text-lg font-medium text-gray-700 mb-2 block">
                             Upload PDF
                         </Label>
@@ -93,12 +92,12 @@ export default function PDFParser() {
                     {loading && (
                         <div className="space-y-2">
                             <Progress value={progress} className="w-full" />
-                            <p className="text-sm text-gray-600 text-center">Parsing PDF... {progress}%</p>
+                            <p className="text-sm text-cyan-300 text-center">Parsing PDF... {progress}%</p>
                         </div>
                     )}
 
-                    <div className="bg-white p-6 rounded-lg shadow-md">
-                        <Label htmlFor="parsed-data" className="text-lg font-medium text-gray-700 mb-2 block">
+                    <div className="bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300 p-3 rounded-lg shadow-md">
+                        <Label htmlFor="parsed-data" className="text-lg font-large text-white mb-2 block">
                             Parsed Data
                         </Label>
                         <Textarea
@@ -106,14 +105,14 @@ export default function PDFParser() {
                             placeholder="Parsed data will appear here..."
                             value={parsedData}
                             readOnly
-                            className="mt-1 h-64 w-full border border-gray-300 focus:outline-none focus:ring focus:ring-blue-500"
+                            className="mt-1 h-64 w-full border-2 border-white focus:outline-none focus:ring focus:ring-blue-500"
                         />
                     </div>
                 </div>
             </main>
-            <footer className="py-4 px-4 border-t bg-white">
-                <p className="text-center text-sm text-gray-500">© 2024 PDF Data Parser. All rights reserved.</p>
-            </footer>
+            
         </div>
+        </div>
+        
     );
 }
