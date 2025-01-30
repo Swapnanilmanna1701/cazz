@@ -158,7 +158,7 @@ export default function Tool() {
             placeholder="Enter text here ..."
             value={userText}
             onChange={(e) => setuserText(e.target.value)}
-            className="focus:outline-none max-h-96 w-full p-6 mb-4 border-2"
+            className="focus:outline-none max-h-96 w-full p-6 mb-4 border-2 rounded-2xl"
             name="user-doc"
             id="user-doc"
             rows={25}></textarea>
@@ -177,13 +177,13 @@ export default function Tool() {
             <button
               disabled={!(userText.length > 0)}
               onClick={handleSummarise}
-              className="focus:outline-none px-4 py-2 font-bold text-white bg-red-500">
+              className="focus:outline-none px-4 py-2 font-bold text-white bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300 border-2 rounded-2xl">
               Get Summary
             </button>
-            <ImagePicker />
+            
             <button
               onClick={handleTranlate}
-              className={`px-4 py-2 font-bold text-white bg-red-500 focus:outline-none ${
+              className={`px-4 py-2 font-bold text-white bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300 border-2 rounded-2xl focus:outline-none ${
                 hasSummed ? "block" : "hidden"
               }`}>
               Get Translation
@@ -197,7 +197,7 @@ export default function Tool() {
               value={language}
               onChange={(e) => setLanguage(e.target.value)}
               name="lang-select"
-              className="focus:outline-none px-6 py-2 mx-12 font-bold text-white bg-red-500"
+              className="focus:outline-none px-6 py-2 mx-12 font-bold text-white bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300 border-2 rounded-2xl"
               id="lang-select">
               {Object.entries(languages).map(([key, value]) => (
                 <option key={key} value={key}>
@@ -208,10 +208,10 @@ export default function Tool() {
           </div>
         </div>
         <div className="sm:w-full lg:w-1/2 flex flex-col items-center justify-start p-4 overflow-auto">
-          <div className="h-96 relative w-full px-10 py-6 mb-4 overflow-auto bg-white border">
+          <div className="h-96 relative w-full px-10 py-6 mb-4 overflow-auto bg-slate-900 border-b rounded-2xl">
             {hasSummed && (
               <div
-                className="w-36 absolute top-0 right-0 py-2 text-sm font-bold text-center text-white -translate-x-full bg-red-500 cursor-pointer"
+                className="w-36 absolute top-0 right-0 py-2 text-sm font-bold text-center text-white -translate-x-full bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300 border-2 rounded-2xl cursor-pointer"
                 onClick={copySummary}>
                 Copy Summary
               </div>
@@ -222,7 +222,7 @@ export default function Tool() {
                     ?.replace(/\[...\]/gi, " ")
                     .split(". ")
                     .map((sentence, idx) => (
-                      <li key={idx} className="mb-1">
+                      <li key={idx} className="mb-1 text-white">
                         {sentence}
                       </li>
                     ))
@@ -232,13 +232,13 @@ export default function Tool() {
           <div className="flex flex-row items-center justify-center">
             <button
               onClick={() => setSummaryOrTranslated(!summaryOrTranslated)}
-              className={`px-4 py-2 my-4 font-bold text-white bg-red-500 focus:outline-none mb-4 ${
+              className={`px-4 py-2 my-4 font-bold text-white bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300 border-2 rounded-2xl focus:outline-none mb-4 ${
                 hasSummed ? "block" : "hidden"
               }`}>
               {!summaryOrTranslated ? "View Summarised" : "View Translated"}
             </button>
             <button
-              className={`px-4 py-2 m-4 font-bold text-white bg-red-500  focus:outline-none ${
+              className={`px-4 py-2 m-4 font-bold text-white bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300 border-2 rounded-2xl  focus:outline-none ${
                 hasSummed ? "block" : "hidden"
               }`}
               onClick={() => {

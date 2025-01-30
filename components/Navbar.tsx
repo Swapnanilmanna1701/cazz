@@ -36,7 +36,7 @@ export function Navbar() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <span className="text-3xl">
-                <SparklesText text="Cazz" />{" "}
+                <SparklesText text="CazzAI" />{" "}
               </span>
             </Link>
           </div>
@@ -68,7 +68,7 @@ export function Navbar() {
                   className="text-gray-300 hover:text-white transition-colors py-2 sm:py-0 relative group"
                 >
                   {item}
-                  <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                  <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
                 </Link>
               ))}
               {userId && (
@@ -77,7 +77,7 @@ export function Navbar() {
                   className="text-gray-300 hover:text-white transition-colors py-2 sm:py-0 relative group"
                 >
                   Dashboard
-                  <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                  <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
                 </Link>
               )}
               <SignedOut>

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-empty-object-type */
-import { Button } from "@/components/ui/button";
+//import { Button } from "@/components/ui/button";
 import LinkedIn from "@/components/ui/LinkedInIcon";
 import TextRevealButton from "@/components/textRevealbutton";
 import { Suspense } from "react";
@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/card";
 import Welcome from "@/components/Welcome";
 import {
-  ArrowRight,
+  
   BotMessageSquare,
   Code,
   FileHeart,
@@ -82,12 +82,11 @@ export default function Dashboard({}:Props) {
               </div>
             </CardHeader>
             <CardContent>
-              <Button asChild size={"sm"}>
+              
                 <Link href="/dashboard/forms">
-                  Create
-                  <ArrowRight size={18} />
+                <TextRevealButton />
                 </Link>
-              </Button>
+              
             </CardContent>
           </Card>
           <Card className="hover:-translate-y-1 shadow hover:shadow-blue-500/40 hover:shadow-md duration-500 transition-all border border-violet-500">
@@ -101,12 +100,11 @@ export default function Dashboard({}:Props) {
               </div>
             </CardHeader>
             <CardContent>
-              <Button asChild size={"sm"}>
+              
                 <Link href="/dashboard/resume">
-                  Create
-                  <ArrowRight size={18} />
+                <TextRevealButton />
                 </Link>
-              </Button>
+              
             </CardContent>
           </Card>
           <Card className="hover:-translate-y-1 shadow hover:shadow-blue-500/40 hover:shadow-md duration-500 transition-all border border-blue-500">
@@ -120,11 +118,11 @@ export default function Dashboard({}:Props) {
               </div>
             </CardHeader>
             <CardContent>
-              <Button size={"sm"} asChild>
+              
                 <Link href="/dashboard/chatbot">
-                  Chat <ArrowRight size={18} />
+                <TextRevealButton />
                 </Link>
-              </Button>
+              
             </CardContent>
           </Card>
           <Card className="hover:-translate-y-1 shadow hover:shadow-blue-500/40 hover:shadow-md duration-500 transition-all border border-violet-500">
@@ -138,12 +136,11 @@ export default function Dashboard({}:Props) {
               </div>
             </CardHeader>
             <CardContent>
-              <Button asChild size={"sm"}>
+              
                 <Link href="/dashboard/emailer">
-                  Create
-                  <ArrowRight size={18} />
+                <TextRevealButton />
                 </Link>
-              </Button>
+              
             </CardContent>
           </Card>
 
@@ -158,12 +155,11 @@ export default function Dashboard({}:Props) {
               </div>
             </CardHeader>
             <CardContent>
-              <Button asChild size={"sm"}>
+              
                 <Link href="/dashboard/toplinkedin">
-                  Create
-                  <ArrowRight size={18} />
+                <TextRevealButton />
                 </Link>
-              </Button>
+              
             </CardContent>
           </Card>
           <Card className="hover:-translate-y-1 shadow hover:shadow-blue-500/40 hover:shadow-md duration-500 transition-all border border-violet-500">
@@ -177,12 +173,11 @@ export default function Dashboard({}:Props) {
               </div>
             </CardHeader>
             <CardContent>
-              <Button asChild size={"sm"}>
+             
                 <Link href="/dashboard/pages">
-                  Create
-                  <ArrowRight size={18} />
+                <TextRevealButton />
                 </Link>
-              </Button>
+              
             </CardContent>
           </Card>
 
@@ -197,12 +192,11 @@ export default function Dashboard({}:Props) {
               </div>
             </CardHeader>
             <CardContent>
-              <Button asChild size={"sm"}>
+              
                 <Link href="/dashboard/code-converter">
-                  Create
-                  <ArrowRight size={18} />
+                <TextRevealButton />
                 </Link>
-              </Button>
+              
             </CardContent>
           </Card>
 
@@ -217,12 +211,11 @@ export default function Dashboard({}:Props) {
               </div>
             </CardHeader>
             <CardContent>
-              <Button asChild size={"sm"}>
+              
                 <Link href="/dashboard/speech">
-                  Create
-                  <ArrowRight size={18} />
+                <TextRevealButton />
                 </Link>
-              </Button>
+              
             </CardContent>
           </Card>
 
@@ -237,12 +230,11 @@ export default function Dashboard({}:Props) {
               </div>
             </CardHeader>
             <CardContent>
-              <Button asChild size={"sm"}>
+              
                 <Link href="/dashboard/summary">
-                  Create
-                  <ArrowRight size={18} />
+                <TextRevealButton />
                 </Link>
-              </Button>
+              
             </CardContent>
           </Card>
 
@@ -257,12 +249,11 @@ export default function Dashboard({}:Props) {
               </div>
             </CardHeader>
             <CardContent>
-              <Button asChild size={"sm"}>
+              
                 <Link href="/dashboard/pdf-parse">
-                  Create
-                  <ArrowRight size={18} />
+                <TextRevealButton />
                 </Link>
-              </Button>
+              
             </CardContent>
           </Card>
 
@@ -277,12 +268,11 @@ export default function Dashboard({}:Props) {
               </div>
             </CardHeader>
             <CardContent>
-              <Button asChild size={"sm"}>
+              
                 <Link href="/dashboard/imgtxt">
-                  Create
-                  <ArrowRight size={18} />
+                <TextRevealButton />
                 </Link>
-              </Button>
+              
             </CardContent>
           </Card>
         </div>
