@@ -9,7 +9,7 @@ import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
-  title: "Cazz",
+  title: "CazzAI",
   description: "Your Smartest Companion",
 };
 

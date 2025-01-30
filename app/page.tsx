@@ -61,7 +61,7 @@ export default function Home() {
             </Button>
             <Button
               asChild
-              className="bg-transparent border border-blue-600 text-blue-600 hover:bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-700 hover:text-white px-8 py-3 rounded-full text-lg transition duration-300 ease-in-out"
+              className="bg-transparent border border-blue-600 text-blue-600 hover:bg-gradient-to-r from-pink-700 via-purple-500 to-cyan-300 hover:text-white px-8 py-3 rounded-full text-lg transition duration-300 ease-in-out"
             >
               <Link href="#features">Learn More</Link>
             </Button>

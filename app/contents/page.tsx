@@ -1,12 +1,17 @@
 "use client";
 import React, { useState } from "react";
 import { Cover } from "@/components/ui/cover";
+import { useRef } from "react"
+import TextCursorProximity from "@/components/textcursor"
+
 
 import { Navbar } from "@/components/Navbar";
 import SearchSection from "@/components/content/SearchSection";
 import TemplateListSection from "@/components/content/TemplateListSection";
 
 function Dashboard() {
+  const containerRef = useRef<HTMLDivElement>(null)
+
   const [userSearchInput, setUserSearchInput] = useState<string>();
   return (
     <div >

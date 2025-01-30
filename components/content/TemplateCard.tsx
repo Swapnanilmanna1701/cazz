@@ -21,7 +21,7 @@ function TemplateCard(item: TEMPLATE) {
       >
         
         <Image src={item.icon} alt="icon" width={50} height={50} />
-        <h2 className="font-semibold text-lg">{item.name}</h2>
+        <h2 className="font-semibold text-lg bg-clip-text text-transparent bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300">{item.name}</h2>
         <p className="text-sm text-white line-clamp-3">{item.desc}</p>
       </MagicCard>
     </Link>
