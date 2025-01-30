@@ -1,7 +1,9 @@
 "use client"
 import { FormEvent, useState } from "react";
 import { Layout } from "./Layout";
-import ImagePicker from '@/components/summary/image-picker'
+//import ImagePicker from '@/components/summary/image-picker';
+import { Navbar } from "@/components/Navbar";
+
 
 export default function Tool() {
   const scores = {
@@ -151,14 +153,18 @@ export default function Tool() {
   };
 
   return (
+
     <Layout title="Tool">
+      <div className="min-h-screen bg-black overflow-hidden pt-20 w-full">
+        <Navbar />
       <main className="flex flex-wrap max-h-screen">
+        
         <div className="sm:w-full lg:w-1/2 flex flex-col items-center max-h-full p-4">
           <textarea
             placeholder="Enter text here ..."
             value={userText}
             onChange={(e) => setuserText(e.target.value)}
-            className="focus:outline-none max-h-96 w-full p-6 mb-4 border-2 rounded-2xl"
+            className="focus:outline-none max-h-96 w-full p-6 mb-4 border-2 border-violet-500 rounded-2xl no-scrollbar"
             name="user-doc"
             id="user-doc"
             rows={25}></textarea>
@@ -190,7 +196,7 @@ export default function Tool() {
             </button>
           </div>
           <div className="flex">
-            <label htmlFor="lang-select" className="mx-12 text-xl font-bold">
+            <label htmlFor="lang-select" className="mx-6 text-xl font-bold">
               Select Language
             </label>
             <select
@@ -208,7 +214,7 @@ export default function Tool() {
           </div>
         </div>
         <div className="sm:w-full lg:w-1/2 flex flex-col items-center justify-start p-4 overflow-auto">
-          <div className="h-96 relative w-full px-10 py-6 mb-4 overflow-auto bg-slate-900 border-b rounded-2xl">
+          <div className="h-96 relative w-full px-10 py-6 mb-4 overflow-auto bg-slate-900 border-2 rounded-2xl border-cyan-300">
             {hasSummed && (
               <div
                 className="w-36 absolute top-0 right-0 py-2 text-sm font-bold text-center text-white -translate-x-full bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300 border-2 rounded-2xl cursor-pointer"
@@ -260,7 +266,7 @@ export default function Tool() {
             {Object.entries(sentiment).map(([key, value]) => (
               <div
                 key={key}
-                className="md:w-1/2 flex flex-row justify-between w-full px-4 py-2 my-2 border border-gray-500 rounded-lg shadow-lg">
+                className="md:w-1/2 flex flex-row justify-between w-full px-4 py-2 my-2 border border-cyan-400 rounded-lg shadow-lg">
                 <details className="px-4 py-1 text-lg italic text-red-500">
                   <summary className="focus:outline-none">{key}</summary>
                   <p className="py-2 text-sm text-black">{value[1]}</p>
@@ -273,6 +279,9 @@ export default function Tool() {
           </div>
         </div>
       </main>
+      </div>
+      
+      
     </Layout>
   );
 }
