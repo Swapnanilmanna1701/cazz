@@ -1,7 +1,5 @@
 "use client";
 import Link from "next/link";
-import { InteractiveHoverButton } from "@/components/intbutton";
-
 import {
   SignInButton,
   SignUpButton,
@@ -11,9 +9,10 @@ import {
   useAuth,
 } from "@clerk/nextjs";
 import { useState, useEffect } from "react";
-import GradientFillButton from "@/components/fillbutton"
 import { Menu, X } from "lucide-react";
 import SparklesText from "@/components/ui/sparklestxt";
+import GradientFillButton from "@/components/fillbutton";
+import {InteractiveHoverButton} from "@/components/intbutton";
 
 export function Navbar() {
   const { userId } = useAuth();
@@ -85,10 +84,14 @@ export function Navbar() {
               )}
               <SignedOut>
                 <SignInButton mode="modal">
-                <InteractiveHoverButton>Sign In</InteractiveHoverButton>
+                  <button className="text-gray-300 hover:text-white transition-colors mt-2 sm:mt-0">
+                    <InteractiveHoverButton>Sign In</InteractiveHoverButton>
+                  </button>
                 </SignInButton>
                 <SignUpButton mode="modal">
-                  <GradientFillButton />
+                  <button className="">
+                    <GradientFillButton />
+                  </button>
                 </SignUpButton>
               </SignedOut>
               <SignedIn>
