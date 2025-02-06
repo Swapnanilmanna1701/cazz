@@ -63,7 +63,7 @@ export default function Home() {
               asChild
               className="bg-transparent border border-blue-600 text-blue-600 hover:bg-gradient-to-r from-pink-700 via-purple-500 to-cyan-300 hover:text-white px-8 py-3 rounded-full hover:border-white text-lg transition duration-300 ease-in-out"
             >
-              <Link href="/dashboard/content">Learn More</Link>
+              <Link href="#features">Learn More</Link>
             </Button>
           </div>
         </div>

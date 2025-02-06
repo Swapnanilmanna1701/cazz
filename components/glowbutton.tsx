@@ -38,7 +38,7 @@ const BorderGlowButton = () => {
         }
       ></span>
       <div className="relative z-10 m-[1px] rounded-3xl bg-gradient-to-r from-pink-700 to-blue-500  px-4 py-1 text-lg text-white backdrop-blur-sm">
-      <Link href="/generate">Start Creating</Link>
+      <Link href="/features">Start Creating</Link>
       </div>
     </button>
   )
