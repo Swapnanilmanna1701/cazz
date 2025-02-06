@@ -6,7 +6,7 @@ import { Navbar } from "@/components/Navbar";
 import PricingCards from "@/components/pricing-cards";
 //import {Accordion,AccordionContent,AccordionItem,AccordionTrigger,} from "@/components/ui/accordion";
 import MagicBadge from "@/components/ui/magic-badge";
-import { FAQ } from "@/constants/faq";
+//import { FAQ } from "@/constants/faq";
 //import { TextRevealCard } from "@/components/ui/text-reveal-card";
 
 

@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 //import { useState, useEffect } from 'react';
 //import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
@@ -6,8 +5,8 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 //import { SectionBadge } from "@/components/ui/badge";
 //import { Particles } from "@/components/particles";
-
-
+import TextRevealButton from "@/components/textreavel";
+import BorderGlowButton from "@/components/glowbutton";
 
 import { Button } from "@/components/ui/button";
 //import { RainbowButton } from '@/components/ui/rainbow-button'
@@ -21,7 +20,9 @@ import {
   RocketIcon,
 } from "lucide-react";
 import { auth } from "@clerk/nextjs/server";
-import TypewriterEffectSmoothDemo from "@/components/typewritter";
+import { TextReveal } from "@/components/infinite";
+
+//import TypewriterEffectSmoothDemo from "@/components/typewritter";
 
 import { SignUpButton } from "@clerk/nextjs";
 // import Header from "@/components/Navbar1";
@@ -30,14 +31,13 @@ import { Navbar } from "@/components/Navbar";
 //import { Footer } from "@/components/Footer";
 import BlurFade from "@/components/magicui/blur-fade";
 import RotatingText from "@/components/ui/RotatingText";
-import { LampContainer } from "@/components/ui/lamp";
+//import { LampContainer } from "@/components/ui/lamp";
 
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import Perks from "@/components/perks";
 
 export default function Home() {
   const { userId } = auth();
-  
 
   return (
     <div className="min-h-screen bg-black overflow-hidden pt-20 w-full">
@@ -57,15 +57,11 @@ export default function Home() {
           </h1>
 
           <div className="flex justify-center space-x-4">
+            <BorderGlowButton />
+
             <Button
               asChild
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105"
-            >
-              <Link href="/generate">Start Creating</Link>
-            </Button>
-            <Button
-              asChild
-              className="bg-transparent border border-blue-600 text-blue-600 hover:bg-gradient-to-r from-pink-700 via-purple-500 to-cyan-300 hover:text-white px-8 py-3 rounded-full text-lg transition duration-300 ease-in-out"
+              className="bg-transparent border border-blue-600 text-blue-600 hover:bg-gradient-to-r from-pink-700 via-purple-500 to-cyan-300 hover:text-white px-8 py-3 rounded-full hover:border-white text-lg transition duration-300 ease-in-out"
             >
               <Link href="#features">Learn More</Link>
             </Button>
@@ -78,7 +74,7 @@ export default function Home() {
             <BlurFade delay={0.1} blur="6px" duration={1} inView>
               <span className="">
                 <span className="text-4xl font-bold mb-12 text-center text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text inline-bloc">
-                  Services We Provide In {" "}
+                  Services We Provide In{" "}
                   <span>
                     <SparklesText text="CazzAI" />{" "}
                   </span>
@@ -173,29 +169,23 @@ export default function Home() {
             </Button>
           ) : (
             <SignUpButton mode="modal">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105">
-                Get Started Free <ArrowRightIcon className="ml-2 h-5 w-5" />
-              </Button>
+              <TextRevealButton />
             </SignUpButton>
           )}
         </div>
-        <div className="mb--20 text-2xl text-center relative">
-          
-        </div>
+        <div className=" text-2xl text-center relative"></div>
 
         <div>
-          <LampContainer>
-            <div className="flex flex-col items-center justify-center relative w-full text-center">
-              <TypewriterEffectSmoothDemo />
+          <div className="flex flex-col items-center justify-center relative w-full text-center mb-12">
+            <div className="flex items-center justify-center bg-white dark:bg-black">
+              <TextReveal text="Magic UI will change the way you design." />
             </div>
-          </LampContainer>
+          </div>
         </div>
-        
-      <div>
-      <Footer />
-      </div>
 
-        
+        <div className="mt-10">
+          <Footer />
+        </div>
 
         <div className="h-[20rem] lg:h-[20rem] hidden md:flex items-center justify-center">
           <TextHoverEffect text="CAZZAI" />

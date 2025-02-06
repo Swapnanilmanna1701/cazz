@@ -19,9 +19,7 @@ export default function FlipWordsDemo() {
           <br />
           <FlipWords words={words} className="text-blue-600" />
           <br />
-          <span>
-            <SparklesText text="CazzAI" />{" "}
-          </span>
+          
         </div>
       </div>
     </div>
