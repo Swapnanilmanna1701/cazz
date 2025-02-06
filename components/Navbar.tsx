@@ -1,5 +1,7 @@
 "use client";
 import Link from "next/link";
+import { InteractiveHoverButton } from "@/components/intbutton";
+
 import {
   SignInButton,
   SignUpButton,
@@ -83,9 +85,7 @@ export function Navbar() {
               )}
               <SignedOut>
                 <SignInButton mode="modal">
-                  <button className="text-gray-300 hover:text-white transition-colors mt-2 sm:mt-0">
-                    Sign In
-                  </button>
+                <InteractiveHoverButton>Sign In</InteractiveHoverButton>
                 </SignInButton>
                 <SignUpButton mode="modal">
                   <GradientFillButton />

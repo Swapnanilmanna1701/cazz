@@ -277,8 +277,8 @@ export default function Dashboard({}:Props) {
           </Card>
         </div>
         <div className="flex flex-col">
-          <h2 className="text-2xl md:text-3xl font-semibold py-2 text-white">
-            Trending Tools :
+          <h2 className="text-2xl text-center md:text-3xl font-semibold py-2 text-white">
+            Trending Tools
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 py-10 mb-12">
             {/* @ts-expect-error */}
