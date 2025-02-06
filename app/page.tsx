@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 //import { Particles } from "@/components/particles";
 import TextRevealButton from "@/components/textreavel";
 import BorderGlowButton from "@/components/glowbutton";
-
+import MultiStepLoaderDemo from "@/components/multi-step-loader-demo"
 import { Button } from "@/components/ui/button";
 //import { RainbowButton } from '@/components/ui/rainbow-button'
 //import Blobby from "@/components/ui/blobby";
@@ -59,9 +59,8 @@ export default function Home() {
           <div className="flex justify-center space-x-4">
             <BorderGlowButton />
 
-            <Button
-              asChild
-              className="bg-transparent border border-blue-600 text-blue-600 hover:bg-gradient-to-r from-pink-700 via-purple-500 to-cyan-300 hover:text-white px-8 py-3 rounded-full hover:border-white text-lg transition duration-300 ease-in-out"
+            <Button className="hover:bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300 text-blue-600 px-5 py-4 rounded-full bg-black border-2 border-blue-600 text-lg transition hover:text-white hover:border-white duration-300 ease-in-out transform hover:scale-104 "
+              
             >
               <Link href="/dashboard/content">Learn More</Link>
             </Button>

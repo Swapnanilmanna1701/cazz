@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Config } from "tailwindcss";
+const colors = require("tailwindcss/colors");
+
 const svgToDataUri = require("mini-svg-data-uri");
 const {
   default: flattenColorPalette,
