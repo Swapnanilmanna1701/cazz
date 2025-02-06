@@ -11,7 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/browser/carousel";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/browser/card";
 import { ImageModal } from "./ImageModal";
 
 export function ImageCarousel({

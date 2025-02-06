@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FC } from "react";
 import TypeAnimation from "./TypeAnimation";
 import { ArrowRight } from "lucide-react";
-import GradientFillButton from "../button";
+import GradientFillButton from "@/components/button";
 
 type TInputAreaProps = {
   promptValue: string;
