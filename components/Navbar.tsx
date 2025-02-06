@@ -9,6 +9,7 @@ import {
   useAuth,
 } from "@clerk/nextjs";
 import { useState, useEffect } from "react";
+import GradientFillButton from "@/components/fillbutton"
 import { Menu, X } from "lucide-react";
 import SparklesText from "@/components/ui/sparklestxt";
 
@@ -87,9 +88,7 @@ export function Navbar() {
                   </button>
                 </SignInButton>
                 <SignUpButton mode="modal">
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full transition-colors mt-2 sm:mt-0">
-                    Sign Up
-                  </button>
+                  <GradientFillButton />
                 </SignUpButton>
               </SignedOut>
               <SignedIn>

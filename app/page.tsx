@@ -1,9 +1,12 @@
+
 import Link from "next/link";
 //import { useState, useEffect } from 'react';
 //import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 //import AnimationContainer from "@/components/ui/animation-container";
 import Footer from "@/components/Footer";
 //import { SectionBadge } from "@/components/ui/badge";
+//import { Particles } from "@/components/particles";
+
 
 
 import { Button } from "@/components/ui/button";
@@ -34,6 +37,7 @@ import Perks from "@/components/perks";
 
 export default function Home() {
   const { userId } = auth();
+  
 
   return (
     <div className="min-h-screen bg-black overflow-hidden pt-20 w-full">
