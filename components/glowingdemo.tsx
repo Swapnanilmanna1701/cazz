@@ -1,9 +1,9 @@
 "use client";
 
 import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
-import { GlowingEffect } from "@/components/glowing";
+import { GlowingEffect } from "@/components/glowing-effect";
 
-export function GlowingEffectDemoSecond() {
+export default function GlowingEffectDemo() {
   return (
     <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
       <GridItem
@@ -56,9 +56,7 @@ const GridItem = ({ area, icon, title, description }: GridItemProps) => {
     <li className={`min-h-[14rem] list-none ${area}`}>
       <div className="relative h-full rounded-2.5xl border  p-2  md:rounded-3xl md:p-3">
         <GlowingEffect
-          blur={0}
-          borderWidth={3}
-          spread={80}
+          spread={40}
           glow={true}
           disabled={false}
           proximity={64}

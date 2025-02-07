@@ -6,7 +6,7 @@ import AnimationContainer from "@/components/ui/animation-container";
 const Footer = () => {
   return (
     <div className="flex flex-col relative items-center justify-center border-t border-border pt-16 pb-8 md:pb-0 px-6 lg:px-8 w-full max-w-6xl mx-auto lg:pt-32 bg-[radial-gradient(35%_128px_at_50%_0%,theme(backgroundColor.white/8%),transparent)]">
-      <div className="absolute top-0 left-1/2 right-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-1.5 bg-foreground rounded-full"></div>
+      <div className="absolute top-0 left-1/2 right-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-2 bg-gradient-to-r from-pink-700 to-cyan-300 via-violet-500 rounded-full"></div>
       <Particles
         className="absolute inset-0 w-full -z-10"
         quantity={40}
@@ -23,7 +23,7 @@ const Footer = () => {
               CazzAI, Your Ultimate Companion.
             </p>
             <span className="mt-4 text-neutral-200 text-sm flex items-center">
-              Made by Swapnanil & Purbayan
+              Made by Swapnanil,Purbayan & Supriti
             </span>
           </div>
         </AnimationContainer>

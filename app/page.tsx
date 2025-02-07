@@ -3,6 +3,7 @@ import Link from "next/link";
 //import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 //import AnimationContainer from "@/components/ui/animation-container";
 import Footer from "@/components/Footer";
+import GlowingEffectDemo from "@/components/glowingdemo"
 //import Testimonial from "@/components/testimonial";
 //import { SectionBadge } from "@/components/ui/badge";
 //import { Particles } from "@/components/particles";
@@ -52,7 +53,7 @@ export default function Home() {
         <div className="text-center py-20 lg:py-32 relative">
           <RocketIcon className="w-16 h-16 text-purple-500 mx-auto mb-6 animate-bounce" />
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300">
-            Sky-Rocket Your Carrier with{" "}
+            Enhance Your Productivity With{" "}
             <span className="text-8xl">
               <SparklesText text="CazzAI" />{" "}
             </span>
@@ -64,7 +65,7 @@ export default function Home() {
             <Button className="hover:bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300 text-blue-600 px-5 py-4 rounded-full bg-black border-2 border-blue-600 text-lg transition hover:text-white hover:border-white duration-300 ease-in-out transform hover:scale-104 "
               
             >
-              <Link href="/dashboard/content">Learn More</Link>
+              <Link href="/dashboard/content">Explore CazzAI</Link>
             </Button>
           </div>
         </div>
@@ -89,44 +90,9 @@ export default function Home() {
             </BlurFade>
           </div>
 
-          <div className=" py-20 grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
-            {[
-              {
-                title: "Twitter Threads",
-                icon: <TwitterIcon className="w-10 h-10 mb-4 text-blue-400" />,
-                description:
-                  "Generate compelling Twitter threads that engage your audience and boost your reach.",
-              },
-              {
-                title: "Instagram Captions",
-                icon: (
-                  <InstagramIcon className="w-10 h-10 mb-4 text-pink-400" />
-                ),
-                description:
-                  "Create catchy captions for your Instagram posts that increase engagement and followers.",
-              },
-              {
-                title: "LinkedIn Posts",
-                icon: <LinkedinIcon className="w-10 h-10 mb-4 text-blue-600" />,
-                description:
-                  "Craft professional content for your LinkedIn network to establish thought leadership.",
-              },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="p-8 rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1"
-              >
-                <div className="flex flex-col items-center text-center">
-                  {feature.icon}
-                  <h3 className="text-2xl font-semibold mb-3 text-white">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <GlowingEffectDemo />
         </div>
+        
 
         {/* Benefits Section */}
         <Perks />
