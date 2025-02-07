@@ -1,21 +1,26 @@
 "use client";
-import Link from "next/link";
+import SparklesText from "@/components/ui/sparklestxt";
 import {
+  SignedIn,
+  SignedOut,
   SignInButton,
   SignUpButton,
-  UserButton,
-  SignedOut,
-  SignedIn,
   useAuth,
+  UserButton,
 } from "@clerk/nextjs";
-import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import SparklesText from "@/components/ui/sparklestxt";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export function Navbar() {
   const { userId } = useAuth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [navbarItems, setNavbarItems] = useState<string[]>([]);
+
+  if (userId) {
+    setNavbarItems(["Features", "Pricing", "Docs", "Contents"]);
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,12 +61,7 @@ export function Navbar() {
             } sm:block mt-4 sm:mt-0`}
           >
             <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-8">
-              {[
-                "Features",
-                "Pricing",
-                "Docs",
-                "Contents",
-              ].map((item) => (
+              {navbarItems.map((item) => (
                 <Link
                   key={item}
                   href={`/${item.toLowerCase()}`}
