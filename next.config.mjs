@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   webpack: (config) => {
     // Ignore node-specific modules when bundling for the browser

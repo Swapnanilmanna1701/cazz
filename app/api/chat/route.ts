@@ -11,6 +11,7 @@ const genAI = new GoogleGenerativeAI(
 
 export async function POST(req: Request) {
   const context = await req.json();
+  
 
   const result = await streamObject({
     model: google("gemini-1.5-pro-latest"),
@@ -26,3 +27,4 @@ export async function POST(req: Request) {
 
   return result.toTextStreamResponse();
 }
+

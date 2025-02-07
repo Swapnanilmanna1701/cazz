@@ -25,8 +25,17 @@ const config: Config = {
           "0%, 100%": { boxShadow: "0 0 10px rgba(150, 0, 255, 0.5)" },
           "50%": { boxShadow: "0 0 20px rgba(150, 0, 255, 1)" },
         },
+        marquee: {from: { transform: "translateX(0)" },
+        to: { transform: "translateX(calc(-100% - var(--gap)))" },
+                   },
+                 "marquee-vertical": {
+                  from: { transform: "translateY(0)" },
+                  to: { transform: "translateY(calc(-100% - var(--gap)))" },
+                  },
       },
       animation: {
+        marquee: "marquee var(--duration) infinite linear",
+         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
         "glow-purple": "glow 2s infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",

@@ -3,11 +3,12 @@ import Link from "next/link";
 //import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 //import AnimationContainer from "@/components/ui/animation-container";
 import Footer from "@/components/Footer";
+//import Testimonial from "@/components/testimonial";
 //import { SectionBadge } from "@/components/ui/badge";
 //import { Particles } from "@/components/particles";
 import TextRevealButton from "@/components/textreavel";
 import BorderGlowButton from "@/components/glowbutton";
-import MultiStepLoaderDemo from "@/components/multi-step-loader-demo"
+//import MultiStepLoaderDemo from "@/components/multi-step-loader-demo"
 import { Button } from "@/components/ui/button";
 //import { RainbowButton } from '@/components/ui/rainbow-button'
 //import Blobby from "@/components/ui/blobby";
@@ -20,6 +21,7 @@ import {
   RocketIcon,
 } from "lucide-react";
 import { auth } from "@clerk/nextjs/server";
+import Reviews from "@/components/testimonial";
 import { TextReveal } from "@/components/infinite";
 
 //import TypewriterEffectSmoothDemo from "@/components/typewritter";
@@ -154,7 +156,8 @@ export default function Home() {
               />
             </svg>
           </div>
-          <h2 className="text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 font-bold mb-8 ">
+          <Reviews />
+          <h2 className="text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-700 via-purple-500 to-cyan-300 font-bold mb-8 ">
             Want to elevate yourself to one step ahead?
           </h2>
           {userId ? (

@@ -93,6 +93,27 @@ export default function Dashboard({}:Props) {
           </Card>
 
 
+          <Card
+        className="hover:-translate-y-1 shadow hover:shadow-blue-500/40 hover:shadow-md duration-500 transition-all border border-cyan-500">
+            <CardHeader className="flex gap-4">
+              <Speech size={50} />
+              <div>
+                <CardTitle>Meta AI ✨</CardTitle>
+                <CardDescription>
+                  Practice your interview skills with AI feedback.
+                </CardDescription>
+              </div>
+            </CardHeader>
+            <CardContent>
+              
+                <Link href="/dashboard/meta">
+                <TextRevealButton />
+                </Link>
+              
+            </CardContent>
+          </Card>
+
+
           <Card className="hover:-translate-y-1 shadow hover:shadow-blue-500/40 hover:shadow-md duration-500 transition-all border border-cyan-500">
             <CardHeader className="flex gap-4">
               <TableProperties size={50} />
