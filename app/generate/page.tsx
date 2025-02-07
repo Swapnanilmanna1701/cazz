@@ -1,10 +1,12 @@
 "use client";
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
-import { useState, useEffect } from "react";
+import { Navbar } from "@/components/Navbar";
+import { InstagramMock } from "@/components/social-mocks/InstagramMock";
+import { LinkedInMock } from "@/components/social-mocks/LinkedInMock";
+import { TwitterMock } from "@/components/social-mocks/TwitterMock";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
   SelectContent,
@@ -12,32 +14,29 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
 import {
-  Loader2,
-  Upload,
-  Copy,
-  Twitter,
-  Instagram,
-  Linkedin,
-  Clock,
-  Zap,
-} from "lucide-react";
-import { GoogleGenerativeAI, Part } from "@google/generative-ai";
-import ReactMarkdown from "react-markdown";
-import { Navbar } from "@/components/Navbar";
-import { SignInButton, useUser } from "@clerk/nextjs";
-import { useRouter } from "next/navigation";
-import {
+  createOrUpdateUser,
+  getGeneratedContentHistory,
   getUserPoints,
   saveGeneratedContent,
   updateUserPoints,
-  getGeneratedContentHistory,
-  createOrUpdateUser,
 } from "@/utils/db/actions";
-import { TwitterMock } from "@/components/social-mocks/TwitterMock";
-import { InstagramMock } from "@/components/social-mocks/InstagramMock";
-import { LinkedInMock } from "@/components/social-mocks/LinkedInMock";
+import { SignInButton, useUser } from "@clerk/nextjs";
+import { GoogleGenerativeAI, Part } from "@google/generative-ai";
+import {
+  Clock,
+  Copy,
+  Instagram,
+  Linkedin,
+  Loader2,
+  Twitter,
+  Upload,
+  Zap,
+} from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import ReactMarkdown from "react-markdown";
 
 const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
 const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null;
@@ -73,23 +72,7 @@ export default function GenerateContent() {
   const [selectedHistoryItem, setSelectedHistoryItem] =
     useState<HistoryItem | null>(null);
 
-  useEffect(() => {
-    if (!apiKey) {
-      console.error("Gemini API key is not set");
-    }
-  }, []);
-
-  useEffect(() => {
-    if (isLoaded && !isSignedIn) {
-      router.push("/");
-    } else if (isSignedIn && user) {
-      console.log("User loaded:", user);
-      fetchUserPoints();
-      fetchContentHistory();
-    }
-  }, [isLoaded, isSignedIn, user, router]);
-
-  const fetchUserPoints = async () => {
+  const fetchUserPoints = useCallback(async () => {
     if (user?.id) {
       console.log("Fetching points for user:", user.id);
       const points = await getUserPoints(user.id);
@@ -100,7 +83,7 @@ export default function GenerateContent() {
         const updatedUser = await createOrUpdateUser(
           user.id,
           user.emailAddresses[0].emailAddress,
-          user.fullName || "",
+          user.fullName || ""
         );
         console.log("Updated user:", updatedUser);
         if (updatedUser) {
@@ -108,14 +91,38 @@ export default function GenerateContent() {
         }
       }
     }
-  };
+  }, [user, setUserPoints]);
 
-  const fetchContentHistory = async () => {
+  const fetchContentHistory = useCallback(async () => {
     if (user?.id) {
       const contentHistory = await getGeneratedContentHistory(user.id);
       setHistory(contentHistory);
     }
-  };
+  }, [user]);
+
+  useEffect(() => {
+    if (!apiKey) {
+      console.error("Gemini API key is not set");
+    }
+  }, []);
+
+  useEffect(() => {
+    // if (isLoaded && !isSignedIn) {
+    //   router.push("/");
+    // }
+    if (isSignedIn && user) {
+      console.log("User loaded:", user);
+      fetchUserPoints();
+      fetchContentHistory();
+    }
+  }, [
+    isLoaded,
+    isSignedIn,
+    user,
+    router,
+    fetchContentHistory,
+    fetchUserPoints,
+  ]);
 
   const handleGenerate = async () => {
     if (
@@ -185,7 +192,7 @@ export default function GenerateContent() {
       // Update points
       const updatedUser = await updateUserPoints(
         user.id,
-        -POINTS_PER_GENERATION,
+        -POINTS_PER_GENERATION
       );
       if (updatedUser) {
         setUserPoints(updatedUser.points);
@@ -196,7 +203,7 @@ export default function GenerateContent() {
         user.id,
         content.join("\n\n"),
         prompt,
-        contentType,
+        contentType
       );
 
       if (savedContent) {
@@ -217,7 +224,7 @@ export default function GenerateContent() {
     setGeneratedContent(
       item.contentType === "twitter"
         ? item.content.split("\n\n")
-        : [item.content],
+        : [item.content]
     );
   };
 
@@ -252,12 +259,12 @@ export default function GenerateContent() {
             Welcome to CazzAI
           </h1>
           <p className="text-gray-400 mb-6">
-            To start generating amazing content, please sign in or create an
+            To start generating amazing content, please login or create an
             account.
           </p>
           <SignInButton mode="modal">
             <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2">
-              Sign In / Sign Up
+              Login / Create an account
             </Button>
           </SignInButton>
           <p className="text-gray-500 mt-4 text-sm">
@@ -277,7 +284,7 @@ export default function GenerateContent() {
   return (
     <div className="bg-black min-h-screen text-white">
       <Navbar />
-      
+
       <div className="container mx-auto px-4 mb-8 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 mt-14 lg:grid-cols-3 gap-8">
           {/* Left sidebar - History */}
