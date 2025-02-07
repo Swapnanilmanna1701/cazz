@@ -304,7 +304,7 @@ export default function Dashboard({}:Props) {
             <CardHeader className="flex gap-4">
               <Code className="size-10" />
               <div>
-                <CardTitle>Image to text</CardTitle>
+                <CardTitle>AI File Convertor</CardTitle>
                 <CardDescription>
                   Convert your code to other languages.
                 </CardDescription>
@@ -312,7 +312,7 @@ export default function Dashboard({}:Props) {
             </CardHeader>
             <CardContent>
               
-                <Link href="/dashboard/imgtxt">
+                <Link href="/dashboard/convertor">
                 <TextRevealButton />
                 </Link>
               
