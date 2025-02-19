@@ -15,9 +15,7 @@ import { Button } from "@/components/ui/button";
 //import Blobby from "@/components/ui/blobby";
 import SparklesText from "@/components/ui/sparklestxt";
 import {
-  TwitterIcon,
-  InstagramIcon,
-  LinkedinIcon,
+  
   ArrowRightIcon,
   RocketIcon,
 } from "lucide-react";
@@ -35,6 +33,7 @@ import { Navbar } from "@/components/Navbar";
 import BlurFade from "@/components/magicui/blur-fade";
 import RotatingText from "@/components/ui/RotatingText";
 //import { LampContainer } from "@/components/ui/lamp";
+import LoaderView from "@/components/loaderconverter";
 
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import Perks from "@/components/perks";
@@ -45,14 +44,16 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black overflow-hidden pt-20 w-full">
       <Navbar />
+      <div className="mx-auto h-12 w-12"><LoaderView  /></div>
 
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Decorative elements */}
 
         {/* Hero Section */}
-        <div className="text-center py-20 lg:py-32 relative">
-          <RocketIcon className="w-16 h-16 text-purple-500 mx-auto mb-6 animate-bounce" />
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300">
+        <div className="text-center py-40 lg:py-40 relative">
+          
+          
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mt-15 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300">
             Enhance Your Productivity With{" "}
             <span className="text-8xl">
               <SparklesText text="CazzAI" />{" "}
