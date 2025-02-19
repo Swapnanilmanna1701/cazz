@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import LoaderView from "@/components/loaderconverter"
+import Prism from "@/components/prism"
 import {
   SignInButton,
   SignUpButton,
@@ -37,8 +37,10 @@ export function Navbar() {
       <nav className="container mx-auto px-4 sm:px-8 py-4 sm:py-6">
         <div className="flex flex-wrap justify-between items-center max-w-6xl mx-auto">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-            
+            <Link href="/" className="flex items-center gap-1 space-x-2">
+            <div className="mx-auto h-12 w-12 relative">
+              <Prism />
+            </div>
               <span className="text-3xl">
                 <SparklesText text="CazzAI" />{" "}
               </span>

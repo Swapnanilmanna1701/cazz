@@ -3,7 +3,8 @@ import Link from "next/link";
 //import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 //import AnimationContainer from "@/components/ui/animation-container";
 import Footer from "@/components/Footer";
-import GlowingEffectDemo from "@/components/glowingdemo"
+import GlowingEffectDemo from "@/components/glowingdemo";
+import CreateButton from "@/components/createbutton";
 //import Testimonial from "@/components/testimonial";
 //import { SectionBadge } from "@/components/ui/badge";
 //import { Particles } from "@/components/particles";
@@ -11,14 +12,11 @@ import TextRevealButton from "@/components/textreavel";
 import BorderGlowButton from "@/components/glowbutton";
 //import MultiStepLoaderDemo from "@/components/multi-step-loader-demo"
 import { Button } from "@/components/ui/button";
+//import Prism from "@/components/prism";
 //import { RainbowButton } from '@/components/ui/rainbow-button'
 //import Blobby from "@/components/ui/blobby";
 import SparklesText from "@/components/ui/sparklestxt";
-import {
-  
-  ArrowRightIcon,
-  RocketIcon,
-} from "lucide-react";
+import { ArrowRightIcon } from "lucide-react";
 import { auth } from "@clerk/nextjs/server";
 import Reviews from "@/components/testimonial";
 import { TextReveal } from "@/components/infinite";
@@ -34,7 +32,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 import RotatingText from "@/components/ui/RotatingText";
 //import { LampContainer } from "@/components/ui/lamp";
 import LoaderView from "@/components/loaderconverter";
-
+import Button69 from "@/components/button69";
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import Perks from "@/components/perks";
 
@@ -44,15 +42,15 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black overflow-hidden pt-20 w-full">
       <Navbar />
-      <div className="mx-auto h-12 w-12"><LoaderView  /></div>
+      <div className="mx-auto h-12 w-12">
+        <LoaderView />
+      </div>
 
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Decorative elements */}
 
         {/* Hero Section */}
         <div className="text-center py-40 lg:py-40 relative">
-          
-          
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mt-15 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300">
             Enhance Your Productivity With{" "}
             <span className="text-8xl">
@@ -61,13 +59,13 @@ export default function Home() {
           </h1>
 
           <div className="flex justify-center space-x-4">
-            <BorderGlowButton />
+            <Link href="/features">
+              <CreateButton />
+            </Link>
 
-            <Button className="hover:bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300 text-blue-600 px-5 py-4 rounded-full bg-black border-2 border-blue-600 text-lg transition hover:text-white hover:border-white duration-300 ease-in-out transform hover:scale-104 "
-              
-            >
-              <Link href="/dashboard/content">Explore CazzAI</Link>
-            </Button>
+            <Link href="/dashboard/content">
+              <Button69 />
+            </Link>
           </div>
         </div>
 
@@ -93,7 +91,6 @@ export default function Home() {
 
           <GlowingEffectDemo />
         </div>
-        
 
         {/* Benefits Section */}
         <Perks />
